@@ -1,14 +1,18 @@
-div{
-    color: #6c3a09;
-    height: 50rem;
-    padding: 135vh 50vw 0 10vw;
+.container{
+    display: flex;
+    align-items: center;
+    gap: 150px;
+    margin-top: 100px;
+    padding: 100vh 0 0 0rem;
 }
-div h1{
-    width: 50rem;
+.inside{
+    color: #6c3a09;
+}
+.inside h1{
     font-weight: bold;
 }
-div p {
-    width: 600px;
+.inside p {
+    font-size: 20px;
+    width: 30rem;
     color: #707070;
-  }
-  
+}
