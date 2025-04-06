@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { CardComponent } from '../card/card.component';
+import { Coffe } from '../../models/Coffe';
 
 @Component({
   selector: 'app-list-products',
@@ -9,9 +10,9 @@ import { CardComponent } from '../card/card.component';
   styleUrl: './list-products.component.css'
 })
 export class ListProductsComponent {
-  coffes = signal<{ name: string; price: number }[]>(this.getCoffes())
+  listCoffes = signal<Coffe[]>(this.getCoffes())
   getCoffes(): Coffe[] {
 
-    return { 'Espresso',  2.5 }; // Example object
+    return [new Coffe()]; // Example object
   }
 }

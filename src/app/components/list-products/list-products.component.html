@@ -1,24 +1,9 @@
-@for(){
-    <app-card
-imageSrc="../../../assets/coffe-one.svg"
-imageAlt="Coffee Cup"
-title="Cappuccino"
-  subtitle="Coffee 50% | Milk 50%"
-  secondSubtitle="$8.50"
-></app-card>
-
+@for(coffe of listCoffes(); track coffe.id){
 <app-card
-imageSrc="../../../assets/coffe-beans.svg"
-imageAlt="Coffee Beans"
-title="Cappuccino"
-subtitle="Coffee 50% | Milk 50%"
-secondSubtitle="$8.50"
-></app-card>
-<app-card
-imageSrc="../../../assets/coffe-two.svg"
-imageAlt="Coffee Beans"
-title="Cappuccino"
-subtitle="Coffee 50% | Milk 50%"
-secondSubtitle="$8.50"
+  imageSrc="{{ coffe.imageSrc }}"
+  imageAlt="{{ coffe.imageAlt }}"
+  title="{{ coffe.title }}"
+  subtitle="{{ coffe.subtitle }}"
+  secondSubtitle="{{ coffe.secondSubtitle }}"
 ></app-card>
 }
