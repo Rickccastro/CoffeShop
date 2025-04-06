@@ -1,0 +1,29 @@
+{
+    "coffes": [
+      {
+        "id": "1",
+        "imageSrc": "../../../assets/coffe-one.svg",
+        "imageAlt": "Coffee Cup",
+        "title": "Cappuccino",
+        "subtitle": "Coffee 50% | Milk 50%",
+        "secondSubtitle": "$8.50"
+      },
+      {
+        "id": "2",
+        "imageSrc": "../../../assets/coffe-two.svg",
+        "imageAlt": "Coffee Mug",
+        "title": "Espresso",
+        "subtitle": "Strong and rich",
+        "secondSubtitle": "$6.00"
+      },
+      {
+        "id": "3",
+        "imageSrc": "../../../assets/coffe-beans.svg",
+        "imageAlt": "Coffee Beans",
+        "title": "Latte",
+        "subtitle": "More milk, less coffee",
+        "secondSubtitle": "$7.50"
+      }
+    ]
+  }
+  
