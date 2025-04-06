@@ -1,16 +1,15 @@
   <mat-card class="product-card">
     <mat-card-header>
-      <!-- <div mat-card-avatar class="example-header-image"></div> -->
-      <img mat-card-image src="../../../assets/coffe-one.svg" alt="Coffe-Photos">
+      <img mat-card-image src={{imageSrc}} alt="Coffe-Photos">
     </mat-card-header>
 
     <mat-card-content>
-        <mat-card-title>Capuccino</mat-card-title>
-        <mat-card-subtitle>50% Leite 50% Café</mat-card-subtitle>   
-        <mat-card-subtitle>R$8,52</mat-card-subtitle>     
+        <mat-card-title>{{title}}</mat-card-title>
+        <mat-card-subtitle>{{subtitle}}</mat-card-subtitle>   
+        <mat-card-subtitle>{{secondSubtitle}}</mat-card-subtitle>     
     </mat-card-content>
 
     <mat-card-actions>
-      <app-button>Order Now</app-button>
+      <app-button [buttonLabel]="buttonLabel"></app-button>
     </mat-card-actions>
   </mat-card>
