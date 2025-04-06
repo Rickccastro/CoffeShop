@@ -2,7 +2,7 @@
     "coffes": [
       {
         "id": "1",
-        "imageSrc": "../../../assets/coffe-one.svg",
+        "imageSrc": "assets/coffe-one.svg",
         "imageAlt": "Coffee Cup",
         "title": "Cappuccino",
         "subtitle": "Coffee 50% | Milk 50%",
@@ -10,7 +10,7 @@
       },
       {
         "id": "2",
-        "imageSrc": "../../../assets/coffe-two.svg",
+        "imageSrc": "assets/coffe-two.svg",
         "imageAlt": "Coffee Mug",
         "title": "Espresso",
         "subtitle": "Strong and rich",
@@ -18,11 +18,19 @@
       },
       {
         "id": "3",
-        "imageSrc": "../../../assets/coffe-beans.svg",
+        "imageSrc": "assets/coffe-three.svg",
         "imageAlt": "Coffee Beans",
-        "title": "Latte",
+        "title": "Macchiato",
         "subtitle": "More milk, less coffee",
         "secondSubtitle": "$7.50"
+      },
+      {
+        "id": "4",
+        "imageSrc": "assets/coffe-four.svg",
+        "imageAlt": "Coffee Beans",
+        "title": "Expresso",
+        "subtitle": "Concentrated Coffee ",
+        "secondSubtitle": "$9.50"
       }
     ]
   }

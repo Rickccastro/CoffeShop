@@ -17,6 +17,8 @@
     padding-top: 50px;
     gap: 100px;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .content-container h1{

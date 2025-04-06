@@ -1,5 +1,6 @@
+<div class="container-list">
 @for(coffe of coffeesList; track coffe.id){
-<app-card
+  <app-card
   imageSrc="{{ coffe.imageSrc }}"
   imageAlt="{{ coffe.imageAlt }}"
   title="{{ coffe.title }}"
@@ -7,3 +8,4 @@
   secondSubtitle="{{ coffe.secondSubtitle }}"
 ></app-card>
 }
+</div>

@@ -12,8 +12,4 @@ import { CoffeService } from '../../services/coffe.service';
 })
 export class ListProductsComponent {
   @Input() coffeesList: Coffe[] = [];
-
-  constructor() {
-    console.log(this.coffeesList);
-  }
 }
