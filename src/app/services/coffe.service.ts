@@ -11,7 +11,7 @@ export class CoffeService {
 
 
   getCoffes(){
-    return this.httpClient.get<Coffe[]>('');
+    return this.httpClient.get<Coffe[]>('http://localhost:3000/coffes');
   } 
 
 }
