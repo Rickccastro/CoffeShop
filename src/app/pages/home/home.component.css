@@ -1,0 +1,14 @@
+div{
+    color: #6c3a09;
+    height: 50rem;
+    padding: 135vh 50vw 0 10vw;
+}
+div h1{
+    width: 50rem;
+    font-weight: bold;
+}
+div p {
+    width: 600px;
+    color: #707070;
+  }
+  
