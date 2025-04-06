@@ -1,0 +1,31 @@
+.product-card {
+  position: relative;
+  padding-bottom: 45px; /* Permite posicionar elementos filhos de forma absoluta */
+}
+.mat-mdc-card-actions {
+  position: absolute;
+  bottom: -20px; /* Valor negativo para sobrepor o final do padding */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10; /* Garante que o botão fique sobre os demais elementos */
+}
+.mat-mdc-card {
+  background-color: rgba(249, 192, 106, 0.42);
+  max-width: fit-content;
+}
+.mat-mdc-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mat-mdc-card-header {
+  padding: 0;
+}
+
+.mat-mdc-card-title {
+  color: #6c3a09;
+}
+.mat-mdc-card-subtitle {
+  color: #707070;
+}
