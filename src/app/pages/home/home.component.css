@@ -1,18 +1,32 @@
-.container{
-    display: flex;
-    align-items: center;
-    gap: 150px;
+.container-formatter{
     margin-top: 100px;
     padding: 100vh 0 0 0rem;
 }
-.inside{
-    color: #6c3a09;
+.section-container{
+    margin: 0 150px ;
 }
-.inside h1{
+.section-container h1{
+    color: #6c3a09;
     font-weight: bold;
 }
-.inside p {
+.text-aligner{
+    text-align: center;
+}
+.content-container{
+    display: flex;
+    padding-top: 50px;
+    gap: 100px;
+    flex-direction: row;
+}
+
+.content-container h1{
+    width: 551px;
+    font-size: 55px;
+    color: #6c3a09;
+    font-weight: bold;
+}
+.content-container p {
     font-size: 20px;
-    width: 30rem;
+    max-width: 40rem;
     color: #707070;
 }
