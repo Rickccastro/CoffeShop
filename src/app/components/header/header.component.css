@@ -1,0 +1,25 @@
+main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* ou mais, dependendo da página */
+    background-image: url("../../../assets/coffe-background.svg");
+    background-size: cover;
+    background-position: center;
+    z-index: 1; /* fica por trás */
+  }
+
+  main div{
+    width: 40%;
+    margin-right: 40%;
+  }
+  p{
+    font-size: 2rem;
+  }
+  
+  h1{
+    font-family: "Clicker Script", cursive;
+    font-size: 13rem;
+    padding-left: 10%;
+  }
