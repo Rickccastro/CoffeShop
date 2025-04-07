@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, Input, signal } from '@angular/core';
 import { HeaderComponent } from '../../components/header/header.component';
 import { ButtonComponent } from "../../components/button/button.component";
 import { CardComponent } from '../../components/card/card.component';
@@ -16,9 +16,9 @@ import { ListProductsComponent } from '../../components/list-products/list-produ
 
 export class HomeComponent {
   coffees = signal<Coffe[]>([]);
+  @Input() buttonLabel: string = 'Learn More';
 
   private route = inject(ActivatedRoute);
-
   ngOnInit() {
     this.route.data.subscribe(data => {
       this.coffees.set(data['coffe']);

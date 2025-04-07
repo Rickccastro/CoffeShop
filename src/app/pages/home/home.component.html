@@ -11,7 +11,7 @@
           is no doubt that you will enjoy this coffee more than others you have
           ever tasted.
         </p>
-        <app-button></app-button>
+        <app-button [buttonLabel]="buttonLabel"></app-button>
       </div>
       <img src="../../../assets/coffe-beans.svg" alt="Coffe-Cup" />
     </div>
@@ -27,6 +27,20 @@
       </p>
     </div>
 
+    <div class="content-container">
+      <app-list-products [coffeesList]="coffees()"></app-list-products>
+    </div>
+  </div>
+
+
+  <div class="section-container">
+    <div class="text-aligner">
+      <h1>Why are we different?</h1>
+      <p>
+        We don’t just make your coffee, we make your day!
+      </p>
+    </div>
+    
     <div class="content-container">
       <app-list-products [coffeesList]="coffees()"></app-list-products>
     </div>

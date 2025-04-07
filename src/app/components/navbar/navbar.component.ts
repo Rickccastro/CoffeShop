@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import { ButtonComponent } from '../button/button.component';
@@ -12,5 +12,6 @@ import { ButtonComponent } from '../button/button.component';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-
+  @Input() buttonIn: string = 'Sign In';
+  @Input() buttonOut: string = 'Sign Out';
 }
