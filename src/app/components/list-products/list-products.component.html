@@ -1,11 +1,13 @@
 <div class="container-list">
-@for(coffe of coffeesList; track coffe.id){
-  <app-card
-  imageSrc="{{ coffe.imageSrc }}"
-  imageAlt="{{ coffe.imageAlt }}"
-  title="{{ coffe.title }}"
-  subtitle="{{ coffe.subtitle }}"
-  secondSubtitle="{{ coffe.secondSubtitle }}"
-></app-card>
-}
+  @for (card of cardsList; track card.id || card.title) {
+    <app-card
+      [imageSrc]="card.imageSrc"
+      [imageAlt]="card.imageAlt"
+      [title]="card.title"
+      [subtitle]="card.subtitle"
+      [secondSubtitle]="card.secondSubtitle"
+      [showButton]="card.showButton"
+      [buttonLabel]="card.buttonLabel">
+    </app-card>
+  }
 </div>

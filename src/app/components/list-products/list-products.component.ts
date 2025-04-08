@@ -1,7 +1,8 @@
-import { Component, inject, Input, signal } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CardComponent } from '../card/card.component';
-import { Coffe } from '../../models/Coffe';
-import { CoffeService } from '../../services/coffe.service';
+import { CardDisplay } from '../../models/CardDisplay'; 
+
+
 
 @Component({
   selector: 'app-list-products',
@@ -11,5 +12,5 @@ import { CoffeService } from '../../services/coffe.service';
   styleUrl: './list-products.component.css'
 })
 export class ListProductsComponent {
-  @Input() coffeesList: Coffe[] = [];
+  @Input() cardsList: CardDisplay[] = [];
 }

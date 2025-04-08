@@ -14,7 +14,7 @@ export class CardComponent {
   @Input() imageAlt: string = '';
   @Input() title: string = '';
   @Input() subtitle: string = '';
-  @Input() secondSubtitle: string = '';
+  @Input() secondSubtitle?: string = '';
 
   @Input() showButton: boolean = true;
   @Input() buttonLabel: string = 'Order Now';
