@@ -1,8 +1,5 @@
-export class Coffe {
-  id: string = '';
-  imageSrc: string = '';
-  imageAlt: string = '';
-  title: string = '';
-  subtitle: string = '';
-  secondSubtitle: string = '';
-}
+export interface Coffe {
+  id: string;
+  secondSubtitle?: string 
+ }
+
