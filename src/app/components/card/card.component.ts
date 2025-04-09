@@ -15,7 +15,8 @@ export class CardComponent {
   @Input() title: string = '';
   @Input() subtitle: string = '';
   @Input() secondSubtitle?: string = '';
+  @Input() cardOption: 'small' | 'default' = 'default';
 
   @Input() showButton: boolean = true;
-  @Input() buttonLabel: string = 'Order Now';
+  @Input() buttonLabel: string = '';
 }
