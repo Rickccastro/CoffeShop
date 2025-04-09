@@ -18,6 +18,7 @@ export class HomeComponent {
   coffees = signal<CardDisplay[]>([]);
   banners: CardDisplay[] = STATIC_BANNERS;
   buttonLabel: string = 'Learn More';
+  @Input() cardOption: 'small' | 'default' = 'default';
 
 
   private route = inject(ActivatedRoute);

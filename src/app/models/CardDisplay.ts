@@ -6,7 +6,7 @@ export interface CardDisplay {
     imageSrc: string;
     imageAlt: string;
     showButton: boolean;
-    buttonLabel: string;
-   }
+    cardOption?: 'small' | 'default';
+}
   
   

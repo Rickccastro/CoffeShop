@@ -1,7 +1,7 @@
 .product-card {
   position: relative;
-  padding-bottom: 45px;
  /* Permite posicionar elementos filhos de forma absoluta */
+ padding-bottom: 50px;
 
 }
 .mat-mdc-card-image {
@@ -11,11 +11,11 @@
 }
 
 /* Estilo condicional baseado no atributo cardoption */
-.product-card[cardoption="small"] .mat-mdc-card-image {
-  width: 100px;
-  height: 100px;
+.product-card[cardOption='small'] .mat-mdc-card-image {
+  width: 70px;
+  height: 70px;
 }
-.product-card[cardoption="default"] .mat-mdc-card-image {
+.product-card[cardOption='default'] .mat-mdc-card-image{
   width: 200px;
   height: 200px;
 }

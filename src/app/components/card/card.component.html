@@ -1,4 +1,4 @@
-  <mat-card class="product-card" [attr.cardoption]="cardOption">
+  <mat-card class="product-card" [attr.cardOption]="cardOption">
     <mat-card-header>
       <img mat-card-image src={{imageSrc}} alt="Coffe-Photos">
     </mat-card-header>
@@ -9,7 +9,8 @@
         <mat-card-subtitle>{{secondSubtitle}}</mat-card-subtitle>     
     </mat-card-content>
 
-    <mat-card-actions>
-      <app-button [showButton]="showButton" [buttonLabel]="buttonLabel"></app-button>
-    </mat-card-actions>
+      <mat-card-actions>
+        <app-button [showButton]="showButton" [buttonLabel]="buttonLabel"></app-button>
+      </mat-card-actions>
+    
   </mat-card>

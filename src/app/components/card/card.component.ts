@@ -18,5 +18,5 @@ export class CardComponent {
   @Input() cardOption: 'small' | 'default' = 'default';
 
   @Input() showButton: boolean = true;
-  @Input() buttonLabel: string = '';
+  @Input() buttonLabel: string = 'ver mais';
 }
