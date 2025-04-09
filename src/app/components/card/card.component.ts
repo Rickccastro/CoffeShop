@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { ButtonComponent } from '../button/button.component';
+import { CardDisplay } from '../../models/CardDisplay';
 
 @Component({
   selector: 'app-card',
@@ -10,13 +11,6 @@ import { ButtonComponent } from '../button/button.component';
   styleUrl: './card.component.css',
 })
 export class CardComponent {
-  @Input() imageSrc: string = '';
-  @Input() imageAlt: string = '';
-  @Input() title: string = '';
-  @Input() subtitle: string = '';
-  @Input() secondSubtitle?: string = '';
+  @Input() data!: CardDisplay;
   @Input() cardOption: 'small' | 'default' = 'default';
-
-  @Input() showButton: boolean = true;
-  @Input() buttonLabel: string = 'ver mais';
 }

@@ -12,6 +12,6 @@ import { ButtonComponent } from '../button/button.component';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-  @Input() buttonIn: string = 'Sign In';
-  @Input() buttonOut: string = 'Sign Out';
+  buttonIn: string = 'Sign In';
+  buttonOut: string = 'Sign Out';
 }

@@ -1,12 +1,7 @@
 <div class="container-list">
   @for (card of cardsList; track card.id || card.title) {
     <app-card
-      [imageSrc]="card.imageSrc"
-      [imageAlt]="card.imageAlt"
-      [title]="card.title"
-      [subtitle]="card.subtitle"
-      [secondSubtitle]="card.secondSubtitle"
-      [showButton]="card.showButton"
+      [data]="card"
       [cardOption]="cardOption">
     </app-card>
   }

@@ -9,6 +9,7 @@ export const STATIC_BANNERS: CardDisplay[] = [
     imageSrc: 'assets/banners-coffee/bean-banner.svg',
     imageAlt: 'Coffee Beans',
     showButton: false,
+    buttonText : '',
   },
   {
     id:'',
@@ -18,6 +19,7 @@ export const STATIC_BANNERS: CardDisplay[] = [
     imageSrc: 'assets/banners-coffee/medal-banner.svg',
     imageAlt: 'Morning Coffee',
     showButton: false,
+    buttonText : '',
   },
   {
     id:'',
@@ -27,6 +29,8 @@ export const STATIC_BANNERS: CardDisplay[] = [
     imageSrc: 'assets/banners-coffee/cup-banner.svg',
     imageAlt: 'Cold Brew Coffee',
     showButton: false,
+    buttonText : '',
+
   },
   {
     id:'',
@@ -36,6 +40,7 @@ export const STATIC_BANNERS: CardDisplay[] = [
     imageSrc: 'assets/banners-coffee/money-banner.svg',
     imageAlt: 'Organic Coffee',
     showButton: false,
+    buttonText : '',
   },
 ];
     

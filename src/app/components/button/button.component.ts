@@ -9,6 +9,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './button.component.css'
 })
 export class ButtonComponent {
-  @Input() buttonLabel: string = 'ver mais';
+  @Input() buttonText: string = 'texto-padrao';
   @Input() showButton: boolean = true;
 }
