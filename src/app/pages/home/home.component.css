@@ -1,34 +1,56 @@
-.container-formatter{
-    margin-top: 100px;
-    padding: 100vh 0 0 0rem;
-}
-.section-container{
-    margin: 0 150px ;
-}
-.section-container h1{
-    color: #6c3a09;
-    font-weight: bold;
-}
-.text-aligner{
-    text-align: center;
-}
-.content-container{
-    display: flex;
-    padding-top: 50px;
-    gap: 100px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.container-formatter {
+  margin-top: 100px;
+  padding: 100vh 0 0 0rem;
 }
 
-.content-container h1{
-    width: 551px;
-    font-size: 55px;
-    color: #6c3a09;
-    font-weight: bold;
+.section-container{
+    padding-top: 100px;
+}
+.section-container h1 {
+  color: #6c3a09;
+  font-weight: bold;
+}
+.text-aligner {
+  text-align: center;
+  position: relative; /* necessário para a imagem absoluta funcionar */
+  text-align: center;
+}
+.content-container {
+  display: flex;
+  padding-top: 50px;
+  gap: 100px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-container h1 {
+  width: 551px;
+  font-size: 55px;
+  color: #6c3a09;
+  font-weight: bold;
 }
 .content-container p {
-    font-size: 20px;
-    max-width: 40rem;
-    color: #707070;
+  font-size: 20px;
+  max-width: 40rem;
+  color: #707070;
+}
+
+#imagem-invertida {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: -125px;
+    right: 0;
+    transform: scaleX(-1);
+    z-index: -1; /* joga pra trás do texto */    
+}
+
+#imagem-normal{ 
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: -125px;
+    left: 0;
+    z-index: -1; 
 }

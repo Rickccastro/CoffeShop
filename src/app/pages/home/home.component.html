@@ -16,10 +16,10 @@
       <img src="../../../assets/coffes/coffe-beans.svg" alt="Coffe-Cup" />
     </div>
   </div>
-  <img src="../../../assets/coffes/coffe-splash.svg" alt="Coffe-Slapsh" />
 
   <div class="section-container">
     <div class="text-aligner">
+      <img id="imagem-normal" src="../../../assets/coffes/coffe-splash.svg" alt="Coffe-Slapsh" />
       <h1>Enjoy a new blend of coffee style</h1>
       <p>
         Explore all flavours of coffee with us. There is always a new cup worth
@@ -39,10 +39,13 @@
       <p>
         We don’t just make your coffee, we make your day!
       </p>
+      <div>
+        <img  id="imagem-invertida" src="../../../assets/coffes/coffe-splash.svg" alt="Coffe-Slapsh" />
+      </div>
     </div>
     
     <div class="content-container">
-      <app-list-products [cardOption]="'small'" [cardsList]="banners"></app-list-products>
+      <app-list-products [cardOption]="'small'" [cardsList]="banners"></app-list-products> 
     </div>
   </div>
 </div>
