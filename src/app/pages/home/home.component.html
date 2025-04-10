@@ -19,7 +19,11 @@
 
   <div class="section-container">
     <div class="text-aligner">
-      <img id="imagem-normal" src="../../../assets/coffes/coffe-splash.svg" alt="Coffe-Slapsh" />
+      <img
+        id="splash-esquerda"
+        src="../../../assets/coffes/coffe-splash.svg"
+        alt="Coffe-Slapsh"
+      />
       <h1>Enjoy a new blend of coffee style</h1>
       <p>
         Explore all flavours of coffee with us. There is always a new cup worth
@@ -32,20 +36,99 @@
     </div>
   </div>
 
-
   <div class="section-container">
     <div class="text-aligner">
       <h1>Why are we different?</h1>
-      <p>
-        We don’t just make your coffee, we make your day!
-      </p>
+      <p>We don’t just make your coffee, we make your day!</p>
       <div>
-        <img  id="imagem-invertida" src="../../../assets/coffes/coffe-splash.svg" alt="Coffe-Slapsh" />
+        <img
+          id="splash-direita"
+          src="../../../assets/coffes/coffe-splash.svg"
+          alt="Coffe-Slapsh"
+        />
       </div>
     </div>
-    
+
     <div class="content-container">
-      <app-list-products [cardOption]="'small'" [cardsList]="banners"></app-list-products> 
+      <app-list-products
+        [cardOption]="'small'"
+        [cardsList]="banners"
+      ></app-list-products>
     </div>
+
+    <div class="text-aligner">
+      <div>Great ideas start with great coffee, Lets help you achieve that</div>
+      <h1>Get started today.</h1>
+      <app-button [buttonText]="buttonText"></app-button>
+    </div>
+
+    <div class="image-formatter">
+      <div class="background-layer"></div>
+      <div class="overlay-layer"></div>
+      <!-- sombra marrom -->
+      <div class="beans-layer"></div>
+      <div class="cup-layer"></div>
+
+      <div id="uhul" class="content">
+        <h1>
+          Get a chance to have an<br />
+          Amazing morning
+        </h1>
+        <p>
+          We are giving you are one time opportunity to experience a better life
+          with coffee.
+        </p>
+        <app-button></app-button>
+      </div>
+    </div>
+
+    <div class="section-container">
+      <div class="text-aligner">
+        <div class="cofito">
+          <h1>Our coffee perfection feedback</h1>
+          <p>Our customers has amazing things to say about us</p>
+        </div>
+        <div>
+          <img
+            id="splash-direita"
+            src="../../../assets/coffes/coffe-splash.svg"
+            alt="Coffe-Slapsh"
+          />
+        <app-card></app-card>
+
+        <img id="baixo"
+        src="../../../assets/coffes/splash.baixo.svg"
+        alt="Coffe-Slapsh"
+      />
+        </div>
+      </div>
+    </div>
+
+
+    <div class="image-formatter">
+      <div class="background-layer"></div>
+      <!-- <div class="overlay-layer"></div> -->
+      <div class="text-aligner">
+        <div id="uhul">
+        <div>
+          <h1>
+            Subscribe to get the Latest News
+          </h1>
+          <p>
+            Don’t miss out on our latest news, updates, tips and special offers
+          </p>
+        </div>
+        <input type="text" name="" id="">
+
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <img
+      src="../../../assets/footer/coffe-beans-footer.svg"
+      alt="Coffe-Slapsh"
+    />
+    </footer>
   </div>
 </div>
