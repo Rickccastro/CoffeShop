@@ -2,7 +2,7 @@
 <div class="container-formatter">
   <section>
     <div class="content-container">
-      <div>
+      <div class="discover-text">
         <h1>Discover the best coffee</h1>
         <p>
           Bean Scene is a coffee shop that provides you with quality coffee that
@@ -54,7 +54,7 @@
         [cardsList]="banners"
       ></app-list-products>
     </div>
-
+    
     <div class="text-aligner">
       <div>Great ideas start with great coffee, Lets help you achieve that</div>
       <h1>Get started today.</h1>
@@ -65,22 +65,21 @@
   
 <section>
   <div class="image-formatter">
-    <div class="background-layer"></div>
-    <div class="overlay-layer"></div>
-    <!-- sombra marrom -->
-    <div class="beans-layer"></div>
-    <div class="cup-layer"></div>
+    <div class="background-layer">
+      <div class="content-container">
+        <div class= "getchance-text"> 
+          <h1>
+            Get a chance to have an<br />
+            Amazing morning
+          </h1>
+          <p>
+            We are giving you are one time opportunity to experience a better life
+            with coffee.
+          </p>
+          <app-button></app-button>
+        </div>
 
-    <div id="uhul" class="content">
-      <h1>
-        Get a chance to have an<br />
-        Amazing morning
-      </h1>
-      <p>
-        We are giving you are one time opportunity to experience a better life
-        with coffee.
-      </p>
-      <app-button></app-button>
+      </div>
     </div>
   </div>
 </section>
@@ -95,7 +94,10 @@
           src="../../../assets/coffes/coffe-splash.svg"
           alt="Coffe-Slapsh"
         />
-        <app-card></app-card>
+        <div class="content-container">
+
+          <app-card></app-card>
+        </div>
 
         <img
           id="baixo"
@@ -106,27 +108,24 @@
     </div>
   </section>    
 
-  <section>
-    <div class="image-formatter">
-      <div class="background-layer"></div>
-      <div class="text-aligner">
-        <div id="uhul">
-          <div>
-            <h1>Subscribe to get the Latest News</h1>
-            <p>
-              Don’t miss out on our latest news, updates, tips and special offers
-            </p>
-          </div>
-          <input type="text" name="" id="" />
-        </div>
-      </div>
-    </div>
-  </section>
-
   <footer>
-    <img
-      src="../../../assets/footer/coffe-beans-footer.svg"
-      alt="Coffe-Slapsh"
-    />
+    <!-- <section>
+      <div class="image-formatter">
+        <div class="background-layer">
+          <div class="text-aligner">
+            <div class="content-container">
+              <div class="subscribe-text">
+                <h1>Subscribe to get the Latest News</h1>
+                <p>
+                  Don’t miss out on our latest news, updates, tips and special offers
+                </p>
+                <input type="text" name="" id="" />
+              </div>
+            </div>
+        </div>
+        </div>
+   
+      </div>
+    </section> -->
   </footer>
 </div>
