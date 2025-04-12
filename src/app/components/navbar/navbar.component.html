@@ -11,7 +11,11 @@
     </ul>
 
     <div class="navbar-buttons">
-      <app-button [buttonText]="buttonIn"></app-button>
-      <app-button [buttonText]="buttonOut"></app-button>
+      <app-button>
+        <ng-content>Sign In</ng-content>
+      </app-button>
+      <app-button>
+        <ng-content>Sign Out</ng-content>
+      </app-button>
     </div>
   </nav>

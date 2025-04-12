@@ -9,5 +9,4 @@ import { ButtonComponent } from '../button/button.component';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  buttonText: string = 'Order Now';
 }

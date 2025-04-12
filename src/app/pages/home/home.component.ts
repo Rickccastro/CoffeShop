@@ -20,8 +20,6 @@ export class HomeComponent {
   feedbacks = signal<CardDisplay[]>([]);
 
   banners: CardDisplay[] = STATIC_BANNERS;
-  buttonLabel: string = 'Learn More';
-  buttonText: string = 'Join Us';
   @Input() cardOption: 'small' | 'default' = 'default';
 
 
