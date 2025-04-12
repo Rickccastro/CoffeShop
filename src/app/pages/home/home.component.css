@@ -64,26 +64,27 @@ section{
 .image-formatter {
   position: relative;
   width: 100%;
-  height:100vh;
+  height: 100vh; 
   overflow: hidden;
+
 }
 
 
 /* fundo base com filtro marrom */
 .background-layer {
   position: absolute;
-  width: 100% ;
-  height:100vh;
+  width: 100%;
+  height:100%;
   background-repeat: no-repeat;
   background-position: bottom;
   pointer-events: none;
 
   background-image: url("../../../assets/footer/Wpp.jpg");
-  background-size: cover;
+  background-size: contain;
   /* background-color:  #382208;
   opacity: 0.95; */
    /* tom café */
-   background-position: bottom; 
+   background-position: center; 
    background-blend-mode: multiply; /* mistura cor e imagem */
    
    z-index: 1;

@@ -1,8 +1,21 @@
-<div class="container-list">
-  @for (card of cardsList; track card.id || card.title) {
-    <app-card
-      [data]="card"
-      [cardOption]="cardOption">
-    </app-card>
-  }
-</div>
+  <div class="carousel-container">
+
+    <div class="container-list">
+
+      <app-button buttonText="<===" id="align-button" [showButton]="hasVisibleCardsWithShowButton()" (click)="prev()" [disabled]="currentIndex === 0">
+      </app-button>
+
+      @for (card of cardsList; track card.id || card.title) 
+      {      
+        <app-card
+          [data]="card"
+          [cardOption]="cardOption">
+        </app-card>
+      }
+
+      <app-button buttonText="===>" id="align-button" [showButton]="hasVisibleCardsWithShowButton()" (click)="next()" [disabled]="currentIndex >= cardsList.length - visibleCards">
+        >
+      </app-button>
+
+    </div>
+  </div>
