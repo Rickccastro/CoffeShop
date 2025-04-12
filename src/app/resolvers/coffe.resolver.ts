@@ -1,6 +1,6 @@
 import { inject } from '@angular/core';
 import { ResolveFn } from '@angular/router';
-import { CoffeService } from '../services/coffe.service'; // Adjust the path as needed
+import { CoffeService } from '../services/coffe.service'; 
 import { Coffe } from '../models/Coffe';
 import { Observable } from 'rxjs/internal/Observable';
 

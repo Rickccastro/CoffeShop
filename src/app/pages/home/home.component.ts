@@ -6,6 +6,7 @@ import { CardDisplay } from '../../models/CardDisplay';
 import { ActivatedRoute } from '@angular/router';
 import { ListProductsComponent } from '../../components/list-products/list-products.component';
 import { STATIC_BANNERS } from '../../data/static-data';
+import { Banner } from '../../models/Banner';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,7 @@ export class HomeComponent {
   coffees = signal<Coffe[]>([]);
   feedbacks = signal<CardDisplay[]>([]);
 
-  banners: Partial<CardDisplay>[] = STATIC_BANNERS;
+  banners: Partial<Banner>[] = STATIC_BANNERS;
   @Input() cardOption: 'small' | 'default' = 'default';
 
 

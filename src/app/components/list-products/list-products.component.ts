@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import { CardDisplay } from '../../models/CardDisplay';
 import { ButtonComponent } from '../button/button.component';
+import { Coffe } from '../../models/Coffe';
 
 @Component({
   selector: 'app-list-products',
@@ -11,7 +12,7 @@ import { ButtonComponent } from '../button/button.component';
   styleUrl: './list-products.component.css',
 })
 export class ListProductsComponent {
-  @Input() cardsList: Partial<CardDisplay>[] = [];
+  @Input() cardsList: Coffe[] = [];
   @Input() cardOption: 'small' | 'default' = 'default';
   buttonText:string = ''
 
