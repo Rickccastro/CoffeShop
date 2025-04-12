@@ -7,7 +7,8 @@
         "title": "Cappuccino",
         "subtitle": "Coffee 50% | Milk 50%",
         "secondSubtitle": "$8.50",
-        "buttonText" : "soaksao"
+        "buttonText" : "soaksao",
+        "showButton" : true
       },
       {
         "id": "2",
@@ -16,8 +17,8 @@
         "title": "Espresso",
         "subtitle": "Strong and rich",
         "secondSubtitle": "$6.00",
-        "buttonText" : "soaksao"
-
+        "buttonText" : "soaksao",
+        "showButton" : true
       },
       {
         "id": "3",
@@ -26,7 +27,8 @@
         "title": "Macchiato",
         "subtitle": "More milk, less coffee",
         "secondSubtitle": "$7.50",
-        "buttonText" : "soaksao"
+        "buttonText" : "soaksao",
+        "showButton" : true
       },
       {
         "id": "4",
@@ -35,7 +37,8 @@
         "title": "Expresso",
         "subtitle": "Concentrated Coffee ",
         "secondSubtitle": "$9.50",
-        "buttonText" : "soaksao"
+        "buttonText" : "soaksao",
+        "showButton" : true
       }
     ]
   }
