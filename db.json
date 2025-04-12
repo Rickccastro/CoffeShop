@@ -6,9 +6,7 @@
         "imageAlt": "Coffee Cup",
         "title": "Cappuccino",
         "subtitle": "Coffee 50% | Milk 50%",
-        "secondSubtitle": "$8.50",
-        "buttonText" : "soaksao",
-        "showButton" : true
+        "secondSubtitle": "$8.50"
       },
       {
         "id": "2",
@@ -16,9 +14,7 @@
         "imageAlt": "Coffee Mug",
         "title": "Espresso",
         "subtitle": "Strong and rich",
-        "secondSubtitle": "$6.00",
-        "buttonText" : "soaksao",
-        "showButton" : true
+        "secondSubtitle": "$6.00"
       },
       {
         "id": "3",
@@ -26,9 +22,7 @@
         "imageAlt": "Coffee Beans",
         "title": "Macchiato",
         "subtitle": "More milk, less coffee",
-        "secondSubtitle": "$7.50",
-        "buttonText" : "soaksao",
-        "showButton" : true
+        "secondSubtitle": "$7.50"
       },
       {
         "id": "4",
@@ -36,9 +30,7 @@
         "imageAlt": "Coffee Beans",
         "title": "Expresso",
         "subtitle": "Concentrated Coffee ",
-        "secondSubtitle": "$9.50",
-        "buttonText" : "soaksao",
-        "showButton" : true
+        "secondSubtitle": "$9.50"
       }
     ],
     

@@ -37,7 +37,12 @@ export class ListProductsComponent {
   }
 
   hasVisibleCardsWithShowButton(): boolean {
-    return this.visibleCardsList.some((card) => card.secondSubtitle != null || card.secondSubtitle != undefined);
+    return this.visibleCardsList.some(
+      (card) =>
+        card.secondSubtitle !== null &&
+        card.secondSubtitle !== undefined &&
+        card.secondSubtitle.trim() !== ''
+    );
   }
 
   get visibleCardsList(): any[] {

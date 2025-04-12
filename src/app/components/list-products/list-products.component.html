@@ -10,7 +10,8 @@
         <app-card
           [data]="card"
           [cardOption]="cardOption"
-          [buttonText]="buttonText">
+          [buttonText]="hasText()"
+          [showButton]="hasVisibleCardsWithShowButton()">
         </app-card>
       }
 

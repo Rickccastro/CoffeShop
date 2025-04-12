@@ -18,7 +18,7 @@ export class HomeComponent {
   coffees = signal<Coffe[]>([]);
   feedbacks = signal<CardDisplay[]>([]);
 
-  banners: CardDisplay[] = STATIC_BANNERS;
+  banners: Partial<CardDisplay>[] = STATIC_BANNERS;
   @Input() cardOption: 'small' | 'default' = 'default';
 
 

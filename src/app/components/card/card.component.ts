@@ -13,5 +13,6 @@ import { CardDisplay } from '../../models/CardDisplay';
 export class CardComponent {
   @Input() data: Partial<CardDisplay> = {}; 
   @Input() cardOption: 'small' | 'default' = 'default';
-  @Input() buttonText:string = '';
+  @Input() showButton!: boolean;
+  @Input() buttonText!: string;
 }
