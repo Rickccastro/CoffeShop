@@ -1,8 +1,6 @@
 .product-card {
   position: relative;
  /* Permite posicionar elementos filhos de forma absoluta */
- padding-bottom: 50px;
-
 }
 .mat-mdc-card-image {
   object-fit: cover; /* Faz o crop para preencher sem distorcer */
@@ -10,7 +8,25 @@
   margin: 0  auto;
 }
 
-/* Estilo condicional baseado no atributo cardoption */
+.product-card[cardOption='small']  {
+  width: 200px;
+}
+
+.product-card[cardOption='small'] .mat-mdc-card-subtitle{
+  text-align: center;
+  width: 150px;
+}
+
+.product-card[cardOption='small'] .mat-mdc-card-header {
+  padding-top: 30px;
+}
+
+.product-card[cardOption='small'] .mat-mdc-card-content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+
 .product-card[cardOption='small'] .mat-mdc-card-image {
   width: 70px;
   height: 70px;
@@ -18,6 +34,10 @@
 .product-card[cardOption='default'] .mat-mdc-card-image{
   width: 200px;
   height: 200px;
+}
+
+.product-card[cardOption='default'] .mat-mdc-card-content{
+  padding-bottom: 50px;
 }
 
 .mat-mdc-card-actions {
