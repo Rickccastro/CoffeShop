@@ -11,12 +11,14 @@ import { CardComponent } from '../../components/card/card.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, ButtonComponent, ListProductsComponent,CardComponent],
+  imports: [HeaderComponent, ButtonComponent, ListProductsComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
   coffees = signal<CardDisplay[]>([]);
+  feedbacks = signal<CardDisplay[]>([]);
+
   banners: CardDisplay[] = STATIC_BANNERS;
   buttonLabel: string = 'Learn More';
   buttonText: string = 'Join Us';
@@ -27,6 +29,7 @@ export class HomeComponent {
   ngOnInit() {
     this.route.data.subscribe((data) => {
       this.coffees.set(data['coffe']);
+      this.feedbacks.set(data['feedbacks']);
     });
   }
 }

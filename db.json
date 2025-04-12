@@ -40,6 +40,33 @@
         "buttonText" : "soaksao",
         "showButton" : true
       }
-    ]
+    ],
+    
+    "feedbacks": [
+    {
+      "id": 1,
+      "descricao": "Atendimento excelente!",
+      "usuario": "João Silva",
+      "cargo": "cliente"
+    },
+    {
+      "id": 2,
+      "descricao": "Sistema de agendamento precisa de melhorias.",
+      "usuario": "Maria Oliveira",
+      "cargo": "funcionario"
+    },
+    {
+      "id": 3,
+      "descricao": "Ambiente limpo e organizado.",
+      "usuario": "Carlos Souza",
+      "cargo": "cliente"
+    },
+    {
+      "id": 4,
+      "descricao": "Sugiro atualizar o manual interno.",
+      "usuario": "Ana Paula",
+      "cargo": "funcionario"
+    }
+  ]
   }
   

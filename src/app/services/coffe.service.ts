@@ -8,8 +8,6 @@ import { Observable } from 'rxjs';
 })
 export class CoffeService {
   httpClient = inject(HttpClient);
-  coffes: Coffe[] = []
-
 
   getCoffees(): Observable<Coffe[]> {
     return this.httpClient.get<Coffe[]>('http://localhost:3000/coffes');
