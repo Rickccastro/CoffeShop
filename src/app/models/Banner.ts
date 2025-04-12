@@ -3,6 +3,4 @@ export interface Banner {
   subtitle: string;
   imageSrc: string;
   imageAlt: string;
-  showButton: boolean;
-  buttonLabel: string;
 }

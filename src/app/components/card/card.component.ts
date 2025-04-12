@@ -11,6 +11,7 @@ import { CardDisplay } from '../../models/CardDisplay';
   styleUrl: './card.component.css',
 })
 export class CardComponent {
-  @Input() data!: CardDisplay;
+  @Input() data: Partial<CardDisplay> = {}; 
   @Input() cardOption: 'small' | 'default' = 'default';
+  @Input() buttonText:string = '';
 }

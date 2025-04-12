@@ -78,15 +78,13 @@ section{
   background-repeat: no-repeat;
   background-position: bottom;
   pointer-events: none;
-
-  background-image: url("../../../assets/footer/Wpp.jpg");
   background-size: contain;
+  background-image: url("../../../assets/footer/Wpp.jpg");  
   /* background-color:  #382208;
   opacity: 0.95; */
    /* tom café */
    background-position: center; 
-   background-blend-mode: multiply; /* mistura cor e imagem */
-   
+   background-blend-mode: multiply; /* mistura cor e imagem */ 
    z-index: 1;
 }
 

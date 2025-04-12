@@ -1,7 +1,6 @@
   <div class="carousel-container">
 
     <div class="container-list">
-
       <app-button id="align-button" [showButton]="hasVisibleCardsWithShowButton()" (click)="prev()" [disabled]="currentIndex === 0">
         <img src="../../../assets/carousel/arrow-left.svg" alt="Voltar" />
       </app-button>
@@ -10,7 +9,8 @@
       {      
         <app-card
           [data]="card"
-          [cardOption]="cardOption">
+          [cardOption]="cardOption"
+          [buttonText]="buttonText">
         </app-card>
       }
 
