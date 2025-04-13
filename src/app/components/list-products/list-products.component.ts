@@ -12,7 +12,7 @@ import { Coffe } from '../../models/Coffe';
   styleUrl: './list-products.component.css',
 })
 export class ListProductsComponent {
-  @Input() cardsList: Coffe[] = [];
+  @Input() cardsList: Partial<CardDisplay>[] = [];
   @Input() cardOption: 'small' | 'default' = 'default';
   buttonText:string = ''
 
