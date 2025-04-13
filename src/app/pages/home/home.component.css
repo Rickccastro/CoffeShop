@@ -55,10 +55,10 @@ section{
 #baixo {
     display: flex;
     flex-direction: row;
-    top: 350px;
+    top: 450px;
     position: absolute;
     left: 0;
-    z-index: -1; /* joga pra trás do texto */    
+    z-index: -1;
 }
 
 .image-formatter {
@@ -78,14 +78,24 @@ section{
   background-repeat: no-repeat;
   background-position: bottom;
   pointer-events: none;
-  background-size: contain;
-  background-image: url("../../../assets/footer/Wpp.jpg");  
-  /* background-color:  #382208;
-  opacity: 0.95; */
+  background-size: cover;
    /* tom café */
    background-position: center; 
    background-blend-mode: multiply; /* mistura cor e imagem */ 
    z-index: 1;
+}
+
+#coffe-cup{
+  width: 400px;
+}
+#coffe-one{
+  background-image: url("../../../assets/footer/customer.webp");  
+}
+
+#coffe-two{
+  background-color:  #382208;
+  opacity: 0.95;
+  background-image: url("../../../assets/footer/397e0662-5cf1-4127-bd31-b8d707198123.png");  
 }
 
 .getchance-text h1{
@@ -115,5 +125,6 @@ section{
 
 
 footer {
-  background-color: #442808;
+  margin-top: 100px;
+  /* background-color: #442808; */
 }
