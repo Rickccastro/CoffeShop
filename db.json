@@ -33,32 +33,48 @@
         "secondSubtitle": "$9.50"
       }
     ],
-    
+
     "feedbacks": [
     {
       "id": "1",
-      "descricao": "Atendimento excelente!",
-      "usuario": "João Silva",
-      "cargo": "cliente"
+      "descricao": "A Coffee Shop me conquistou desde o primeiro gole! O ambiente é super aconchegante, o atendimento é impecável e cada bebida tem um sabor único, feito com muito carinho. Sou apaixonado pelo cappuccino deles é equilibrado e sempre vem na temperatura ideal. E os doces? Uma verdadeira tentação! Já virou meu cantinho favorito pra trabalhar, relaxar ou encontrar os amigos. Não é só café, é uma experiência. Recomendo de olhos fechados!",
+      "usuario": {
+        "nome": "Ricardo Castro",
+        "cargo": "Cliente",
+        "imageSrc": "assets/user/rickccastro.jpg",
+        "imageAlt": "Foto de Ricardo Castro"
+      }
     },
     {
       "id": "2",
       "descricao": "Sistema de agendamento precisa de melhorias.",
-      "usuario": "Maria Oliveira",
-      "cargo": "funcionario"
+      "usuario": {
+        "nome": "Maria Oliveira",
+        "cargo": "funcionario",
+        "imageSrc": "https://example.com/images/maria-oliveira.jpg",
+        "imageAlt": "Foto de Maria Oliveira"
+      }
     },
     {
       "id": "3",
       "descricao": "Ambiente limpo e organizado.",
-      "usuario": "Carlos Souza",
-      "cargo": "cliente"
+      "usuario": {
+        "nome": "Carlos Souza",
+        "cargo": "cliente",
+        "imageSrc": "https://example.com/images/carlos-souza.jpg",
+        "imageAlt": "Foto de Carlos Souza"
+      }
     },
     {
       "id": "4",
       "descricao": "Sugiro atualizar o manual interno.",
-      "usuario": "Ana Paula",
-      "cargo": "funcionario"
+      "usuario": {
+        "nome": "Ana Paula",
+        "cargo": "funcionario",
+        "imageSrc": "https://example.com/images/ana-paula.jpg",
+        "imageAlt": "Foto de Ana Paula"
+      }
     }
   ]
-  }
+}
   
