@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Feedback } from '../models/Feedback';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
+import { CardDisplay } from '../models/CardDisplay';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,18 @@ import { Observable } from 'rxjs';
 export class FeedbacksService {
   httpClient = inject(HttpClient);
 
-   getFeedbacks(): Observable<Feedback[]> {
-     return this.httpClient.get<Feedback[]>('http://localhost:3000/feedbacks');
-    }
+  getFeedbacks(): Observable<Partial<CardDisplay>[]> {
+    return this.httpClient.get<Feedback[]>('http://localhost:3000/feedbacks').pipe(
+      map(feedbacks =>
+        feedbacks.map(fb => ({
+          id: fb.id,
+          title: fb.usuario.nome,
+          subtitle: fb.usuario.cargo,
+          secondSubtitle: fb.descricao,
+          imageSrc: fb.usuario.imageSrc,
+          imageAlt: fb.usuario.imageAlt,
+        }))
+      )
+    );
+  }  
 }
