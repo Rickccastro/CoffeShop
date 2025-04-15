@@ -3,6 +3,8 @@ import { CardComponent } from '../card/card.component';
 import { CardDisplay } from '../../models/CardDisplay';
 import { ButtonComponent } from '../button/button.component';
 import { Coffe } from '../../models/Coffe';
+import { Feedback } from '../../models/Feedback';
+
 
 @Component({
   selector: 'app-list-products',
@@ -13,11 +15,11 @@ import { Coffe } from '../../models/Coffe';
 })
 export class ListProductsComponent {
   @Input() cardsList: Partial<CardDisplay>[] = [];
-  @Input() cardOption: 'small' | 'default' = 'default';
+  @Input() cardOption: 'feedback' |'small' | 'default' = 'default';
   buttonText:string = ''
 
+  visibleCards: number = 4;
   currentIndex = 0;
-  visibleCards = 4;
 
   prev(): void {
     this.currentIndex = Math.max(0, this.currentIndex - 1);
@@ -40,16 +42,18 @@ export class ListProductsComponent {
   hasVisibleCardsWithShowButton(): boolean {
     return this.visibleCardsList.some(
       (card) =>
-        card.secondSubtitle !== null &&
-        card.secondSubtitle !== undefined &&
-        card.secondSubtitle.trim() !== ''
+        this.cardOption === 'default'
     );
   }
 
   get visibleCardsList(): any[] {
-    return this.cardsList.slice(
+    const visible = this.cardsList.slice(
       this.currentIndex,
       this.currentIndex + this.visibleCards
     );
+    if(this.cardOption === 'feedback'){
+      visible.length = 1
+    }
+    return visible;
   }
 }
