@@ -3,8 +3,12 @@
   padding: 100vh 0 0 0rem;
 }
 
-section{
-  padding-top: 100px;
+#section-pad{
+   padding-top: 30px; 
+}
+
+#section-pado{
+  margin-top: 200px; 
 }
 
 .text-aligner {
@@ -33,6 +37,10 @@ section{
   color: #707070;
 }
 
+#great-ideas{
+  padding-top: 50px;
+}
+
 #splash-direita {
     display: flex;
     flex-direction: row;
@@ -47,15 +55,14 @@ section{
     display: flex;
     flex-direction: row;
     position: absolute;
-    top: -125px;
+    top: -60px;
     left: 0;
     z-index: -1; 
 }
 
-#baixo {
+.splash-baixo {
     display: flex;
     flex-direction: row;
-    top: 450px;
     position: absolute;
     left: 0;
     z-index: -1;
@@ -90,6 +97,7 @@ section{
 }
 #coffe-one{
   background-image: url("../../../assets/footer/customer.webp");  
+  background-position: top;
 }
 
 #coffe-two{
@@ -110,10 +118,8 @@ section{
   color: white;
 }
 
-.subscribe-text{
-  color: white;
-}
 .subscribe-text h1{
+  color: white;
   font-size: 50px;
   width: 750px;  
 }
