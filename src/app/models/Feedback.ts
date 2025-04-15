@@ -1,10 +1,13 @@
-export interface Feedback {
-    id?: string;
-    imageSrc: string;
-    imageAlt: string;
+import { CardDisplay } from "./CardDisplay";
+
+export interface Feedback extends CardDisplay {
     descricao: string;
-    usuario: string;
-    cargo: string ;
+    usuario: {
+        nome: string;
+        cargo: string;
+        imageSrc: string;
+        imageAlt: string;
+      };
 }
   
   
