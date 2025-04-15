@@ -7,17 +7,19 @@ import { ActivatedRoute } from '@angular/router';
 import { ListProductsComponent } from '../../components/list-products/list-products.component';
 import { STATIC_BANNERS } from '../../data/static-data';
 import { Banner } from '../../models/Banner';
+import { Feedback } from '../../models/Feedback';
+import { InputComponent } from '../../components/input/input.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, ButtonComponent, ListProductsComponent],
+  imports: [HeaderComponent, ButtonComponent, ListProductsComponent, InputComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
   coffees = signal<Coffe[]>([]);
-  feedbacks = signal<CardDisplay[]>([]);
+  feedbacks = signal<Feedback[]>([]);
 
   banners: Partial<Banner>[] = STATIC_BANNERS;
   @Input() cardOption: 'small' | 'default' = 'default';
@@ -27,7 +29,7 @@ export class HomeComponent {
   ngOnInit() {
     this.route.data.subscribe((data) => {
       this.coffees.set(data['coffe']);
-      this.feedbacks.set(data['feedbacks']);
+      this.feedbacks.set(data['feedback']);
     });
   }
 }
