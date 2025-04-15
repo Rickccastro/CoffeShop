@@ -1,7 +1,7 @@
   <div class="carousel-container">
 
     <div class="container-list">
-      <app-button id="align-button" [showButton]="hasVisibleCardsWithShowButton()" (click)="prev()" [disabled]="currentIndex === 0">
+      <app-button id="align-button" [showButton]="carouselShowButton()" (click)="prev()" [disabled]="currentIndex === 0">
         <img src="../../../assets/carousel/arrow-left.svg" alt="Voltar" />
       </app-button>
 
@@ -11,11 +11,11 @@
           [data]="card"
           [cardOption]="cardOption"
           [buttonText]="hasText()"
-          [showButton]="hasVisibleCardsWithShowButton()">
+          [showButton]="showButtonCardDisplay()">
         </app-card>
       }
 
-      <app-button id="align-button" [showButton]="hasVisibleCardsWithShowButton()" (click)="next()" [disabled]="currentIndex === 0">
+      <app-button id="align-button" [showButton]="carouselShowButton()" (click)="next()" [disabled]="currentIndex === 0">
         <img src="../../../assets/carousel/arrow-right.svg" alt="Voltar" />
       </app-button>
 

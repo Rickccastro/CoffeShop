@@ -15,45 +15,60 @@ import { Feedback } from '../../models/Feedback';
 })
 export class ListProductsComponent {
   @Input() cardsList: Partial<CardDisplay>[] = [];
-  @Input() cardOption: 'feedback' |'small' | 'default' = 'default';
+  @Input() cardOption?: 'feedback' |'small' | 'default' = 'default';
+  
   buttonText:string = ''
 
-  visibleCards: number = 4;
   currentIndex = 0;
 
-  prev(): void {
-    this.currentIndex = Math.max(0, this.currentIndex - 1);
-  }
-
   next(): void {
-    this.currentIndex = Math.min(
-      this.cardsList.length - this.visibleCards,
-      this.currentIndex + 1
-    );
+    if (this.cardsList.length === 0) return;
+  
+    this.currentIndex = (this.currentIndex + 1) % this.cardsList.length;
+  }
+  
+  prev(): void {
+    if (this.cardsList.length === 0) return;
+  
+    this.currentIndex =
+      (this.currentIndex - 1 + this.cardsList.length) % this.cardsList.length;
   }
 
   hasText(): string {
-    if(this.hasVisibleCardsWithShowButton()){
+    if(this.showButtonCardDisplay()){
      return this.buttonText= 'Order Now'
     }
     return this.buttonText
   }
 
-  hasVisibleCardsWithShowButton(): boolean {
+  showButtonCardDisplay(): boolean{
+    if(this.cardOption === 'default'){
+     return true
+    } 
+    return false 
+  }
+
+  carouselShowButton(): boolean {
     return this.visibleCardsList.some(
       (card) =>
-        this.cardOption === 'default'
+        this.cardOption === 'default' || this.cardOption === 'feedback'
     );
   }
 
   get visibleCardsList(): any[] {
-    const visible = this.cardsList.slice(
-      this.currentIndex,
-      this.currentIndex + this.visibleCards
-    );
-    if(this.cardOption === 'feedback'){
-      visible.length = 1
+    const totalCards = this.cardsList.length;
+    const visible = 4;
+  
+    if (this.cardOption === 'feedback') {
+      return totalCards ? [this.cardsList[this.currentIndex]] : [];
     }
-    return visible;
+  
+    const cardsToShow: any[] = [];
+    for (let i = 0; i < visible; i++) {
+      const index = (this.currentIndex + i) % totalCards;
+      cardsToShow.push(this.cardsList[index]);
+    }
+  
+    return cardsToShow;
   }
 }

@@ -12,7 +12,7 @@ import { CardDisplay } from '../../models/CardDisplay';
 })
 export class CardComponent {
   @Input() data: Partial<CardDisplay> = {}; 
-  @Input() cardOption: 'feedback' |'small' | 'default' = 'default';
+  @Input() cardOption?: 'feedback' |'small' | 'default' = 'default';
   @Input() showButton!: boolean;
   @Input() buttonText!: string;
 }
