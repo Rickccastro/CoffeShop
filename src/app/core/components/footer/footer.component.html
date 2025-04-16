@@ -1,45 +1,44 @@
-<footer id="section-pado">
-    <section>
-      <div class="image-formatter">
-        <div id="coffe-two" class="background-layer">
-          <div class="content-container">
-            <div class="subscribe-container">
-              <div id="subcribe-text-size" class="subscribe-content">
-                <h1>Contact With Us </h1>
-                <ul>
-                  <li>Phone</li>
-                  <li>Email</li>
-                </ul>
-              </div>              
-
-              <div id="subcribe-text-size" class="subscribe-content">
-                <h1>Be Social</h1>
-                <ul>
-                  <li>WhatsZapp</li>
-                  <li>Instagram</li>
-                  <li>Twitter</li>
-                </ul>
-
-              </div>
-              <div id="subcribe-email-size" class="subscribe-content">
-                <h1>Subscribe to get the Latest News</h1>
-                <p>
-                  Don’t miss out on our latest news, updates, tips and special
-                  offers
-                </p>
-                <app-input
-                  [label]="'Email'"
-                  [type]="'email'"
-                  [placeholder]="'Ex. ricardo.castro@gmail.com'"
-                  [formControl]="emailFormControl"
-                >
-                </app-input>
-                <app-button>Sign In</app-button>
-                  
-              </div>
+<footer>
+  <section>
+    <div class="image-formatter">
+      <div id="coffe-two" class="background-layer">
+        <div class="content-container">
+          <div class="subscribe-content">
+            <div>
+              <h1>Contact With Us</h1>
+              <ul>
+                <li>Phone</li>
+                <li>Email</li>
+              </ul>
             </div>
+
+            <div>
+              <h1>Be Social</h1>
+              <ul>
+                <li>WhatsZapp</li>
+                <li>Instagram</li>
+                <li>Twitter</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subscribe-email">
+            <h1>Subscribe to get the Latest News</h1>
+            <p>
+              Don’t miss out on our latest news, updates, tips and special
+              offers
+            </p>
+            <app-input
+              [label]="'Email'"
+              [type]="'email'"
+              [placeholder]="'Ex. ricardo.castro@gmail.com'"
+              [formControl]="emailFormControl"
+            >
+            </app-input>
+            <app-button>Sign In</app-button>
           </div>
         </div>
       </div>
-    </section>
-  </footer>
+    </div>
+  </section>
+</footer>

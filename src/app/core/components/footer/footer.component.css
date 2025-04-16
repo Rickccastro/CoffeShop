@@ -1,30 +1,64 @@
-#section-pado{
-    margin-top: 200px; 
+  .background-layer {
+    position: absolute;
+    width: 100%;
+    height:100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    pointer-events: none;
+    background-size: cover;
+     /* tom café */
+     background-position: center; 
+     background-blend-mode: multiply; /* mistura cor e imagem */ 
+     z-index: 1;
   }
+  .image-formatter {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
   
-.subscribe-container{
+  }
+
+  #coffe-two{
+    background-color:  #382208;
+    opacity: 0.95;
+    background-image: url("../../../../assets/footer/coffe-footer.png");  
+  }
+
+  .content-container {
     display: flex;
+    padding-top: 50px;
     flex-direction: row;
-    max-width: 700px;
+    gap: 100px;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
   }
-  
+
   .subscribe-content{
-    font-weight: regular; 
-    color: white;
-    font-size: 20px;
+   display: flex;
+   flex-direction: row;
+   gap: 50px;
+   font-weight: regular; 
+   color: white;
+   font-size: 20px;
   }
+
   #subcribe-text-size{
-    min-width: 250px;
+    min-width: fit-content; 
   }
-  #subcribe-email-size{
-    min-width: 425px;
+
+  .subscribe-email{
+    max-width: 425px;
+    max-height: 130px;
   }
-  .subscribe-content h1{
+
+  h1{
     font-weight: regular; 
     color: white;
     font-size: 30px;
   }
   
   footer {
-    margin-top: 100px;
+    margin-top: 210px;
   }
