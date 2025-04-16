@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { ResolveFn } from '@angular/router';
 
 import { coffeeResolver } from './coffe.resolver';
-import { Coffe } from '../core/components/models/Coffe';
+import { Coffe } from '../core/models/Coffe';
 import { Observable } from 'rxjs';
 
 describe('coffeResolver', () => {

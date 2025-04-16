@@ -3,8 +3,8 @@ import { ResolveFn } from '@angular/router';
 
 import { feedbackResolver } from './feedbacks.resolver';
 import { Observable } from 'rxjs';
-import { Feedback } from '../core/components/models/Feedback';
-import { CardDisplay } from '../core/components/models/CardDisplay';
+import { Feedback } from '../core/models/Feedback';
+import { CardDisplay } from '../core/models/CardDisplay';
 
 describe('feedbacksResolver', () => {
   const executeResolver: ResolveFn<Observable<Partial<CardDisplay[]>>> = (...resolverParameters) => 

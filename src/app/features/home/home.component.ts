@@ -1,10 +1,10 @@
 import { Component, inject, Input, signal } from '@angular/core';
 import { ButtonComponent } from '../../shared/components/button/button.component';
-import { Coffe } from '../../core/components/models/Coffe';
+import { Coffe } from '../../core/models/Coffe';
 import { ActivatedRoute } from '@angular/router';
 import { ListProductsComponent } from '../../shared/components/list-products/list-products.component';
-import { Banner } from '../../core/components/models/Banner';
-import { Feedback } from '../../core/components/models/Feedback';
+import { Banner } from '../../core/models/Banner';
+import { Feedback } from '../../core/models/Feedback';
 import { HeaderComponent } from '../../shared/components/header/header.component';
 import { STATIC_BANNERS } from '../../shared/data/static-data';
 

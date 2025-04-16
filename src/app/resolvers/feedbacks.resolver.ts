@@ -3,8 +3,8 @@ import { inject } from '@angular/core';
 import { map } from 'rxjs/operators';
 
 import { Observable } from 'rxjs';
-import { Feedback } from '../core/components/models/Feedback';
-import { CardDisplay } from '../core/components/models/CardDisplay';
+import { Feedback } from '../core/models/Feedback';
+import { CardDisplay } from '../core/models/CardDisplay';
 import { FeedbacksService } from '../shared/services/feedbacks.service';
 
 
