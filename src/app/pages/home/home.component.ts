@@ -10,11 +10,12 @@ import { Banner } from '../../models/Banner';
 import { Feedback } from '../../models/Feedback';
 import { InputComponent } from '../../components/input/input.component';
 import { FormControl, Validators } from '@angular/forms';
+import { FooterComponent } from "../../components/footer/footer.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, ButtonComponent, ListProductsComponent, InputComponent],
+  imports: [HeaderComponent, ButtonComponent, ListProductsComponent, FooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
@@ -25,19 +26,11 @@ export class HomeComponent {
   banners: Partial<Banner>[] = STATIC_BANNERS;
   @Input() cardOption: 'small' | 'default' = 'default';
 
-  emailFormControl!: FormControl 
-
-
   private route = inject(ActivatedRoute);
   ngOnInit() {
     this.route.data.subscribe((data) => {
       this.coffees.set(data['coffe']);
       this.feedbacks.set(data['feedback']);
     });
-
-    this.emailFormControl = new FormControl('', [
-      Validators.required,
-      Validators.email,
-    ]);
   }
 }

@@ -7,10 +7,6 @@
    padding-top: 30px; 
 }
 
-#section-pado{
-  margin-top: 200px; 
-}
-
 .text-aligner {
   text-align: center;
   position: relative; 
@@ -116,21 +112,4 @@
 
 .getchance-text p{
   color: white;
-}
-
-.subscribe-text h1{
-  color: white;
-  font-size: 50px;
-  width: 750px;  
-}
-.subscribe-text p{
-  width: 750px; 
-  font-size: 20px;
-  font-weight: regular; 
-}
-
-
-footer {
-  margin-top: 100px;
-  /* background-color: #442808; */
 }
