@@ -1,11 +1,11 @@
 import { ResolveFn } from '@angular/router';
-import { FeedbacksService } from '../services/feedbacks.service'; // Adjust the path as needed
 import { inject } from '@angular/core';
 import { map } from 'rxjs/operators';
 
 import { Observable } from 'rxjs';
 import { Feedback } from '../core/components/models/Feedback';
 import { CardDisplay } from '../core/components/models/CardDisplay';
+import { FeedbacksService } from '../shared/services/feedbacks.service';
 
 
 export const feedbackResolver: ResolveFn<Observable<CardDisplay[]>> = () => {

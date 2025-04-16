@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { Feedback } from '../core/components/models/Feedback';
 import { map, Observable } from 'rxjs';
-import { CardDisplay } from '../core/components/models/CardDisplay';
+import { CardDisplay } from '../../core/components/models/CardDisplay';
+import { Feedback } from '../../core/components/models/Feedback';
 
 @Injectable({
   providedIn: 'root'
