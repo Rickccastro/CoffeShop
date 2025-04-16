@@ -6,6 +6,10 @@
     background-position: bottom;
     pointer-events: none;
     background-size: cover;
+
+    background-color:  #382208;
+    opacity: 0.95;
+    background-image: url("../../../../assets/footer/coffe-footer.png");  
      /* tom café */
      background-position: center; 
      background-blend-mode: multiply; /* mistura cor e imagem */ 
@@ -18,13 +22,6 @@
     overflow: hidden;
   
   }
-
-  #coffe-two{
-    background-color:  #382208;
-    opacity: 0.95;
-    background-image: url("../../../../assets/footer/coffe-footer.png");  
-  }
-
   .content-container {
     display: flex;
     padding-top: 50px;
@@ -54,11 +51,13 @@
   }
 
   h1{
-    font-weight: regular; 
     color: white;
     font-size: 30px;
   }
-  
+  ul {
+    list-style: none;
+    font-weight: bold;
+  }
   footer {
     margin-top: 210px;
   }
