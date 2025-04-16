@@ -10,12 +10,11 @@ import { Banner } from '../../models/Banner';
 import { Feedback } from '../../models/Feedback';
 import { InputComponent } from '../../components/input/input.component';
 import { FormControl, Validators } from '@angular/forms';
-import { FooterComponent } from "../../components/footer/footer.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, ButtonComponent, ListProductsComponent, FooterComponent],
+  imports: [HeaderComponent, ButtonComponent, ListProductsComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
