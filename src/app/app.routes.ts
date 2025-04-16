@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
+import { HomeComponent } from './features/home/home.component';
 import { coffeeResolver } from './resolvers/coffe.resolver';
 import { feedbackResolver } from './resolvers/feedbacks.resolver';
 

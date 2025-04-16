@@ -4,8 +4,8 @@ import { inject } from '@angular/core';
 import { map } from 'rxjs/operators';
 
 import { Observable } from 'rxjs';
-import { Feedback } from '../models/Feedback';
-import { CardDisplay } from '../models/CardDisplay';
+import { Feedback } from '../core/components/models/Feedback';
+import { CardDisplay } from '../core/components/models/CardDisplay';
 
 
 export const feedbackResolver: ResolveFn<Observable<CardDisplay[]>> = () => {

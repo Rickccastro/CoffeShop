@@ -1,4 +1,4 @@
-import { CardDisplay } from '../models/CardDisplay';
+import { CardDisplay } from '../core/components/models/CardDisplay';
 
 export const STATIC_BANNERS: Partial<CardDisplay>[] = [
   {

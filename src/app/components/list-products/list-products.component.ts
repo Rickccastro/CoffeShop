@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { CardComponent } from '../card/card.component';
-import { CardDisplay } from '../../models/CardDisplay';
+import { CardDisplay } from '../../core/components/models/CardDisplay';
 import { ButtonComponent } from '../button/button.component';
-import { Coffe } from '../../models/Coffe';
-import { Feedback } from '../../models/Feedback';
+import { Coffe } from '../../core/components/models/Coffe';
+import { Feedback } from '../../core/components/models/Feedback';
 
 
 @Component({
