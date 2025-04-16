@@ -2,9 +2,6 @@ import { Component, Input } from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import { CardDisplay } from '../../../core/models/CardDisplay';
 import { ButtonComponent } from '../button/button.component';
-import { Coffe } from '../../../core/models/Coffe';
-import { Feedback } from '../../../core/models/Feedback';
-
 
 @Component({
   selector: 'app-list-products',
