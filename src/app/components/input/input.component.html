@@ -1,14 +1,19 @@
-<form class="form-container">
+<!-- <form class="form-container">*/
+</form> -->
+<div class="form-container">
   <mat-form-field class="form-field-container">
-    <mat-label>Email</mat-label>
-    <input #emailInput type="email" matInput [formControl]="emailFormControl"
-           placeholder="Ex. ricardo.castro.linkedin@gmail.com" />
-    
-    @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
-      <mat-error>Please enter a valid email address</mat-error>
+    <mat-label>{{ label }}</mat-label>
+  <input
+    [type]="type"
+    matInput
+    [placeholder]="placeholder"
+    [formControl]="formControl"
+  />    
+    @if (formControl.hasError('email') && !formControl.hasError('required')) {
+      <mat-error>Please enter a valid {{label}} address</mat-error>
     }
-    @if (emailFormControl.hasError('required')) {
-      <mat-error>Email is <strong>required</strong></mat-error>
+    @if (formControl.hasError('required')) {
+      <mat-error>{{label}} is <strong>required</strong></mat-error>
     }
   </mat-form-field>
-</form>
+</div>

@@ -9,6 +9,7 @@ import { STATIC_BANNERS } from '../../data/static-data';
 import { Banner } from '../../models/Banner';
 import { Feedback } from '../../models/Feedback';
 import { InputComponent } from '../../components/input/input.component';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -24,6 +25,8 @@ export class HomeComponent {
   banners: Partial<Banner>[] = STATIC_BANNERS;
   @Input() cardOption: 'small' | 'default' = 'default';
 
+  @Input() emailFormControl!: FormControl 
+
 
   private route = inject(ActivatedRoute);
   ngOnInit() {
@@ -31,5 +34,10 @@ export class HomeComponent {
       this.coffees.set(data['coffe']);
       this.feedbacks.set(data['feedback']);
     });
+
+    this.emailFormControl = new FormControl('', [
+      Validators.required,
+      Validators.email,
+    ]);
   }
 }

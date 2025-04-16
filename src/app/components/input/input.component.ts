@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import {
   FormControl,
   FormsModule,
@@ -22,8 +22,8 @@ import { MatInputModule } from '@angular/material/input';
   styleUrl: './input.component.css',
 })
 export class InputComponent {
-  emailFormControl = new FormControl('', [
-    Validators.required,
-    Validators.email,
-  ]);
+  @Input() label!: string;
+  @Input() type: string = 'text';
+  @Input() placeholder: string = '';
+  @Input() formControl!: FormControl;
 }
