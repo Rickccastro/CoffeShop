@@ -25,7 +25,7 @@ export class HomeComponent {
   banners: Partial<Banner>[] = STATIC_BANNERS;
   @Input() cardOption: 'small' | 'default' = 'default';
 
-  @Input() emailFormControl!: FormControl 
+  emailFormControl!: FormControl 
 
 
   private route = inject(ActivatedRoute);
