@@ -89,7 +89,7 @@
 }
 
 #coffe-cup{
-  width: 400px;
+  width: 40rem;
 }
 #coffe-one{
   background-image: url("../../../assets/footer/customer.webp");  
@@ -97,10 +97,9 @@
 }
 
 .getchance-text h1{
-  width: 600px;
-  font-size: 55px;
+  width: 60rem;
+  font-size: 5.5rem;
   color: white;
-  /* color: #6c3a09; */
   font-weight: bold;
 }
 
