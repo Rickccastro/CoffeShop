@@ -1,49 +1,102 @@
-.navbar-content{
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    z-index: 2; /* fica na frente */ 
-    padding: 0px 5rem;
-    align-items: center;
+* {
+  font-size: 2.5rem;
+  box-sizing: border-box;
 }
-.navbar-logo{
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  width: 100%;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.navbar-logo {
   font-family: "Clicker Script", cursive;
-  width: 15%;
- 
+  color: white;
+  flex: 1 1 auto;
 }
 
-p{
-    color: white;
-    font-size: 2.5rem;
-}
-
-.navbar-list{
-    justify-content: center;
-    width: 70%;
-    display: flex;
-    gap: 0px 2rem;
-    flex-direction: row;
-}
-ul{
-    list-style: none;
-    flex-direction: row;
-}
- a{
-    text-decoration: none;
-    color: white;
+.navbar-list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  flex: 2 1 auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar-buttons {
-    display: flex;
-    flex: 1 1 auto;
-    justify-content: center;
-    width: 15%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex: 1 1 auto;
+}
+
+.navbar-list a {
+  text-decoration: none;
+  color: white;
+}
+
+p {
+  font-size: 5rem;
+  color: white;
+}
+
+app-button {
+  font-size: 2rem;
+}
+
+/* Toggle button for small screens */
+.navbar-toggle {
+  display: none;
+  font-size: 4rem;
+  cursor: pointer;
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  .navbar-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-toggle {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+
+  .navbar-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem 2rem;
     gap: 1rem;
   }
-  .navbar-buttons button {
-    background-color: #F9C06A;
-    width: 6rem;
-    height: 3rem;
-    border-radius: 1.5rem;
-    border: none;
-  }  
+
+  .navbar-list.show {
+    display: flex;
+  }
+
+  .navbar-buttons {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+  }
+}

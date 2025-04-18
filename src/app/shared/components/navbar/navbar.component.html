@@ -1,9 +1,14 @@
+<div class="navbar-container">
   <nav class="navbar-content">
     <div class="navbar-logo">
       <p>Bean Scene</p>
     </div>
 
-    <ul class="navbar-list">
+    <div class="navbar-toggle" onclick="toggleMenu()">
+      ☰
+    </div>
+
+    <ul class="navbar-list" id="navbar-list">
       <li><a href="#">Home</a></li>
       <li><a href="#">Menu</a></li>
       <li><a href="#">About us</a></li>
@@ -11,11 +16,8 @@
     </ul>
 
     <div class="navbar-buttons">
-      <app-button>
-        Sign In
-      </app-button>
-      <app-button>
-        Sign Out
-      </app-button>
+      <app-button>Sign In</app-button>
+      <app-button>Sign Out</app-button>
     </div>
   </nav>
+</div>
