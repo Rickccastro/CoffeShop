@@ -2,7 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 16px;
+  }
+
+  :root {
+    --custom-f-size: 62.5%;
+  }
+  
+  html {
+    font-size: var(--custom-f-size); /* 1rem = 10px */
   }
 
 html, body { height: 100%; }
@@ -15,12 +22,10 @@ body {
   }
 
   h1{
-    font-size: 55px;
     color: #6c3a09;
     font-weight: bold;
   }
   p{
-    font-size: 20px;
     color: #707070;
  }
 
