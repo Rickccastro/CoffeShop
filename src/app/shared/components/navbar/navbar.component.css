@@ -11,7 +11,7 @@
   z-index: 3; 
   display: flex;
   justify-content: space-between;
-  padding: 10px 30px 0 30px;
+  padding: 1rem 2rem 0 1rem;
 }
 
 .navbar-menu{
@@ -26,7 +26,8 @@
 }
 
 .navbar-logo {
-  font-size: clamp(3rem, 3vw, 6rem);
+  font-size: clamp(1.5rem, 3vw, 6rem);
+  width: clamp(1rem, 3vw, 3rem);
   font-family: "Clicker Script", cursive;
   flex: 1 1 auto;
 }
@@ -49,6 +50,7 @@
 @media (max-width: 768px) {
   .navbar-container{
     justify-content: space-between;
+    padding-right: 0;
   }
   .navbar-menu{
     display: flex;
@@ -56,8 +58,10 @@
   }
 
   #menu-icone{
-    height: 4rem;
-    width: 5rem;
+    text-align: center;
+    align-items: center;
+    height: 2.5rem;
+    width: 3rem;
   }
   .navbar-list, .navbar-buttons {
     display: none;

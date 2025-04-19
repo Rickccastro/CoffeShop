@@ -1,14 +1,15 @@
 p {
   color: white;
-  font-size: clamp(2rem, 3vw, 3rem);
-  width: clamp(40rem, 50vw, 70rem);
+  font-size: clamp(1rem, 2vw, 2rem);
+  width: clamp(20rem, 50vw, 70rem);
 }
 
 h1 {
   color: white;
   font-family: "Clicker Script", cursive;
-  font-size: clamp(12rem, 20vw, 30rem);
+  font-size: clamp(5rem, 15vw, 30rem);
 }
+
 
 .main-wrapper {
   position: relative;
@@ -36,11 +37,11 @@ h1 {
   position: relative;
   z-index: 1;
   display: flex;
-  padding-top: 6%;
-  padding-inline: 15%;
   color: white;
 }
 
 .hero-text{
+  padding-top: 10%;
+  padding-inline: 12%;
   max-width: fit-content;
 }
