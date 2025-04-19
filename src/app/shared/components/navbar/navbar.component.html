@@ -1,11 +1,12 @@
 <div class="navbar-container">
-  <nav class="navbar-content">
     <div class="navbar-logo">
       <p>Bean Scene</p>
     </div>
 
     <div class="navbar-menu">
-      <mat-icon svgIcon="menu-icon-registred" class="menu-icon"></mat-icon>
+      <button mat-button [matMenuTriggerFor]="menu">
+        <mat-icon id="menu-icone" svgIcon="menu-icon-registred" class="menu-icon"></mat-icon>
+      </button>
       <mat-menu #menu="matMenu">
         <button mat-menu-item>Item 1</button>
         <button mat-menu-item>Item 2</button>
@@ -19,5 +20,4 @@
       <li><a href="#">Contact us</a></li>
       <li><a id="account" href="#">Account</a></li>
     </ul>
-  </nav>
 </div>

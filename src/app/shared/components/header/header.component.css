@@ -28,7 +28,7 @@ h1 {
 .hero-header img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* cobre a área sem distorcer */
+  object-fit: fill; 
   object-position: top center;
 }
 
@@ -44,39 +44,3 @@ h1 {
 .hero-text{
   max-width: fit-content;
 }
-
-.hero-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 150vh;
-  z-index: 0;
-}
-
-.main-wrapper {
-  width: 212vw;
-}
-
-
-@media (min-width: 768px) {
-  .main-wrapper {
-    width: 160vw;
-  }  
-}
-
-@media (min-width: 1440px) {
-  .main-wrapper {
-    width: 120vw;
-  }
-}
-
-@media (min-width: 2440px) {
-  .main-wrapper {
-    width: 100vw;
-  }
-}
-
-
-
-

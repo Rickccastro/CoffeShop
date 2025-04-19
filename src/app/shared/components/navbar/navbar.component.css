@@ -4,16 +4,15 @@
 
 .navbar-container {
   position: absolute; 
+  align-items: center;
   top: 0;
   left: 0;
   width: 100%; /* Igual ao .main-wrapper */
   z-index: 3; 
   display: flex;
-  justify-content: center;
-  padding-top: 10px;
+  justify-content: space-between;
+  padding: 10px 30px 0 30px;
 }
-
-
 
 .navbar-menu{
   display: none;
@@ -22,8 +21,8 @@
 .navbar-content {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  width: 70%;
+  justify-content: space-between;
+  gap: 10rem;
 }
 
 .navbar-logo {
@@ -34,44 +33,31 @@
 
 .navbar-list {
   display: flex;
-  font-size: clamp(1rem, 3vw, 2.5rem);
   gap: 2rem;
+  min-width: 30rem;
   list-style: none;
   flex: 2 1 auto;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
 }
 
-
-.navbar-buttons {
-  font-size: clamp(1rem, 3vw, 2rem);
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex: 1 1 auto;
-}
-
 .navbar-list a {
+  font-size: clamp(1rem, 2vw, 2.5rem);
   text-decoration: none;
 }
 
-.navbar-toggle {
-  display: none;
-  font-size: 4rem;
-  cursor: pointer;
-} 
-
-
-/* Responsivo */
 @media (max-width: 768px) {
+  .navbar-container{
+    justify-content: space-between;
+  }
   .navbar-menu{
     display: flex;
     justify-content: end;
-    width:10rem;
   }
-  .menu-icon{
-    width: 10rem;
-    height: 3.5rem;
+
+  #menu-icone{
+    height: 4rem;
+    width: 5rem;
   }
   .navbar-list, .navbar-buttons {
     display: none;
