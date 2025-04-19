@@ -1,36 +1,40 @@
-* {
-  font-size: 2.5rem;
-  box-sizing: border-box;
+*{
+  color: white;
 }
 
 .navbar-container {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%; /* Igual ao .main-wrapper */
+  z-index: 3; 
   display: flex;
   justify-content: center;
   padding-top: 10px;
-  width: 100%;
+}
+
+
+
+.navbar-menu{
+  display: none;
 }
 
 .navbar-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
   gap: 2rem;
-  width: 100%;
-  max-width: 1200px;
-  padding: 0 2rem;
-  position: relative;
-  z-index: 2;
+  width: 70%;
 }
 
 .navbar-logo {
+  font-size: clamp(3rem, 3vw, 6rem);
   font-family: "Clicker Script", cursive;
-  color: white;
   flex: 1 1 auto;
 }
 
 .navbar-list {
   display: flex;
+  font-size: clamp(1rem, 3vw, 2.5rem);
   gap: 2rem;
   list-style: none;
   flex: 2 1 auto;
@@ -38,7 +42,9 @@
   align-items: center;
 }
 
+
 .navbar-buttons {
+  font-size: clamp(1rem, 3vw, 2rem);
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -47,56 +53,27 @@
 
 .navbar-list a {
   text-decoration: none;
-  color: white;
 }
 
-p {
-  font-size: 5rem;
-  color: white;
-}
-
-app-button {
-  font-size: 2rem;
-}
-
-/* Toggle button for small screens */
 .navbar-toggle {
   display: none;
   font-size: 4rem;
   cursor: pointer;
-  color: white;
-}
+} 
 
 
+/* Responsivo */
 @media (max-width: 768px) {
-  .navbar-content {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navbar-toggle {
-    display: block;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-  }
-
-  .navbar-list {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 1rem 2rem;
-    gap: 1rem;
-  }
-
-  .navbar-list.show {
+  .navbar-menu{
     display: flex;
+    justify-content: end;
+    width:10rem;
   }
-
-  .navbar-buttons {
-    flex-direction: column;
-    width: 100%;
-    align-items: flex-start;
+  .menu-icon{
+    width: 10rem;
+    height: 3.5rem;
+  }
+  .navbar-list, .navbar-buttons {
+    display: none;
   }
 }

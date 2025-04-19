@@ -4,8 +4,12 @@
       <p>Bean Scene</p>
     </div>
 
-    <div class="navbar-toggle" onclick="toggleMenu()">
-      ☰
+    <div class="navbar-menu">
+      <mat-icon svgIcon="menu-icon-registred" class="menu-icon"></mat-icon>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
     </div>
 
     <ul class="navbar-list" id="navbar-list">
@@ -13,11 +17,7 @@
       <li><a href="#">Menu</a></li>
       <li><a href="#">About us</a></li>
       <li><a href="#">Contact us</a></li>
+      <li><a id="account" href="#">Account</a></li>
     </ul>
-
-    <div class="navbar-buttons">
-      <app-button>Sign In</app-button>
-      <app-button>Sign Out</app-button>
-    </div>
   </nav>
 </div>
