@@ -2,6 +2,22 @@
    padding-top: 30px; 
 }
 
+.discover-section{
+  display: flex;
+  gap:3rem
+}
+
+#coffe-cup{
+  width: clamp(20rem,20vw,60rem);
+  height: auto;
+}
+
+.discover-photo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .text-aligner {
   text-align: center;
   position: relative; 
@@ -9,34 +25,32 @@
 }
 .content-container {
   display: flex;
-  padding-top: 50px;
-  gap: 100px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
 .discover-text h1{
-  width: 550px;
-  font-size: 55px;
+  max-width: 55rem;
+  font-size:clamp(3rem,5vw,5.5rem);
   color: #6c3a09;
   font-weight: bold;
 }
 .discover-text p {
-  font-size: 20px;
-  max-width: 40rem;
+  font-size:clamp(1.5rem,3vw,3rem);
+  max-width: 60rem;
   color: #707070;
 }
 
 #great-ideas{
-  padding-top: 50px;
+  padding-top: 5rem;
 }
 
 #splash-direita {
     display: flex;
     flex-direction: row;
     position: absolute;
-    top: -100px;
+    top: -10rem;
     right: 0;
     transform: scaleX(-1);
     z-index: -1; /* joga pra trás do texto */    
@@ -46,7 +60,7 @@
     display: flex;
     flex-direction: row;
     position: absolute;
-    top: -60px;
+    top: -6rem;
     left: 0;
     z-index: -1; 
 }
@@ -83,9 +97,7 @@
    z-index: 1;
 }
 
-#coffe-cup{
-  width: 40rem;
-}
+
 #coffe-one{
   background-image: url("../../../assets/footer/customer.webp");  
   background-position: top;
@@ -100,4 +112,13 @@
 
 .getchance-text p{
   color: white;
+}
+
+/*Mobile*/
+@media (max-width: 768px) {
+  .discover-section{
+    display: flex;
+    flex-direction: column;
+    gap:3rem
+  }  
 }
