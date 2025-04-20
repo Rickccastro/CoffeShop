@@ -8,6 +8,7 @@ import {
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { MatInputModule } from '@angular/material/input';
+import { ButtonComponent } from "../button/button.component";
 
 @Component({
   selector: 'app-input',
@@ -17,7 +18,7 @@ import { MatInputModule } from '@angular/material/input';
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
-  ],
+],
   templateUrl: './input.component.html',
   styleUrl: './input.component.css',
 })
