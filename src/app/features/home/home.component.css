@@ -1,15 +1,37 @@
-#section-pad{
-   padding-top: 30px; 
+.content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
+
+h1{
+  font-size:clamp(3rem,5vw,10rem);
+}
+
+p {
+  font-size:clamp(1.5rem,2vw,4rem);
+  color: #707070;
+}
+
+/* #section-pad{
+   padding-top: 30px; 
+} */
 
 .discover-section{
   display: flex;
+  padding: 1rem;
   gap:3rem
+}
+.discover-text{
+  max-width: 700px;
+}
+.discover-subtitle{
+  max-width: 800px;
 }
 
 #coffe-cup{
-  width: clamp(20rem,20vw,60rem);
-  height: auto;
+  width: clamp(20rem,30vw,60rem);
 }
 
 .discover-photo{
@@ -18,29 +40,21 @@
   justify-content: center;
 }
 
-.text-aligner {
-  text-align: center;
+.splash-container{
   position: relative; 
-  text-align: center;
-}
-.content-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 
-.discover-text h1{
-  max-width: 55rem;
-  font-size:clamp(3rem,5vw,5.5rem);
-  color: #6c3a09;
-  font-weight: bold;
+.enjoy-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
 }
-.discover-text p {
-  font-size:clamp(1.5rem,3vw,3rem);
-  max-width: 60rem;
-  color: #707070;
+
+.text-aligner {
+  text-align: center;
 }
+
 
 #great-ideas{
   padding-top: 5rem;
