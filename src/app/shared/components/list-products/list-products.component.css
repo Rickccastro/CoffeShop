@@ -4,6 +4,6 @@
 }
 .container-list {
   display: flex;
-  gap: 16px; 
+  gap: 1rem; 
   transition: transform 10s ease;
 }

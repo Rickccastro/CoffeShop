@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import { CardDisplay } from '../../../core/models/CardDisplay';
 import { ButtonComponent } from '../button/button.component';
@@ -10,13 +10,33 @@ import { ButtonComponent } from '../button/button.component';
   templateUrl: './list-products.component.html',
   styleUrl: './list-products.component.css',
 })
-export class ListProductsComponent {
+export class ListProductsComponent implements OnInit {
   @Input() cardsList: Partial<CardDisplay>[] = [];
   @Input() cardOption?: 'feedback' |'small' | 'default' = 'default';
-  
   buttonText:string = ''
-
   currentIndex = 0;
+  cardsToShow: number = 4; // valor padrão para desktop
+
+
+
+  ngOnInit(): void {
+    this.updateCardsToShow(); // definir valor inicial baseado na tela
+  }
+
+  @HostListener('window:resize', [])
+  onResize() {
+    this.updateCardsToShow();
+  }
+
+  updateCardsToShow() {
+    const width = window.innerWidth;
+
+    if (width < 768) {
+      this.cardsToShow = 1; // mobile
+    } else {
+      this.cardsToShow = 4; // desktop
+    }
+  }
 
   next(): void {
     if (this.cardsList.length === 0) return;
@@ -27,8 +47,7 @@ export class ListProductsComponent {
   prev(): void {
     if (this.cardsList.length === 0) return;
   
-    this.currentIndex =
-      (this.currentIndex - 1 + this.cardsList.length) % this.cardsList.length;
+    this.currentIndex = (this.currentIndex - 1 + this.cardsList.length) % this.cardsList.length;
   }
 
   hasText(): string {
@@ -54,14 +73,13 @@ export class ListProductsComponent {
 
   get visibleCardsList(): any[] {
     const totalCards = this.cardsList.length;
-    const visible = 4;
   
     if (this.cardOption === 'feedback') {
       return totalCards ? [this.cardsList[this.currentIndex]] : [];
     }
   
     const cardsToShow: any[] = [];
-    for (let i = 0; i < visible; i++) {
+    for (let i = 0; i < this.cardsToShow; i++) {
       const index = (this.currentIndex + i) % totalCards;
       cardsToShow.push(this.cardsList[index]);
     }
