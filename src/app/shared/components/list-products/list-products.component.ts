@@ -6,7 +6,7 @@ import { ButtonComponent } from '../button/button.component';
 @Component({
   selector: 'app-list-products',
   standalone: true,
-  imports: [CardComponent],
+  imports: [CardComponent, ButtonComponent],
   templateUrl: './list-products.component.html',
   styleUrl: './list-products.component.css',
 })
@@ -34,7 +34,7 @@ export class ListProductsComponent implements OnInit {
     if (width < 768) {
       this.cardsToShow = 1; // mobile
     }
-    if(width<845){
+    else if(width<845){
       this.cardsToShow = 3;
     } else {
       this.cardsToShow = 4; // desktop
