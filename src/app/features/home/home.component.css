@@ -39,6 +39,9 @@ p {
 .splash-container{
   position: relative; 
 }
+.splash-container img{
+  max-width: clamp(20rem, 17vw, 40rem);
+}
 
 .enjoy-text{
   display: flex;
@@ -59,10 +62,10 @@ p {
     display: flex;
     flex-direction: row;
     position: absolute;
-    top: -10rem;
+    top: -4rem;
     right: 0;
     transform: scaleX(-1);
-    z-index: -1; /* joga pra trás do texto */    
+    z-index: -1;
 }
 
 #splash-esquerda{ 
@@ -82,6 +85,10 @@ p {
     z-index: -1;
 }
 
+#splash-baixo-feedback{
+  bottom: -25px;
+}
+
 .image-formatter {
   position: relative;
   width: 100%;
@@ -91,7 +98,6 @@ p {
 }
 
 
-/* fundo base com filtro marrom */
 .background-layer {
   position: absolute;
   width: 100%;
@@ -100,9 +106,8 @@ p {
   background-position: bottom;
   pointer-events: none;
   background-size: cover;
-   /* tom café */
    background-position: center; 
-   background-blend-mode: multiply; /* mistura cor e imagem */ 
+   background-blend-mode: multiply; 
    z-index: 1;
 }
 
@@ -130,4 +135,7 @@ p {
     flex-direction: column;
     gap:3rem
   }  
+  .splash-container{
+    display: none;
+  }
 }

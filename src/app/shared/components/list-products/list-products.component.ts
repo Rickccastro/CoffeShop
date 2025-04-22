@@ -34,7 +34,7 @@ export class ListProductsComponent implements OnInit {
     if (width < 768) {
       this.cardsToShow = 1; // mobile
     }
-    else if(width<845){
+    else if(width<1200){
       this.cardsToShow = 3;
     } else {
       this.cardsToShow = 4; // desktop
