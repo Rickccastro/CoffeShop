@@ -16,6 +16,14 @@ export class NavbarComponent{
   buttonIn: string = 'Sign In';
   buttonOut: string = 'Sign Out';
 
+  menuItems = [
+    { label: 'Home', link: '#' },
+    { label: 'Produtos', link: '#' },
+    { label: 'About us', link: '#' },
+    { label: 'Contact us', link: '#' },
+    { label: 'Account', link: '#' },
+  ];
+
   constructor(
     private iconRegistry: MatIconRegistry,
     private sanitizer: DomSanitizer

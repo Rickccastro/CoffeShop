@@ -1,23 +1,40 @@
 <div class="navbar-container">
-    <div class="navbar-logo">
-      <p>Bean Scene</p>
-    </div>
+  <div class="navbar-logo">
+    <p>Bean Scene</p>
+  </div>
 
-    <div class="navbar-menu">
-      <button mat-button [matMenuTriggerFor]="menu">
-        <mat-icon id="menu-icone" svgIcon="menu-icon-registred" class="menu-icon"></mat-icon>
+  <div class="navbar-menu">
+    <button mat-button [matMenuTriggerFor]="menu">
+      <mat-icon
+        id="menu-icone"
+        svgIcon="menu-icon-registred"
+        class="menu-icon"
+      ></mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <li><a href="#">Home</a></li>
       </button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item>Item 1</button>
-        <button mat-menu-item>Item 2</button>
-      </mat-menu>
-    </div>
+      <button mat-menu-item>
+        <li><a href="#">Produtos</a></li>
+      </button>
+      <button mat-menu-item>
+        <li><a href="#">About Us</a></li>
+      </button>
+      <button mat-menu-item>
+        <li><a href="#">Contact</a></li>
+      </button>
+      <button mat-menu-item>
+        <li><a href="#">Account</a></li>
+      </button>
+    </mat-menu>
+  </div>
 
-    <ul class="navbar-list" id="navbar-list">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Menu</a></li>
-      <li><a href="#">About us</a></li>
-      <li><a href="#">Contact us</a></li>
-      <li><a id="account" href="#">Account</a></li>
-    </ul>
+  <ul class="navbar-list" id="navbar-list">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Produtos</a></li>
+    <li><a href="#">About us</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">Account</a></li>
+  </ul>
 </div>
