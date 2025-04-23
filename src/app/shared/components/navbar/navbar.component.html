@@ -3,27 +3,47 @@
     <p>Bean Scene</p>
   </div>
 
-  <div class="navbar-menu">
-    <button mat-button [matMenuTriggerFor]="menu">
-      <mat-icon
-        id="menu-icone"
-        svgIcon="menu-icon-registred"
-        class="menu-icon"
-      ></mat-icon>
+  <!-- Mobile menu com botão -->
+  <div class="navbar-menu mobile-only">
+    <button mat-button [matMenuTriggerFor]="defaultMenu">
+      <mat-icon id="menu-icone" svgIcon="menu-icon-registred"></mat-icon>
     </button>
-    <mat-menu #menu="matMenu">
+
+    <mat-menu #defaultMenu="matMenu">
       @for (item of menuItems; track item.label) {
-        <button mat-menu-item>
-          <a [href]="item.link">{{ item.label }}</a>
+        @if (!item.submenu) {
+          <button mat-menu-item [routerLink]="item.link">
+            {{ item.label }}
+          </button>
+        } @else {
+          <button mat-menu-item [matMenuTriggerFor]="productsMenu">
+            {{ item.label }}
+          </button>
+        }
+      }
+    </mat-menu>
+
+    <!-- Submenu -->
+    <mat-menu #productsMenu="matMenu">
+      @for (sub of getSubmenu('Products'); track sub.label) {
+        <button mat-menu-item [routerLink]="sub.link">
+          {{ sub.label }}
         </button>
       }
-    </mat-menu>    
+    </mat-menu>
   </div>
 
-  <ul class="navbar-list" id="navbar-list">
+  <!-- Desktop menu direto na navbar -->
+  <ul class="navbar-list desktop-only">
     @for (item of menuItems; track item.label) {
       <li>
-        <a [href]="item.link">{{ item.label }}</a>
+        @if (!item.submenu) {
+          <a [routerLink]="item.link">{{ item.label }}</a>
+        } @else {
+          <a href="javascript:void(0)" [matMenuTriggerFor]="productsMenu">
+            {{ item.label }}
+          </a>
+        }
       </li>
     }
   </ul>

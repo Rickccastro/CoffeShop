@@ -32,6 +32,11 @@
   flex: 1 1 auto;
 }
 
+button{
+  width: fit-content;
+  padding:0;
+}
+
 .navbar-list {
   display: flex;
   gap: 2rem;
@@ -47,14 +52,19 @@
   text-decoration: none;
 }
 
+.mat-mdc-menu-item {
+padding-left: 16px;
+padding-right: 16px;
+
+} 
+
 @media (max-width: 768px) {
-  .navbar-container{
-    justify-content: space-between;
-    padding-right: 0;
+  .mobile-only {
+    display: block;
   }
-  .navbar-menu{
-    display: flex;
-    justify-content: end;
+
+  .desktop-only {
+    display: none;
   }
 
   #menu-icone{
@@ -63,7 +73,5 @@
     height: 2.5rem;
     width: 3rem;
   }
-  .navbar-list, .navbar-buttons {
-    display: none;
-  }
+  
 }
