@@ -2,11 +2,12 @@ import { Component, EventEmitter, inject, input, Output} from '@angular/core';
 import { FormGroup, FormBuilder, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { ButtonComponent } from "../button/button.component";
 
 @Component({
   selector: 'app-form',
   standalone: true,
-  imports: [ReactiveFormsModule,FormsModule, MatFormFieldModule, MatInputModule],
+  imports: [ReactiveFormsModule, FormsModule, MatFormFieldModule, MatInputModule, ButtonComponent],
   templateUrl: './form.component.html',
   styleUrl: './form.component.css'
 })

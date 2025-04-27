@@ -1,22 +1,53 @@
-<form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-container">
-  <div class="form-content-container">
-    <app-input
-      label="Nome"
-      formControlName="Nome"
-      placeholder="Nome"
-    ></app-input>
 
-    <app-input
-      label="Email"
-      formControlName="Email"
-      placeholder="Email"
-    ></app-input>
+<div class="form-container">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="title-form">
+      <h1>Formulario de Cadastro</h1>
+    </div>
 
-    <app-input
-      label="Senha"
-      formControlName="Senha"
-      placeholder="Senha"
-    ></app-input>
-    <button mat-raised-button color="primary" type="submit">Salvar</button>
-  </div>
-</form>
+    <div class="form-content-container">      
+      <mat-form-field>
+        <mat-label>CPF</mat-label>
+        <input
+          matInput
+          type="name"
+          formControlName="cpf"
+          placeholder="123.456.789-09"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input
+          matInput
+          type="name"
+          formControlName="nome"
+          placeholder="Ricardo Parmezan de Almeida Castro"
+        />
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          type="email"
+          formControlName="email"
+          placeholder="Ex:ricardo.castro@gmail.com"
+        />
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Senha</mat-label>
+        <input
+          matInput
+          type="password"
+          formControlName="senha"
+          placeholder="123456"
+        />
+      </mat-form-field>
+  
+      <app-button>Salvar</app-button>
+    </div>
+  </form>
+
+</div>
