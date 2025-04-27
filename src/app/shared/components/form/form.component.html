@@ -1,0 +1,22 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-container">
+  <div class="form-content-container">
+    <app-input
+      label="Nome"
+      formControlName="Nome"
+      placeholder="Nome"
+    ></app-input>
+
+    <app-input
+      label="Email"
+      formControlName="Email"
+      placeholder="Email"
+    ></app-input>
+
+    <app-input
+      label="Senha"
+      formControlName="Senha"
+      placeholder="Senha"
+    ></app-input>
+    <button mat-raised-button color="primary" type="submit">Salvar</button>
+  </div>
+</form>
