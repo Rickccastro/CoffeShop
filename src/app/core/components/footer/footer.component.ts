@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
-import { ButtonComponent } from "../../../shared/components/button/button.component";
-import { InputComponent } from "../../../shared/components/input/input.component";
-import { FormControl, Validators } from '@angular/forms';
+import { Component, inject } from '@angular/core';
 import { NotificationFormComponent } from "../../../shared/components/notification-form/notification-form.component";
+import { User } from '../../models/User/User';
+import { UserService } from '../../../shared/services/user.service';
 
 @Component({
   selector: 'app-footer',
@@ -12,8 +11,10 @@ import { NotificationFormComponent } from "../../../shared/components/notificati
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-  emailFormControl = new FormControl('', [
-    Validators.required,
-    Validators.email,
-  ]);
+  userService = inject(UserService);
+
+  onSubmit(user: User) 
+  {
+    this.userService.cadastroEmailNotification(user);
+  }    
 }
