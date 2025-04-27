@@ -1,26 +1,33 @@
-import { Component } from '@angular/core';
-import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ButtonComponent } from '../button/button.component';
+import { User } from '../../../core/models/User/User';
 
 @Component({
   selector: 'app-notification-form',
   standalone: true,
-  imports: [    FormsModule,
-      MatFormFieldModule,
-      MatInputModule,
-      ReactiveFormsModule, ButtonComponent],
+  imports: [
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ButtonComponent,
+  ],
   templateUrl: './notification-form.component.html',
-  styleUrl: './notification-form.component.css'
+  styleUrls: ['./notification-form.component.css'],
 })
 export class NotificationFormComponent {
-  form!: FormGroup;
+  @Output() send = new EventEmitter<User>();
+  @Input() user: User | null = null;
 
-  onSubmit(): void {
-    if (this.form.valid) {
-      console.log(this.form.value);
-      // Lógica de envio de dados ou outros processos aqui
-    }
+  emailFormControl = new FormControl('', [
+    Validators.required,
+    Validators.email,
+  ]);
+
+  onSubmit() {
+    const user = { Email: this.emailFormControl.value } as User;
+    this.send.emit(user);
   }
 }
