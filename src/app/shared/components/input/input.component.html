@@ -1,17 +1,6 @@
 <div class="form-container">
   <mat-form-field class="form-field-container">
     <mat-label>{{ label }}</mat-label>
-  <input
-    [type]="type"
-    matInput
-    [placeholder]="placeholder"
-    [formControl]="formControl"
-  />    
-    @if (formControl.hasError('email') && !formControl.hasError('required')) {
-      <mat-error>Please enter a valid {{label}} address</mat-error>
-    }
-    @if (formControl.hasError('required')) {
-      <mat-error>{{label}} is <strong>required</strong></mat-error>
-    }
+      <input [type]="type" [placeholder]="placeholder" matInput/>    
   </mat-form-field>
 </div>

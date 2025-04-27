@@ -1,14 +1,12 @@
-import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import {
   FormControl,
   FormsModule,
   ReactiveFormsModule,
-  Validators,
 } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { MatInputModule } from '@angular/material/input';
-import { ButtonComponent } from "../button/button.component";
 
 @Component({
   selector: 'app-input',
@@ -26,5 +24,4 @@ export class InputComponent {
   @Input() label!: string;
   @Input() type: string = 'text';
   @Input() placeholder: string = '';
-  @Input() formControl!: FormControl;
 }
