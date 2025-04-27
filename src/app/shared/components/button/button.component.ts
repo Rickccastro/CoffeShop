@@ -12,4 +12,5 @@ export class ButtonComponent {
   @Input() showButton: boolean = true;
   @Input() disabled: boolean = false;
   @Output() onClick = new EventEmitter<Event>();
+  @Input() type: 'button' | 'submit' = 'button';
 }
