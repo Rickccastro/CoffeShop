@@ -1,0 +1,21 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-container">
+  <div class="form-content-container">
+    <!-- <app-input
+      label="Email"
+      placeholder="Email"
+      [formControl]="form.get('email')"
+    ></app-input> -->
+
+    <mat-form-field>
+      <mat-label>Input</mat-label>
+      <input
+        matInput
+        type="email"
+        formControlName="Email"
+        placeholder="Email"
+      />
+    </mat-form-field>
+
+    <app-button>Sign In</app-button>
+  </div>
+</form>
