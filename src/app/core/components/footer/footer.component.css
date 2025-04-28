@@ -19,7 +19,7 @@
   left: 0;
   z-index: 2;
   width: 100%;
-  padding: 1.5rem 1.5rem 0;
+  padding: 0.5rem 0.5rem 0 0.5rem;
   display: flex;
   justify-content: center;
   gap: 10rem;
@@ -43,16 +43,16 @@
 }
 
 .footer h1{
-  font-size: clamp(1.25rem, 2.5vw, 2.5rem);
+  font-size: clamp(2rem, 2.5vw, 2.5rem);
   color: white;
 }
 
 .footer li{
-  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+  font-size: clamp(1.5rem, 1.5vw, 1.5rem);
 }
 
 .footer p{
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(1.5rem, 2vw, 2rem);
 }
 
 .footer ul {
@@ -65,11 +65,14 @@
   height: fit-content;
   align-items: start;
   display: flex;
-  gap: 10px;
+   gap: 10px; 
+}
+.data-content2{
+  display: none;
 }
 
 .footer p {
-  margin: 1rem 0;
+   margin: 1rem 0; 
   color: white;
 }
 
@@ -77,9 +80,23 @@
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
-    gap: 4rem;
+    gap: 2rem;
+  }
+  .subscribe-email p{
+    display: none;
   }
   app-button button{
     min-width: 30px;
   }
+  .footer p {
+    margin:  0; 
+    color: white;
+  }
+.data-content{
+  height: fit-content;
+  align-items: start;
+  display: flex;
+  gap: 0; 
+}
+  
 }
