@@ -7,6 +7,7 @@
         type="email"
         [formControl]="emailFormControl"
         placeholder="Ex:ricardo.castro@gmail.com"
+        class="custom-height"
       />
     </mat-form-field>
 
@@ -16,6 +17,6 @@
     @if (emailFormControl.hasError('required') && emailFormControl.touched) {
       <mat-error>Email is <strong>required</strong></mat-error>
     }
-    <app-button type="submit">Sign In</app-button>
   </div>
+  <app-button type="submit">Subscribe</app-button>
 </form>

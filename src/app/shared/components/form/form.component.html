@@ -1,29 +1,15 @@
-
 <div class="form-container">
-  <form [formGroup]="form" (ngSubmit)="onSubmit()">
-    <div class="title-form">
-      <h1>Formulario de Cadastro</h1>
-    </div>
-
-    <div class="form-content-container">      
+  <h1>Cadastro de Usuarios</h1>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-container">
+    <div class="form-content-container">
       <mat-form-field>
         <mat-label>CPF</mat-label>
-        <input
-          matInput
-          type="name"
-          formControlName="cpf"
-          placeholder="123.456.789-09"
-        />
+        <input matInput type="text" formControlName="senha" placeholder="123.456.789-09" />
       </mat-form-field>
-
+  
       <mat-form-field>
         <mat-label>Nome</mat-label>
-        <input
-          matInput
-          type="name"
-          formControlName="nome"
-          placeholder="Ricardo Parmezan de Almeida Castro"
-        />
+        <input matInput type="text" formControlName="nome" placeholder="Ricardo Castro" />
       </mat-form-field>
   
       <mat-form-field>
@@ -32,7 +18,7 @@
           matInput
           type="email"
           formControlName="email"
-          placeholder="Ex:ricardo.castro@gmail.com"
+          placeholder="ricardo.castro.linkedin@gmail.com"
         />
       </mat-form-field>
   
@@ -45,9 +31,7 @@
           placeholder="123456"
         />
       </mat-form-field>
-  
-      <app-button>Salvar</app-button>
-    </div>
+     </div>
+     <app-button>Salvar</app-button>
   </form>
-
 </div>
