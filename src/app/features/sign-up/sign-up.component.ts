@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormComponent } from '../../shared/components/form/form.component';
+import { NotificationFormComponent } from "../../shared/components/notification-form/notification-form.component";
 
 @Component({
   selector: 'app-sign-up',
