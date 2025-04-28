@@ -8,9 +8,9 @@
     --custom-f-size: 62.5%;
   }
   
-  html {
-    font-size: var(--custom-f-size); /* 1rem = 10px */
-  }
+   html {
+    font-size: var(--custom-f-size); 
+  } 
 
 html, body { height: 100%; }
 body {
@@ -28,5 +28,11 @@ body {
   p{
     color: #707070;
  }
+
+.mat-mdc-text-field-wrapper {
+    background-color: #6c3a09 !important;
+    height: 30px;
+ /* rgba(249, 192, 106, 0.42) !important; */
+}
 
 
