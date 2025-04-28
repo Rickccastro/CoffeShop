@@ -10,25 +10,35 @@
     </button>
 
     <mat-menu #defaultMenu="matMenu">
-      @for (item of menuItems; track item.label) {
-        @if (!item.submenu) {
-          <button mat-menu-item [routerLink]="item.link">
-            {{ item.label }}
-          </button>
-        } @else {
-          <button mat-menu-item [matMenuTriggerFor]="productsMenu">
-            {{ item.label }}
-          </button>
-        }
-      }
+      @for (item of menuItems; track item.label) { @if (!item.submenu) {
+      <button mat-menu-item [routerLink]="item.link">
+        {{ item.label }}
+      </button>
+      } @else if (item.label === 'Account') {
+      <button mat-menu-item [matMenuTriggerFor]="accountMenu">
+        {{ item.label }}
+      </button>
+      } @else {
+      <button mat-menu-item [matMenuTriggerFor]="productsMenu">
+        {{ item.label }}
+      </button>
+      } }
     </mat-menu>
 
     <!-- Submenu -->
     <mat-menu #productsMenu="matMenu">
       @for (sub of getSubmenu('Products'); track sub.label) {
-        <button mat-menu-item [routerLink]="sub.link">
-          {{ sub.label }}
-        </button>
+      <button mat-menu-item [routerLink]="sub.link">
+        {{ sub.label }}
+      </button>
+      }
+    </mat-menu>
+    <!--Submenu-->
+    <mat-menu #accountMenu="matMenu">
+      @for (sub of getSubmenu('Account'); track sub.label) {
+      <button mat-menu-item [routerLink]="sub.link">
+        {{ sub.label }}
+      </button>
       }
     </mat-menu>
   </div>
@@ -36,15 +46,15 @@
   <!-- Desktop menu direto na navbar -->
   <ul class="navbar-list desktop-only">
     @for (item of menuItems; track item.label) {
-      <li>
-        @if (!item.submenu) {
-          <a [routerLink]="item.link">{{ item.label }}</a>
-        } @else {
-          <a href="javascript:void(0)" [matMenuTriggerFor]="productsMenu">
-            {{ item.label }}
-          </a>
-        }
-      </li>
+    <li>
+      @if (!item.submenu) {
+      <a [routerLink]="item.link">{{ item.label }}</a>
+      } @else {
+      <a href="javascript:void(0)" [matMenuTriggerFor]="productsMenu">
+        {{ item.label }}
+      </a>
+      }
+    </li>
     }
   </ul>
 </div>

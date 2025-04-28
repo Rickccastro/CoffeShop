@@ -58,7 +58,7 @@ button {
 }
 
 ::ng-deep .mat-mdc-menu-content {
-  background-color: rgba(249, 192, 106, 0.42) !important;
+  background-color: rgba(249, 192, 106, 0.759) !important;
 } 
 
 ::ng-deep .mat-mdc-menu-content > .mat-mdc-menu-item > .mat-mdc-menu-item-text {

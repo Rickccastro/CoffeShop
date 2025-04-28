@@ -27,7 +27,12 @@ export class NavbarComponent{
     },
     { label: 'About us', link: '#' },
     { label: 'Contact us', link: '#' },
-    { label: 'Account', link: '#' }
+    { label: 'Account', 
+      submenu: [
+        { label: 'Register', link: '/sign-up' },
+        { label: 'Login', link: '#' },
+      ]
+     }
   ];
   
 
