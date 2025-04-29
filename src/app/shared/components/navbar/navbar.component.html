@@ -46,15 +46,19 @@
   <!-- Desktop menu direto na navbar -->
   <ul class="navbar-list desktop-only">
     @for (item of menuItems; track item.label) {
-    <li>
-      @if (!item.submenu) {
-      <a [routerLink]="item.link">{{ item.label }}</a>
-      } @else {
-      <a href="javascript:void(0)" [matMenuTriggerFor]="productsMenu">
-        {{ item.label }}
-      </a>
-      }
-    </li>
+      <li>
+        @if (!item.submenu) {
+          <a [routerLink]="item.link">{{ item.label }}</a>
+        } @else if (item.label === 'Products') {
+          <a href="javascript:void(0)" [matMenuTriggerFor]="productsMenu">
+            {{ item.label }}
+          </a>
+        } @else if (item.label === 'Account') {
+          <a href="javascript:void(0)" [matMenuTriggerFor]="accountMenu">
+            {{ item.label }}
+          </a>
+        }
+      </li>
     }
-  </ul>
+  </ul>  
 </div>

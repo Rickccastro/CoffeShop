@@ -34,7 +34,6 @@ export class NavbarComponent{
       ]
      }
   ];
-  
 
   constructor(
     private iconRegistry: MatIconRegistry,
