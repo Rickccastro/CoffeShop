@@ -4,8 +4,8 @@ export interface User {
     Nome?: string;
     Email?: string;
     Senha?: string;
-    imageSrc?: string;
-    imageAlt?: string;
+    // imageSrc?: string;
+    // imageAlt?: string;
 }
   
   
