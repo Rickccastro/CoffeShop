@@ -18,10 +18,10 @@ export class SignUpComponent {
       
   onSubmit(user: User) 
   {
-     this.userService.cadastroUser(user);
-    // .subscribe((data)=>{
-    //   alert(`Usuario ${data.Nome} cadastrado com sucesso!`);
-    //   this.router.navigateByUrl('/');
-    // });
+     this.userService.cadastroUser(user)
+    .subscribe((data)=>{
+      alert(`Usuario ${data.Nome} cadastrado com sucesso!`);
+      this.router.navigateByUrl('/');
+    });
   }    
 }

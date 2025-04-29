@@ -1,40 +1,39 @@
 {
-    "coffes": [
-      {
-        "id": "1",
-        "imageSrc": "assets/coffes/coffe-one.svg",
-        "imageAlt": "Coffee Cup",
-        "title": "Cappuccino",
-        "subtitle": "Coffee 50% | Milk 50%",
-        "secondSubtitle": "$8.50"
-      },
-      {
-        "id": "2",
-        "imageSrc": "assets/coffes/coffe-two.svg",
-        "imageAlt": "Coffee Mug",
-        "title": "Espresso",
-        "subtitle": "Strong and rich",
-        "secondSubtitle": "$6.00"
-      },
-      {
-        "id": "3",
-        "imageSrc": "assets/coffes/coffe-three.svg",
-        "imageAlt": "Coffee Beans",
-        "title": "Macchiato",
-        "subtitle": "More milk, less coffee",
-        "secondSubtitle": "$7.50"
-      },
-      {
-        "id": "4",
-        "imageSrc": "assets/coffes/coffe-four.svg",
-        "imageAlt": "Coffee Beans",
-        "title": "Expresso",
-        "subtitle": "Concentrated Coffee ",
-        "secondSubtitle": "$9.50"
-      }
-    ],
-
-    "feedbacks": [
+  "coffes": [
+    {
+      "id": "1",
+      "imageSrc": "assets/coffes/coffe-one.svg",
+      "imageAlt": "Coffee Cup",
+      "title": "Cappuccino",
+      "subtitle": "Coffee 50% | Milk 50%",
+      "secondSubtitle": "$8.50"
+    },
+    {
+      "id": "2",
+      "imageSrc": "assets/coffes/coffe-two.svg",
+      "imageAlt": "Coffee Mug",
+      "title": "Espresso",
+      "subtitle": "Strong and rich",
+      "secondSubtitle": "$6.00"
+    },
+    {
+      "id": "3",
+      "imageSrc": "assets/coffes/coffe-three.svg",
+      "imageAlt": "Coffee Beans",
+      "title": "Macchiato",
+      "subtitle": "More milk, less coffee",
+      "secondSubtitle": "$7.50"
+    },
+    {
+      "id": "4",
+      "imageSrc": "assets/coffes/coffe-four.svg",
+      "imageAlt": "Coffee Beans",
+      "title": "Expresso",
+      "subtitle": "Concentrated Coffee ",
+      "secondSubtitle": "$9.50"
+    }
+  ],
+  "feedbacks": [
     {
       "id": "1",
       "descricao": "A Coffee Shop me conquistou desde o primeiro gole! O ambiente é super aconchegante, o atendimento é impecável e cada bebida tem um sabor único, feito com muito carinho. Sou apaixonado pelo cappuccino deles é equilibrado e sempre vem na temperatura ideal. E os doces? Uma verdadeira tentação! Já virou meu cantinho favorito pra trabalhar, relaxar ou encontrar os amigos. Não é só café, é uma experiência. Recomendo de olhos fechados!",
@@ -48,7 +47,6 @@
     {
       "id": "2",
       "descricao": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumWhy do we use it? It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).Where does it come from? Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line in section 1.10.32..",
-      
       "usuario": {
         "nome": "Maria Oliveira",
         "cargo": "funcionario",
@@ -76,6 +74,28 @@
         "imageAlt": "Foto de Ana Paula"
       }
     }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "cpf": "12345678909",
+      "nome": "Ricardo Castro",
+      "email": "ricardo.castro.linkedin@gmail.com",
+      "senha": "123"
+    },
+    {
+      "id": "ff8e",
+      "cpf": "98765432100",
+      "nome": "João da Silva",
+      "email": "joao.silva@example.com",
+      "senha": "senhaSegura123"
+    },
+    {
+      "id": "f3a1",
+      "cpf": "123457809",
+      "nome": "rick",
+      "email": "ricardo.castro.linkedin@gmail.com",
+      "senha": "123456"
+    }
   ]
 }
-  

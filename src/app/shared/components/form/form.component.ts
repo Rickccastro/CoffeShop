@@ -31,7 +31,7 @@ export class FormComponent {
     this.form = new FormGroup({
       cpf: new FormControl<string>(this.user()?.Cpf ?? '', {
         nonNullable: true,
-        validators: Validators.required,
+        validators: [Validators.required,]
       }),
       nome: new FormControl<string>(this.user()?.Nome ?? '', {
         nonNullable: true,
@@ -40,12 +40,12 @@ export class FormComponent {
 
       email: new FormControl<string>(this.user()?.Email ?? '', {
         nonNullable: true,
-        validators: Validators.required,
+        validators: [Validators.required,Validators.email]
       }),
 
       senha: new FormControl<string>(this.user()?.Senha ?? '', {
         nonNullable: true,
-        validators: Validators.required,
+        validators: [Validators.required, Validators.pattern("^[0-9]+$")]
       }),
     });
   }
