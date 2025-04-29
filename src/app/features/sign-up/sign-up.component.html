@@ -1,3 +1,20 @@
-<div class="content-container">
-  <app-form></app-form>
-</div>
+  <div class="splash-container">
+    <img
+      id="splash-esquerda"
+      src="../../../assets/coffes/coffe-splash.svg"
+      alt="Coffe-Slapsh"
+    />
+  </div>
+  
+  <div class="content-container">
+    <app-form (send)="onSubmit($event)"></app-form>
+  </div>
+  
+  <div class="splash-container">
+    <img
+      id="splash-direita"
+      src="../../../assets/coffes/coffe-splash.svg"
+      alt="Coffe-Slapsh"
+    />
+  </div>
+
