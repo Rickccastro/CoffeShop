@@ -10,10 +10,14 @@ export class UserService {
   produtos: any[] = [];
 
   cadastroEmailNotification(user: User) {
-    return this.httpClient.post<User>('http://localhost:3000/users', user.Email);
+    return this.httpClient.post<User>('http://localhost:3000/users', user.email);
   }
 
   cadastroUser(user: User) { 
+    return this.httpClient.post<User>('http://localhost:3000/users', user);
+  }
+
+  loginUser(user: User) { 
     console.log(user)
     return this.httpClient.post<User>('http://localhost:3000/users', user);
   }

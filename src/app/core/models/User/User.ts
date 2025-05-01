@@ -1,9 +1,9 @@
 export interface User {
     id?: string;
-    Cpf: string;
-    Nome?: string;
-    Email?: string;
-    Senha?: string;
+    cpf: string;
+    nome?: string;
+    email?: string;
+    senha?: string;
     // imageSrc?: string;
     // imageAlt?: string;
 }
