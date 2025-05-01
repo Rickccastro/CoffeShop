@@ -1,9 +1,8 @@
 import { Component, inject } from '@angular/core';
-import { FormComponent } from '../../shared/components/form/form.component';
-import { NotificationFormComponent } from "../../shared/components/notification-form/notification-form.component";
 import { UserService } from '../../shared/services/user.service';
 import { Router } from '@angular/router';
 import { User } from '../../core/models/User/User';
+import { FormComponent } from '../../shared/components/forms/register-form/register-form.component';
 
 @Component({
   selector: 'app-sign-up',
@@ -20,7 +19,7 @@ export class SignUpComponent {
   {
      this.userService.cadastroUser(user)
     .subscribe((data)=>{
-      alert(`Usuario ${data.Nome} cadastrado com sucesso!`);
+      alert(`Usuario ${data.nome} cadastrado com sucesso!`);
       this.router.navigateByUrl('/');
     });
   }    
