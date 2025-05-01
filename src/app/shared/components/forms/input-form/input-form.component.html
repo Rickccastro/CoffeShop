@@ -1,0 +1,15 @@
+  <mat-form-field>
+    <mat-label>{{ label }}</mat-label>
+    <input
+      matInput
+      [type]="type"
+      [placeholder]="placeholder"
+      [formControl]="control"
+    />
+  </mat-form-field>
+  <!-- @if(control?.invalid && control?.touched){
+    <mat-error >
+      {{ getErrorMessage() }}
+    </mat-error>
+  } -->
+

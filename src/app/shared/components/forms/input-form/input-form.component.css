@@ -1,0 +1,31 @@
+.mat-mdc-form-field.mat-mdc-form-field-invalid .mdc-floating-label {
+  color: black !important;
+}
+
+mat-error {
+  font-size: clamp(1rem, 1vw, 1.5rem) !important;
+  color: rgba(255, 0, 0, 0.716) !important;
+}
+
+mat-label {
+  color: white !important;
+}
+
+.mdc-floating-label .mat-mdc-floating-label {
+  color: white !important;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-floating-label,
+.mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-floating-label--float-above,
+.mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--focused .mat-mdc-form-field-error .mat-mdc-form-field-bottom-align {
+  color: white !important;
+}
+
+
+.mat-mdc-text-field-wrapper {
+  height: 3rem !important;
+  background-color: #6c3a09 !important;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
