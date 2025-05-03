@@ -17,7 +17,7 @@ export class NavbarComponent{
   buttonIn: string = 'Sign In';
   buttonOut: string = 'Sign Out';
   menuItems = [
-    { label: 'Home', link: '#' },
+    { label: 'Home', link: '/' },
     {
       label: 'Products',
       submenu: [
@@ -30,7 +30,8 @@ export class NavbarComponent{
     { label: 'Account', 
       submenu: [
         { label: 'Register', link: '/sign-up' },
-        { label: 'Login', link: '#' },
+        { label: 'Login', link: '/sign-in' },
+        { label: 'Update', link: '/update-user' },
       ]
      }
   ];
