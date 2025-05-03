@@ -24,7 +24,7 @@ import { InputComponent } from '../input-form/input-form.component';
   templateUrl: './register-form.component.html',
   styleUrl: './register-form.component.css',
 })
-export class FormComponent {
+export class RegisterFormComponent {
   @Output() send = new EventEmitter<User>();
   user = input<User | null>(null);
   form!: FormGroup;
