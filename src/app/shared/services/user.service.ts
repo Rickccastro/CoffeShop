@@ -16,6 +16,10 @@ export class UserService {
   cadastroUser(user: User) { 
     return this.httpClient.post<User>('http://localhost:3000/users', user);
   }
+  
+  atualizarUser(user: User) { 
+    return this.httpClient.put<User>('http://localhost:3000/users', user);
+  }
 
   loginUser(user: User) { 
     console.log(user)
