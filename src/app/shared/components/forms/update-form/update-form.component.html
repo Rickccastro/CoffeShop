@@ -1,0 +1,30 @@
+<div class="form-container">
+    <h1>Atualizar Usuario</h1>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="form-content-container">  
+        <app-input
+          label="Nome"
+          type="text"
+          placeholder="Ricardo Castro"
+          [control]="getControl('nome')"
+        ></app-input>
+  
+        <app-input
+          label="Email"
+          type="email"
+          placeholder="ricardo.castro.linkedin@gmail.com"
+          [control]="getControl('email')"
+        >
+        </app-input>
+  
+        <app-input
+          label="Senha"
+          type="password"
+          placeholder="123456"
+          [control]="getControl('senha')"
+        ></app-input>
+      </div>
+      <app-button [type]="'submit'">Salvar</app-button>
+    </form>
+  </div>
+  
