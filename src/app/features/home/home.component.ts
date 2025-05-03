@@ -5,13 +5,12 @@ import { ActivatedRoute } from '@angular/router';
 import { ListProductsComponent } from '../../shared/components/list-products/list-products.component';
 import { Banner } from '../../core/models/Banner';
 import { Feedback } from '../../core/models/Feedback';
-import { HeaderComponent } from '../../shared/components/header/header.component';
 import { STATIC_BANNERS } from '../../shared/data/static-data';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, ButtonComponent, ListProductsComponent],
+  imports: [ButtonComponent, ListProductsComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
