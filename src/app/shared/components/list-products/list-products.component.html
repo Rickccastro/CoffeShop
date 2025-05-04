@@ -1,9 +1,5 @@
 <div class="container-list">
-  <app-button id="align-button" [showButton]="carouselShowButton()" (click)="prev()" [disabled]="currentIndex === 0">
-        <img src="../../../assets/carousel/arrow-left.svg" alt="Voltar" />
-      </app-button>
-
-  @for (card of visibleCardsList; track card.id || card.title) {
+  @for (card of visibleCards; track card.id || card.title) {
   <app-card
     [data]="card"
     [cardOption]="cardOption"
@@ -12,8 +8,4 @@
   >
   </app-card>
   }
-
-  <app-button id="align-button" [showButton]="carouselShowButton()" (click)="next()" [disabled]="currentIndex === 0">
-        <img src="../../../assets/carousel/arrow-right.svg" alt="Voltar" />
-      </app-button>
 </div>
