@@ -1,5 +1,16 @@
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
+
+#enviroment variables
+/src/environments/environment.development.ts
+/src/environments/enviroment.staging.ts
+/src/environments/environment.ts
+
+# Ignorar endpoints de desenvolvimento
+/src/config/apis/endpoints.development.json
+/src/config/apis/endpoints.staging.json
+/src/config/apis/endpoints.production.json
+
 # Compiled output
 /dist
 /tmp
