@@ -10,19 +10,19 @@ export class UserService {
   produtos: any[] = [];
 
   cadastroEmailNotification(user: User) {
-    return this.httpClient.post<User>('http://localhost:3000/users', user.email);
+    return this.httpClient.post<User>('/apiJson/users', user.email);
   }
 
   cadastroUser(user: User) { 
-    return this.httpClient.post<User>('http://localhost:3000/users', user);
+    return this.httpClient.post<User>('/apiJson/users', user);
   }
   
   atualizarUser(user: User) { 
-    return this.httpClient.put<User>('http://localhost:3000/users', user);
+    return this.httpClient.put<User>('/apiJson/users', user);
   }
 
   loginUser(user: User) { 
     console.log(user)
-    return this.httpClient.post<User>('http://localhost:3000/users', user);
+    return this.httpClient.post<User>('/apiJson/users', user);
   }
 }

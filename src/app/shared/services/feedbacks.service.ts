@@ -11,7 +11,7 @@ export class FeedbacksService {
   httpClient = inject(HttpClient);
 
   getFeedbacks(): Observable<Partial<CardDisplay>[]> {
-    return this.httpClient.get<Feedback[]>('http://localhost:3000/feedbacks').pipe(
+    return this.httpClient.get<Feedback[]>('/apiJson/feedbacks').pipe(
       map(feedbacks =>
         feedbacks.map(fb => ({
           id: fb.id,
