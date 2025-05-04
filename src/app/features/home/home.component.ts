@@ -6,11 +6,12 @@ import { ListProductsComponent } from '../../shared/components/list-products/lis
 import { Banner } from '../../core/models/Banner';
 import { Feedback } from '../../core/models/Feedback';
 import { STATIC_BANNERS } from '../../shared/data/static-data';
+import { CarouselComponent } from "../../shared/components/carousel/carousel.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ButtonComponent, ListProductsComponent],
+  imports: [ButtonComponent, ListProductsComponent, CarouselComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

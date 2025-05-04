@@ -42,7 +42,9 @@
 </div>
 
 <div class="content-container">
-  <app-list-products [cardsList]="coffees()"></app-list-products>
+   <app-carousel
+    [cardsList]="coffees()"
+    ></app-carousel>
 </div>
 
 <div class="splash-container">
@@ -107,10 +109,10 @@
     </div>
 
     <div class="feedback-container">
-      <app-list-products
-        [cardOption]="'feedback'"
-        [cardsList]="feedbacks()"
-      ></app-list-products>
+      <app-carousel
+      cardOption="feedback"
+      [cardsList]="feedbacks()"
+      ></app-carousel>
     </div>
   </section>
 </div>
