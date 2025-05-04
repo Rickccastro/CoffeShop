@@ -1,0 +1,19 @@
+<div class="container-list">
+  <app-button (click)="prev()" [disabled]="currentIndex === 0">
+    <img src="../../../assets/carousel/arrow-left.svg" alt="Voltar" />
+  </app-button>
+
+  <app-list-products
+    [cardsList]="cardsList"
+    [cardOption]="cardOption"
+    [currentIndex]="currentIndex"
+    (visibleCardsChange)="onVisibleCardsChange($event)"
+  ></app-list-products>
+
+  <app-button
+    (click)="next()"
+    [disabled]="cardsList.length <= visibleCards.length"
+  >
+    <img src="../../../assets/carousel/arrow-right.svg" alt="Avançar" />
+  </app-button>
+</div>

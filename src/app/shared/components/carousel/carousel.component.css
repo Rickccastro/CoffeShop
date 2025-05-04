@@ -1,0 +1,11 @@
+app-button{
+    display: flex;
+    align-items: center;
+  }
+  .container-list {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; 
+    transition: transform 10s ease;
+  }
+  
