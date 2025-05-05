@@ -13,8 +13,8 @@ import { CardDisplay } from '../../../core/models/CardDisplay';
 })
 export class CarouselComponent {
   @Input() cardsList: Partial<CardDisplay>[] = [];
-  @Input() cardOption?: 'feedback' | 'small' | 'default' = 'default';
-
+  @Input() cardOption?: 'feedback' | 'small' | 'default' = 'default'; 
+  buttonText = 'Order Now';
   currentIndex = 0;
   visibleCards: Partial<CardDisplay>[] = [];
 

@@ -1,14 +1,15 @@
-<div class="container-list">
+<div class="carrousel-container">
   <app-button (click)="prev()" [disabled]="currentIndex === 0">
     <img src="../../../assets/carousel/arrow-left.svg" alt="Voltar" />
   </app-button>
 
-  <app-list-products
-    [cardsList]="cardsList"
-    [cardOption]="cardOption"
-    [currentIndex]="currentIndex"
-    (visibleCardsChange)="onVisibleCardsChange($event)"
-  ></app-list-products>
+    <app-list-products
+      [cardsList]="cardsList"
+      [cardOption]="cardOption"
+      [buttonText]="buttonText"
+      [currentIndex]="currentIndex"
+      (visibleCardsChange)="onVisibleCardsChange($event)"
+    ></app-list-products>
 
   <app-button
     (click)="next()"
