@@ -1,0 +1,15 @@
+app-list-products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+  gap: 20px;
+  padding: 20px;
+  justify-items: center; /* centraliza cada card na célula */
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
