@@ -1,11 +1,9 @@
-<div class="container-list">
-  @for (card of visibleCards; track card.id || card.title) {
-  <app-card
-    [data]="card"
-    [cardOption]="cardOption"
-    [buttonText]="hasText()"
-    [showButton]="showButtonCardDisplay()"
-  >
-  </app-card>
-  }
-</div>
+@for (card of visibleCards; track card.id || card.title) {
+<app-card
+  [data]="card"
+  [cardOption]="cardOption"
+  [buttonText]="buttonText"
+  [showButton]="showButtonCardDisplay()"
+>
+</app-card>
+}

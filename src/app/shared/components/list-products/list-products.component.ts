@@ -1,6 +1,6 @@
 import { CardComponent } from '../card/card.component';
 import { CardDisplay } from '../../../core/models/CardDisplay';
-import { Component, EventEmitter, HostListener, Input, Output, OnInit, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, Output, OnInit, OnChanges, SimpleChanges, input } from '@angular/core';
 
 
 @Component({
@@ -12,7 +12,8 @@ import { Component, EventEmitter, HostListener, Input, Output, OnInit, OnChanges
 })
 export class ListProductsComponent implements OnInit, OnChanges{
   @Input() cardsList: Partial<CardDisplay>[] = [];
-  @Input() cardOption?: 'feedback' |'small' | 'default' = 'default';
+  @Input() cardOption?: 'feedback' |'small' | 'grid' |'default' = 'default';
+  @Input() buttonText: string = '';
   @Input() currentIndex: number = 0;
   @Output() visibleCardsChange = new EventEmitter<Partial<CardDisplay>[]>();
   visibleCards: Partial<CardDisplay>[] = [];
@@ -55,8 +56,13 @@ export class ListProductsComponent implements OnInit, OnChanges{
       return;
     }
   
-    const visible: Partial<CardDisplay>[] = [];
+    if (this.cardOption === 'grid') {
+      this.visibleCards = [...this.cardsList]; // mostra tudo
+      this.visibleCardsChange.emit(this.visibleCards);
+      return;
+    }
   
+    const visible: Partial<CardDisplay>[] = [];
     for (let i = 0; i < this.cardsToShow; i++) {
       const index = (this.currentIndex + i) % total;
       visible.push(this.cardsList[index]);
@@ -64,14 +70,10 @@ export class ListProductsComponent implements OnInit, OnChanges{
   
     this.visibleCards = visible;
     this.visibleCardsChange.emit(visible);
-  }  
-
-  hasText(): string {
-    return this.showButtonCardDisplay() ? 'Order Now' : '';
   }
 
   showButtonCardDisplay(): boolean{
-    if(this.cardOption === 'default'){
+    if(this.cardOption === 'default' || this.cardOption === 'grid'){
      return true
     } 
     return false 

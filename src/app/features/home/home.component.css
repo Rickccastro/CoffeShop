@@ -14,6 +14,13 @@ p {
   color: #707070;
 }
 
+app-list-products{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  transition: transform 10s ease;
+}
+
 .discover-section{
   display: flex;
   padding: 1rem;
