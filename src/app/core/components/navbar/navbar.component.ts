@@ -21,7 +21,7 @@ export class NavbarComponent{
     {
       label: 'Products',
       submenu: [
-        { label: 'Cafés', link: '#' },
+        { label: 'Cafés', link: '/coffees' },
         { label: 'Acompanhamentos', link: '#' },
       ]
     },
