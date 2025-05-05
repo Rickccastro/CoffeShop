@@ -1,11 +1,16 @@
-app-button{
-    display: flex;
-    align-items: center;
-  }
-  .container-list {
-    display: flex;
-    justify-content: center;
-    gap: 1rem; 
-    transition: transform 10s ease;
-  }
-  
+app-button {
+  display: flex;
+  align-items: center;
+}
+.carrousel-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+app-list-products {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  transition: transform 10s ease;
+}

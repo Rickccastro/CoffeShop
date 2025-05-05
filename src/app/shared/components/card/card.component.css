@@ -84,6 +84,11 @@
 
 }
 
+.product-card[cardOption='feedback'] .mat-mdc-card-content{
+  padding-bottom: 0;
+}
+
+
 /*******************************************/
 .product-card[cardOption='small']  {
   width: 200px;
@@ -109,13 +114,13 @@
   height: 70px;
 }
 
-  .product-card[cardOption='default'] .mat-mdc-card-image{
+   .mat-mdc-card-image{
     width: 100%;
     height: 100%;
     max-height: clamp(15rem, 10vw, 20rem);
   }
 
-.product-card[cardOption='default'] .mat-mdc-card-content{
+ .mat-mdc-card-content{
   padding-bottom: 5rem;
 }
 
