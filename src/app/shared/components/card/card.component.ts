@@ -1,7 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { ButtonComponent } from '../button/button.component';
 import { CardDisplay } from '../../../core/models/CardDisplay';
+import { OpenDialogComponent } from "../dialog/open-dialog/open-dialog.component";
 
 @Component({
   selector: 'app-card',
@@ -11,8 +12,13 @@ import { CardDisplay } from '../../../core/models/CardDisplay';
   styleUrl: './card.component.css',
 })
 export class CardComponent {
-  @Input() data: Partial<CardDisplay> = {}; 
-  @Input() cardOption?: 'feedback' |'small' |'grid'|'default' = 'default';
+  @Input() cardData: Partial<CardDisplay> = {}; 
+  @Input() cardOption?: 'feedback' |'small' |'grid'| 'market' |'default' = 'default';
   @Input() showButton!: boolean;
   @Input() buttonText!: string;
+  @Output() buttonClick = new EventEmitter<Partial<CardDisplay>>(); // Novo
+
+  handleButtonClick() {
+    this.buttonClick.emit(this.cardData);
+  }
 }

@@ -1,24 +1,39 @@
-  <mat-card class="product-card" [attr.cardOption]="cardOption">
-    <mat-card-header>
-        <img  mat-card-image src={{data.imageSrc}} alt="Coffe-Photos">
-    </mat-card-header>
+<mat-card class="product-card" [attr.cardOption]="cardOption">
+  <mat-card-header>
+    <img mat-card-image src="{{ cardData.imageSrc }}" alt="Coffe-Photos" />
+  </mat-card-header>
 
-    <mat-card-content>
-      <div class="title-subtitle">
-        <mat-card-title>{{data.title}}</mat-card-title>
-        <mat-card-subtitle>{{data.subtitle}}</mat-card-subtitle>   
-      </div>
-        <mat-card-subtitle class="card-preview">{{data.secondSubtitle}}</mat-card-subtitle>
-        @if(cardOption === 'feedback'){
-          <div class="feedback-icon">
-            <img src="../../../assets/footer/pngtree-cute-cookies-holding-a-coffee-cup-cartoon-png-image_15030379.png" alt="coffee icon">
-          </div>
-        }  
-    </mat-card-content>
+  <mat-card-content>
+    <div class="title-subtitle">
+      <mat-card-title>{{ cardData.title }}</mat-card-title>
+      <mat-card-subtitle>{{ cardData.subtitle }}</mat-card-subtitle>
+    </div>
+    <mat-card-subtitle class="card-preview">{{
+      cardData.secondSubtitle
+    }}</mat-card-subtitle>
+    @if(cardOption === 'feedback'){
+    <div class="feedback-icon">
+      <img
+        src="../../../assets/footer/pngtree-cute-cookies-holding-a-coffee-cup-cartoon-png-image_15030379.png"
+        alt="coffee icon"
+      />
+    </div>
+    }
+  </mat-card-content>
 
-      <mat-card-actions>
-        <app-button [showButton]="showButton">
-          {{buttonText}}  
-      </app-button>
-      </mat-card-actions>
-  </mat-card>
+  <mat-card-actions>
+    @if(cardOption === 'market')
+    { 
+      <app-button [showButton]="showButton"> - </app-button>
+      <app-button [showButton]="showButton"> + </app-button>
+    } 
+    @else {
+    <app-button 
+    [showButton]="showButton"
+    (click)="handleButtonClick()"
+    >
+      {{ buttonText }}
+    </app-button>
+    }
+  </mat-card-actions>
+</mat-card>
