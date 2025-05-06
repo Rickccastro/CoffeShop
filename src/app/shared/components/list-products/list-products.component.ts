@@ -1,6 +1,8 @@
 import { CardComponent } from '../card/card.component';
 import { CardDisplay } from '../../../core/models/CardDisplay';
-import { Component, EventEmitter, HostListener, Input, Output, OnInit, OnChanges, SimpleChanges, input } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, Output, OnInit, OnChanges, SimpleChanges, input, inject } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { FormDialogComponent } from '../dialog/form-dialog/form-dialog.component';
 
 
 @Component({
@@ -17,9 +19,21 @@ export class ListProductsComponent implements OnInit, OnChanges{
   @Input() currentIndex: number = 0;
   @Output() visibleCardsChange = new EventEmitter<Partial<CardDisplay>[]>();
   visibleCards: Partial<CardDisplay>[] = [];
-
-
   cardsToShow: number = 4;
+  dialog = inject(MatDialog);
+
+
+  openDialog(card: Partial<CardDisplay>) {
+    this.dialog.open(FormDialogComponent, {
+      data: {
+        cardData: card,
+        cardOption: 'market',
+        buttonText: 'Comprar'
+      },
+      width: '400px',
+      height: '400px',
+    });
+  }
 
   ngOnInit(): void {
     this.updateCardsToShow();

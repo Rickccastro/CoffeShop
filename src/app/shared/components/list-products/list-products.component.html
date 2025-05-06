@@ -1,9 +1,10 @@
 @for (card of visibleCards; track card.id || card.title) {
 <app-card
-  [data]="card"
+  [cardData]="card"
   [cardOption]="cardOption"
   [buttonText]="buttonText"
   [showButton]="showButtonCardDisplay()"
+  (buttonClick)="openDialog(card)"
 >
 </app-card>
 }
