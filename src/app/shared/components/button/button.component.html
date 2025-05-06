@@ -1,6 +1,9 @@
 @if (showButton) 
 {
-    <button [attr.type]="type">
+    <button 
+    [disabled]="disabled"
+    (click)="handleClick($event)"
+    [attr.type]="type">
         <ng-content></ng-content>
     </button>
 }
