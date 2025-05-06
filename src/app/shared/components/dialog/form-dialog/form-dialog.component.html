@@ -1,0 +1,13 @@
+<h2 mat-dialog-title>Confirmar Pagamento</h2>
+<mat-dialog-content>
+    <app-card
+    [cardOption]="'market'"
+    [buttonText]="'Comprar'"
+    [showButton]="true"
+    (buttonClick)="handleCardButtonClick('pay')">
+  </app-card>  
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="close()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="confirmPayment()">Confirmar</button>
+</mat-dialog-actions>
