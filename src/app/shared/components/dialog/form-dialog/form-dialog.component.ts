@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, Input } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
@@ -13,6 +13,14 @@ import { CardDisplay } from '../../../../core/models/CardDisplay';
   styleUrl: './form-dialog.component.css'
 })
 export class FormDialogComponent {
+  get cardData(): Partial<CardDisplay> {
+    return this.data.cardData;
+  }
+  
+  get buttonText(): string {
+    return this.data.buttonText;
+  }
+
   constructor(
     public dialogRef: MatDialogRef<FormDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: { cardData: Partial<CardDisplay>; cardOption: string; buttonText: string }

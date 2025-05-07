@@ -1,11 +1,12 @@
-<h2 mat-dialog-title>Confirmar Pagamento</h2>
+<h2 mat-dialog-title>Adicione o produto à sua cesta</h2>
 <mat-dialog-content>
-    <app-card
-    [cardOption]="'market'"
-    [buttonText]="'Comprar'"
-    [showButton]="true"
-    (buttonClick)="handleCardButtonClick('pay')">
-  </app-card>  
+  <app-card
+  [cardData]="cardData"
+  [cardOption]="'market'"
+  [buttonText]="buttonText"
+  [showButton]="true"
+  (buttonClick)="handleCardButtonClick('pay')">
+</app-card>
 </mat-dialog-content>
 <mat-dialog-actions>
   <button mat-button (click)="close()">Cancelar</button>
