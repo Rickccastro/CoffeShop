@@ -16,9 +16,20 @@ export class CardComponent {
   @Input() cardOption?: 'feedback' |'small' |'grid'| 'market' |'default' = 'default';
   @Input() showButton!: boolean;
   @Input() buttonText!: string;
-  @Output() buttonClick = new EventEmitter<Partial<CardDisplay>>(); // Novo
+  @Output() buttonClick = new EventEmitter<Partial<CardDisplay>>(); 
+  quantity: number = 1;
 
   handleButtonClick() {
     this.buttonClick.emit(this.cardData);
+  }
+
+  increment() {
+    this.quantity++;
+  }
+
+  decrement() {
+    if (this.quantity > 1) {
+      this.quantity--;
+    }
   }
 }

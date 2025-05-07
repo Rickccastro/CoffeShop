@@ -157,6 +157,17 @@
   color: #707070;
 }
 
+.market-card-actions{
+  display: flex;
+  gap: 1rem;  
+}
+
+::ng-deep #market-card-actions-middle-button button {
+  border-radius: 0 !important;
+  pointer-events: none;
+  cursor: default;
+}
+
 
 /*Mobile*/
 @media (max-width: 768px) {

@@ -24,8 +24,11 @@
   <mat-card-actions>
     @if(cardOption === 'market')
     { 
-      <app-button [showButton]="showButton"> - </app-button>
-      <app-button [showButton]="showButton"> + </app-button>
+      <div class="market-card-actions">
+        <app-button [showButton]="showButton" (click)="decrement()"> - </app-button>
+        <app-button id="market-card-actions-middle-button">{{quantity}}</app-button>
+        <app-button [showButton]="showButton" (click)="increment()"> + </app-button>
+      </div>
     } 
     @else {
     <app-button 
