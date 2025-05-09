@@ -1,41 +1,58 @@
-import { Component, Inject, Input } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { MatDialogModule } from '@angular/material/dialog';
+import { Component, Inject } from '@angular/core';
+import {
+  MAT_DIALOG_DATA,
+  MatDialogModule,
+  MatDialogRef,
+  MatDialog
+} from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { CardComponent } from '../../card/card.component';
 import { CardDisplay } from '../../../../core/models/CardDisplay';
+import { CestaDialogComponent } from '../cesta-dialog/cesta-dialog.component';
+import { ListProductsComponent } from '../../list-products/list-products.component';
 
 @Component({
   selector: 'app-form-dialog',
   standalone: true,
-  imports: [MatDialogModule, MatButtonModule, CardComponent],
+  imports: [
+    MatDialogModule,
+    MatButtonModule,
+    CardComponent, 
+    CestaDialogComponent,
+    MatDialogModule
+  ],
   templateUrl: './form-dialog.component.html',
   styleUrl: './form-dialog.component.css'
 })
 export class FormDialogComponent {
-  get cardData(): Partial<CardDisplay> {
-    return this.data.cardData;
-  }
-  
-  get buttonText(): string {
-    return this.data.buttonText;
-  }
 
   constructor(
     public dialogRef: MatDialogRef<FormDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: { cardData: Partial<CardDisplay>; cardOption: string; buttonText: string }
+    @Inject(MAT_DIALOG_DATA)
+    public data: { cardData: Partial<CardDisplay>; cardOption: string; },
+    private dialog: MatDialog
   ) {}
+
+  get cardData() {
+    return this.data.cardData;
+  }
+
+  adicionaCesto(): { cardData: Partial<CardDisplay>; cardOption: string } {
+   return {
+    cardData: this.data.cardData, 
+    cardOption: this.data.cardOption
+  };
+  }
+  
+  exibirCesto(): void {
+    this.dialog.open(CestaDialogComponent, {
+      data: this.adicionaCesto(),
+      width: '600px',
+      height: '400px',
+    });
+  }
 
   close(): void {
     this.dialogRef.close();
-  }
-
-  confirmPayment(): void {
-    console.log('Pagamento confirmado para', this.data.cardData.title);
-    this.dialogRef.close(true);
-  }
-
-  handleCardButtonClick(option: string): void {
-    console.log('Botão clicado com opção:', option);
   }
 }
