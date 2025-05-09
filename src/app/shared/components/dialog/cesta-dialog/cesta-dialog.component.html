@@ -1,0 +1,12 @@
+<h2 mat-dialog-title>Adicione o produto à sua cesta</h2>
+<mat-dialog-content>
+    <app-list-products
+    [cardsList]="cardsList"
+    [cardOption]="'default'">
+    </app-list-products>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="close()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="removerCesto()">Remover item</button>
+  <button mat-raised-button color="primary" (click)="finalizarPedido()">Finalizar Compra</button>
+</mat-dialog-actions>
