@@ -1,37 +1,44 @@
 import { Component, Inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import {
+  MAT_DIALOG_DATA,
+  MatDialogModule,
+  MatDialogRef,
+} from '@angular/material/dialog';
 import { CardDisplay } from '../../../../core/models/CardDisplay';
-import { ListProductsComponent } from "../../list-products/list-products.component";
+import { ListProductsComponent } from '../../list-products/list-products.component';
+import { CardComponent } from '../../card/card.component';
+import { ButtonComponent } from '../../button/button.component';
 
 @Component({
   selector: 'app-cesta-dialog',
   standalone: true,
-  imports: [MatDialogModule, MatButtonModule, ListProductsComponent],
+  imports: [MatDialogModule, MatButtonModule, CardComponent],
   templateUrl: './cesta-dialog.component.html',
-  styleUrl: './cesta-dialog.component.css'
+  styleUrl: './cesta-dialog.component.css',
 })
 export class CestaDialogComponent {
-    cardsList: Partial<CardDisplay>[] = [];
+  cardsList: Partial<CardDisplay>[] = [];
 
-    constructor(
-      public dialogRef: MatDialogRef<CestaDialogComponent>,
-      @Inject(MAT_DIALOG_DATA) public data: {
-        cardData: Partial<CardDisplay>;  
-        cardOption: string;
-      }
-    ) {
-      console.log(data.cardData);
-      this.cardsList.push(data.cardData);
+  constructor(
+    public dialogRef: MatDialogRef<CestaDialogComponent>,
+    @Inject(MAT_DIALOG_DATA)
+    public data: {
+      cardList: Partial<CardDisplay>[];
     }
-  
-    close(): void {
-      this.dialogRef.close();
-    }
-    removerCesto(): void {
-      // implementar remoção…
-    }
-    finalizarPedido(): void {
-      this.dialogRef.close();
-    }
+  ) {
+    console.log(data.cardList);
+    this.cardsList = [...data.cardList]; // usando spread operator
+    console.log(data.cardList);
+  }
+
+  close(): void {
+    this.dialogRef.close();
+  }
+  removerCesto(): void {
+    this.cardsList.pop();
+  }
+  finalizarPedido(): void {
+    this.dialogRef.close();
+  }
 }
