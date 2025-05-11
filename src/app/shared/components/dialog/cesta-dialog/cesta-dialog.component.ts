@@ -1,7 +1,8 @@
-import { Component, Inject } from '@angular/core';
+import { Component, inject, Inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import {
   MAT_DIALOG_DATA,
+  MatDialog,
   MatDialogModule,
   MatDialogRef,
 } from '@angular/material/dialog';
@@ -19,6 +20,8 @@ import { ButtonComponent } from '../../button/button.component';
 })
 export class CestaDialogComponent {
   cardsList: Partial<CardDisplay>[] = [];
+    dialog = inject(MatDialog);
+  
 
   constructor(
     public dialogRef: MatDialogRef<CestaDialogComponent>,
@@ -33,7 +36,7 @@ export class CestaDialogComponent {
   }
 
   close(): void {
-    this.dialogRef.close();
+    this.dialog.closeAll();
   }
   removerCesto(): void {
     this.cardsList.pop();

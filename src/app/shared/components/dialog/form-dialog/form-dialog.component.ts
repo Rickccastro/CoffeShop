@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, inject, Inject} from '@angular/core';
 import {
   MAT_DIALOG_DATA,
   MatDialogModule,
@@ -11,6 +11,8 @@ import { CardDisplay } from '../../../../core/models/CardDisplay';
 import { CestaDialogComponent } from '../cesta-dialog/cesta-dialog.component';
 import { ListProductsComponent } from '../../list-products/list-products.component';
 import { ButtonComponent } from '../../button/button.component';
+import { FormDialogService } from '../../../services/dialog/form-dialog.service';
+import { CestaDialogService } from '../../../services/dialog/cesta-dialog.service';
 
 @Component({
   selector: 'app-form-dialog',
@@ -22,35 +24,38 @@ import { ButtonComponent } from '../../button/button.component';
 })
 export class FormDialogComponent {
   cardList: Partial<CardDisplay>[] = [];
-  constructor(
-    public dialogRef: MatDialogRef<FormDialogComponent>,
-    @Inject(MAT_DIALOG_DATA)
-    public data: { cardData: Partial<CardDisplay>; cardOption: string },
-    private dialog: MatDialog
-  ) {}
+  dialogRef = inject(MatDialogRef);
+  formService = inject(FormDialogService);
+  cestaService = inject(CestaDialogService);
+
+  dialog = inject(MatDialog);
+  data = inject<{ cardData: Partial<CardDisplay>; cardOption: string }>(MAT_DIALOG_DATA);
 
   get cardData() {
     return this.data.cardData;
   }
 
-  adicionaCesto(): { cardList: Partial<CardDisplay>[]; cardOption: string } {
-    this.cardList.push(this.data.cardData);
-    return {
-      cardList: this.cardList,
-      cardOption: this.data.cardOption,
-    };
+  adicionaCesto(): void {
+    this.formService.adicionaCesto(this.data.cardData);
+    // this.cardList.push(this.data.cardData);
+    // return {
+    //   cardList: this.cardList,
+    //   cardOption: this.data.cardOption,
+    // };
   }
 
   exibirCesto(): void {
-    console.log(this.cardList);
-    this.dialog.open(CestaDialogComponent, {
-      data: { cardList: this.cardList },
-      width: '600px',
-      height: '400px',
-    });
+    this.cestaService.exibirCesto();
+
+    // console.log(this.cardList);
+    // this.dialog.open(CestaDialogComponent, {
+    //   data: { cardList: this.cardList },
+    //   width: '600px',
+    //   height: '400px',
+    // });
   }
 
   close(): void {
-    this.dialogRef.close();
+    this.dialog.closeAll();
   }
 }
