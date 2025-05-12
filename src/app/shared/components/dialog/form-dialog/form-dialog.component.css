@@ -4,3 +4,13 @@ mat-dialog-content, mat-dialog-actions {
     justify-content: center;
     padding: 0;
 }
+
+mat-mdc-dialog-content mdc-dialog__content {
+  background-color: #ffffff !important; /* ou qualquer cor desejada */
+}
+
+:host button {
+  background-color: #F9C06A;
+  border-radius: 2.5rem;
+  color: rgb(59, 59, 59);
+}
