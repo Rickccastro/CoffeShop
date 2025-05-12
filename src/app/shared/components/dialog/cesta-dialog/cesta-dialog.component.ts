@@ -1,4 +1,4 @@
-import { Component, inject, Inject } from '@angular/core';
+import { Component, inject, Inject, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import {
   MAT_DIALOG_DATA,
@@ -18,25 +18,20 @@ import { ButtonComponent } from '../../button/button.component';
   templateUrl: './cesta-dialog.component.html',
   styleUrl: './cesta-dialog.component.css',
 })
-export class CestaDialogComponent {
+export class CestaDialogComponent implements OnInit {
   cardsList: Partial<CardDisplay>[] = [];
-    dialog = inject(MatDialog);
-  
+  dialogRef = inject(MatDialogRef);
+  data = inject<{ cardList: Partial<CardDisplay>[]; cardOption: string }>(
+    MAT_DIALOG_DATA
+  );
+  dialog = inject(MatDialog);
 
-  constructor(
-    public dialogRef: MatDialogRef<CestaDialogComponent>,
-    @Inject(MAT_DIALOG_DATA)
-    public data: {
-      cardList: Partial<CardDisplay>[];
-    }
-  ) {
-    console.log(data.cardList);
-    this.cardsList = [...data.cardList]; // usando spread operator
-    console.log(data.cardList);
+  ngOnInit(): void {
+    this.cardsList = this.data.cardList;
   }
 
   close(): void {
-    this.dialog.closeAll();
+   this.dialogRef.close();
   }
   removerCesto(): void {
     this.cardsList.pop();
