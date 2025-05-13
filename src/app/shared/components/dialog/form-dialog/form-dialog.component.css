@@ -1,3 +1,7 @@
+::ng-deep h2[mat-dialog-title] {
+    color: #6c3a09 !important;
+}
+
 mat-dialog-content, mat-dialog-actions {
     display: flex;
     align-items: center;
@@ -6,11 +10,18 @@ mat-dialog-content, mat-dialog-actions {
 }
 
 mat-mdc-dialog-content mdc-dialog__content {
-  background-color: #ffffff !important; /* ou qualquer cor desejada */
+  background-color: #ffffffca !important; /* ou qualquer cor desejada */
 }
 
 :host button {
   background-color: #F9C06A;
   border-radius: 2.5rem;
   color: rgb(59, 59, 59);
+}
+button{
+  padding: 1rem;
+}
+
+::ng-deep .mat-mdc-dialog-container .mdc-dialog__surface {
+   background-color:rgb(255, 255, 255) !important;  
 }
