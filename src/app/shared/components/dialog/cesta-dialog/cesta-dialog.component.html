@@ -1,10 +1,5 @@
 <h2 mat-dialog-title>Lista de produtos da sua cesta</h2>
 <mat-dialog-content>
-    <!-- <app-list-products
-    [cardsList]="cardsList"
-    [cardOption]="'default'">
-    </app-list-products> -->
-
     @for (card of cardsList; track card.id || card.title) 
     {
         <app-card
@@ -16,12 +11,6 @@
     @empty {
         <p>Nenhum produto na cesta</p>
     }
-    
-    <!-- <app-card
-    [cardData]="cards"
-    [cardOption]="'market'"
-    >    
-  </app-card> -->
 
 </mat-dialog-content>
 <mat-dialog-actions>
