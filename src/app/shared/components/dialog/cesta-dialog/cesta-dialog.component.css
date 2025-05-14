@@ -1,0 +1,8 @@
+:host button {
+  background-color: #F9C06A;
+  border-radius: 2.5rem;
+  color: rgb(59, 59, 59);
+}
+button{
+  padding: 1rem;
+}
