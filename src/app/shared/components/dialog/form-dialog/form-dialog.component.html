@@ -1,15 +1,15 @@
 <h2 mat-dialog-title>Adicione o produto à sua cesta</h2>
 <mat-dialog-content>
-  <app-card
-  [cardData]="cardData"
-  [cardOption]="'market'"
-  [showButton]="true"
-  >
-</app-card>
-  
+  <app-card [cardData]="cardData" [cardOption]="'market'" [showButton]="true">
+  </app-card>
 </mat-dialog-content>
 <mat-dialog-actions>
   <button mat-button (click)="close()">Cancelar</button>
-  <button mat-raised-button color="primary" (click)="adicionaCesto()">Adicionar ao cesto</button>
-  <button mat-raised-button color="primary" (click)="exibirCesto()">Exibir cesto</button>
+  <button mat-raised-button color="primary" (click)="adicionaCesto()">
+    Adicionar
+  </button>
+
+  <button mat-raised-button color="primary" (click)="exibirCesto()">
+    Exibir cesto
+  </button>
 </mat-dialog-actions>
