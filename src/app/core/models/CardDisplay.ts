@@ -1,5 +1,6 @@
 export interface CardDisplay {
     id?: string;
+    priceId?: string;   
     title?: string;
     subtitle?: string;
     secondSubtitle?: string;
