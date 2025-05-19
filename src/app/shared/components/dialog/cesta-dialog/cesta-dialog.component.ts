@@ -7,9 +7,9 @@ import {
   MatDialogRef,
 } from '@angular/material/dialog';
 import { CardDisplay } from '../../../../core/models/CardDisplay';
-import { ListProductsComponent } from '../../list-products/list-products.component';
 import { CardComponent } from '../../card/card.component';
-import { ButtonComponent } from '../../button/button.component';
+import { PaymentLinkService } from '../../../services/payment/paymentlink.service';
+import { PaymentItemDto } from '../../../../core/models/PaymentItemDto';
 
 @Component({
   selector: 'app-cesta-dialog',
@@ -25,6 +25,9 @@ export class CestaDialogComponent implements OnInit {
     MAT_DIALOG_DATA
   );
   dialog = inject(MatDialog);
+  paymentItems: PaymentItemDto[] = [];
+
+  paymentService = inject(PaymentLinkService); 
 
   ngOnInit(): void {
     this.cardsList = this.data.cardList;
@@ -36,7 +39,12 @@ export class CestaDialogComponent implements OnInit {
   removerCesto(): void {
     this.cardsList.pop();
   }
-  finalizarPedido(): void {
-    this.dialogRef.close();
-  }
+  
+finalizarPedido(): void {
+  this.paymentItems = this.cardsList.map(card => ({
+    priceId: card.priceId as string, 
+    quantity: 1      
+  }));
+  this.paymentService.getPaymentLink(this.paymentItems);
+}
 }
