@@ -13,3 +13,17 @@ app-list-products {
   align-items: center;
   text-align: center;
 }
+
+
+
+@media (max-width: 1199px) {
+  app-list-products {
+    grid-template-columns: repeat(3, 1fr); /* até 1199px, 3 colunas */
+  }
+}
+
+@media (max-width: 767px) {
+  app-list-products {
+    grid-template-columns: repeat(1, 1fr); /* até 767px, 2 colunas */
+  }
+}
