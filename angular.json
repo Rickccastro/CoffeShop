@@ -49,21 +49,9 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true,
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.development.ts"
-                }
-              ]
+              "sourceMap": true  
             },
             "staging":{
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.staging.ts"
-                }
-              ]
             }
           },
           "defaultConfiguration": "production"
@@ -73,15 +61,15 @@
           "configurations": {
             "production": {
               "buildTarget": "Coffe-Shop:build:production",
-              "proxyConfig": "src/config/apis/endpoints.production.json"
+              "proxyConfig": "src/app/core/config/apis/endpoints.production.json"
             },
             "development": {
               "buildTarget": "Coffe-Shop:build:development",
-              "proxyConfig": "src/config/apis/endpoints.development.json"
+              "proxyConfig": "src/app/core/config/apis/endpoints.development.json"
             },
             "staging": {
               "buildTarget": "Coffe-Shop:build:staging",
-              "proxyConfig": "src/config/apis/endpoints.staging.json"
+              "proxyConfig": "src/app/core/config/apis/endpoints.staging.json"
             }
           },
           "defaultConfiguration": "development"
