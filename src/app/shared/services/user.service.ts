@@ -22,7 +22,6 @@ export class UserService {
   }
 
   loginUser(user: User) { 
-    console.log(user)
     return this.httpClient.post<User>('/apiJson/users', user);
   }
 }
