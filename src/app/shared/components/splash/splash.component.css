@@ -1,0 +1,21 @@
+.splash-container {
+  display: flex;
+  width: 100%;
+}
+
+.splash-container.esquerda {
+  justify-content: flex-start;
+}
+
+.splash-container.direita {
+  justify-content: flex-end;
+}
+
+#splash-esquerda,
+#splash-direita {
+  max-width: clamp(20rem, 17vw, 40rem);
+}
+
+#splash-direita {
+  transform: scaleX(-1);
+}
