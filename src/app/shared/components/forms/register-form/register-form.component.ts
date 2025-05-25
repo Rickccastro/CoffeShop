@@ -1,4 +1,4 @@
-import { Component, EventEmitter, input, Output } from '@angular/core';
+import { Component, EventEmitter, input, OnInit, Output } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -24,7 +24,7 @@ import { InputComponent } from '../input-form/input-form.component';
   templateUrl: './register-form.component.html',
   styleUrl: './register-form.component.css',
 })
-export class RegisterFormComponent {
+export class RegisterFormComponent implements OnInit {
   @Output() send = new EventEmitter<User>();
   user = input<User | null>(null);
   form!: FormGroup;

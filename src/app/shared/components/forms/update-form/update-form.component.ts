@@ -1,4 +1,4 @@
-import { Component, EventEmitter, input, Output } from '@angular/core';
+import { Component, EventEmitter, input, OnInit, Output } from '@angular/core';
 import { FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import { User } from '../../../../core/models/User/User';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -19,7 +19,7 @@ import { InputComponent } from '../input-form/input-form.component';
   templateUrl: './update-form.component.html',
   styleUrl: './update-form.component.css'
 })
-export class UpdateFormComponent {
+export class UpdateFormComponent implements OnInit {
    @Output() send = new EventEmitter<User>();
     user = input<User | null>(null);
     form!: FormGroup;

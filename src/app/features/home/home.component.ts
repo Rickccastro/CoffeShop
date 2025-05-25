@@ -1,4 +1,4 @@
-import { Component, inject, Input, signal } from '@angular/core';
+import { Component, inject, Input, OnInit, signal } from '@angular/core';
 import { ButtonComponent } from '../../shared/components/button/button.component';
 import { Coffe } from '../../core/models/Coffe';
 import { ActivatedRoute } from '@angular/router';
@@ -15,7 +15,7 @@ import { CarouselComponent } from "../../shared/components/carousel/carousel.com
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
   coffees = signal<Coffe[]>([]);
   feedbacks = signal<Feedback[]>([]);
 
