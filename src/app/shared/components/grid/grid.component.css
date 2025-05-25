@@ -1,0 +1,19 @@
+app-list-products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+  gap: 20px;
+  padding: 20px;
+  justify-items: center; /* centraliza cada card na célula */
+}
+
+@media (max-width: 1199px) {
+  app-list-products {
+    grid-template-columns: repeat(3, 1fr); /* até 1199px, 3 colunas */
+  }
+}
+
+@media (max-width: 767px) {
+  app-list-products {
+    grid-template-columns: repeat(1, 1fr); /* até 767px, 2 colunas */
+  }
+}
