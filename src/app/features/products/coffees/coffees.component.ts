@@ -1,23 +1,23 @@
-import { Component, inject, Input, signal } from '@angular/core';
-import { ListProductsComponent } from "../../../shared/components/list-products/list-products.component";
+import { Component, inject, OnInit, signal } from '@angular/core';
+import { GridComponent } from '../../../shared/components/grid/grid.component';
 import { CardDisplay } from '../../../core/models/CardDisplay';
-import { Coffe } from '../../../core/models/Coffe';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-coffees',
   standalone: true,
-  imports: [ListProductsComponent],
+  imports: [GridComponent],
   templateUrl: './coffees.component.html',
-  styleUrl: './coffees.component.css'
+  styleUrl: './coffees.component.css',
 })
-export class CoffeesComponent {
-    coffees = signal<Coffe[]>([]); 
+export class CoffeesComponent implements OnInit {
+  coffeesList = signal<CardDisplay[]>([]);
 
-    private route = inject(ActivatedRoute);
-      ngOnInit() {
-        this.route.data.subscribe((data) => {
-          this.coffees.set(data['coffe']);
-        });
-      }
+  private route = inject(ActivatedRoute);
+
+  ngOnInit() {
+    this.route.data.subscribe(({ coffee }) => {
+      this.coffeesList.set(coffee as CardDisplay[]);
+    });
+  }
 }
