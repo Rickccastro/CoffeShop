@@ -33,7 +33,7 @@ export const routes: Routes = [
   path:'coffees',
   component:CoffeesComponent,
   resolve: {
-    coffe: coffeeResolver,
+    coffee: coffeeResolver,
 }
 }, 
 ];
