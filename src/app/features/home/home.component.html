@@ -1,25 +1,23 @@
-<div class="content-container">
-  <section class="discover-section">
-    <div class="discover-text">
-      <h1>Discover the best coffee</h1>
-      <p>
-        Bean Scene is a coffee shop that provides you with quality coffee that
-        helps boost your productivity and helps build your mood. Having a cup of
-        coffee is good, but having a cup of real coffee is greater. There is no
-        doubt that you will enjoy this coffee more than others you have ever
-        tasted.
-      </p>
-      <app-button> Learn More </app-button>
-    </div>
-    <div class="discover-photo">
-      <img
-        id="coffe-cup"
-        src="../../../assets/footer/Cookie-sem-fundo.png"
-        alt="Coffe-Cup"
-      />
-    </div>
-  </section>
-</div>
+<section class="content-container discover-section">
+  <div class="discover-text">
+    <h1>Discover the best coffee</h1>
+    <p>
+      Bean Scene is a coffee shop that provides you with quality coffee that
+      helps boost your productivity and helps build your mood. Having a cup of
+      coffee is good, but having a cup of real coffee is greater. There is no
+      doubt that you will enjoy this coffee more than others you have ever
+      tasted.
+    </p>
+    <app-button> Learn More </app-button>
+  </div>
+  <div class="discover-photo">
+    <img
+      id="coffe-cup"
+      src="../../../assets/footer/Cookie-sem-fundo.png"
+      alt="Coffe-Cup"
+    />
+  </div>
+</section>
 
 <div class="splash-container">
   <img
@@ -29,22 +27,18 @@
   />
 </div>
 
-<div class="content-container">
-  <section class="enjoy-container">
-    <div class="enjoy-text">
-      <h1>Enjoy a new blend of coffee style</h1>
-      <p>
-        Explore all flavours of coffee with us. There is always a new cup worth
-        experiencing
-      </p>
-    </div>
-  </section>
-</div>
+<section class="content-container enjoy-container">
+  <div class="enjoy-text">
+    <h1>Enjoy a new blend of coffee style</h1>
+    <p>
+      Explore all flavours of coffee with us. There is always a new cup worth
+      experiencing
+    </p>
+  </div>
+</section>
 
 <div class="content-container">
-   <app-carousel
-    [cardsList]="coffees()"
-    ></app-carousel>
+  <app-carousel [cardsList]="coffees()"></app-carousel>
 </div>
 
 <div class="splash-container">
@@ -55,21 +49,19 @@
   />
 </div>
 
-<div class="content-container">
-  <section>
-    <div class="text-aligner">
-      <h1>Why are we different?</h1>
-      <p>We don’t just make your coffee, we make your day!</p>
-    </div>
-  </section>
-</div>
+<article class="content-container">
+  <div class="text-aligner">
+    <h1>Why are we different?</h1>
+    <p>We don’t just make your coffee, we make your day!</p>
+  </div>
+</article>
 
-<div class="content-container">
+<section class="content-container">
   <app-list-products
     [cardOption]="'small'"
     [cardsList]="banners"
   ></app-list-products>
-</div>
+</section>
 
 <div class="splash-container">
   <img
@@ -79,13 +71,11 @@
   />
 </div>
 
-<div class="content-container">
-  <div class="text-aligner">
-    <p>Great ideas start with great coffee, Lets help you achieve that</p>
-    <h1>Get started today.</h1>
-    <app-button> Join Us </app-button>
-  </div>
-</div>
+<article class="text-aligner">
+  <p>Great ideas start with great coffee, Lets help you achieve that</p>
+  <h1>Get started today.</h1>
+  <app-button> Join Us </app-button>
+</article>
 
 <section>
   <div class="image-formatter">
@@ -101,21 +91,19 @@
   />
 </div>
 
-<div class="content-container">
-  <section>
-    <div class="text-aligner">
-      <h1>Our coffee perfection feedback</h1>
-      <p>Our customers has amazing things to say about us</p>
-    </div>
+<section>
+  <div class="text-aligner">
+    <h1>Our coffee perfection feedback</h1>
+    <p>Our customers has amazing things to say about us</p>
+  </div>
 
-    <div class="feedback-container">
-      <app-carousel
+  <div class="feedback-container">
+    <app-carousel
       cardOption="feedback"
       [cardsList]="feedbacks()"
-      ></app-carousel>
-    </div>
-  </section>
-</div>
+    ></app-carousel>
+  </div>
+</section>
 
 <div class="splash-container">
   <img
