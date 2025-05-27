@@ -1,5 +1,5 @@
 <section class="content-container discover-section">
-  <div class="discover-text">
+  <article id="discover-text">
     <h1>Discover the best coffee</h1>
     <p>
       Bean Scene is a coffee shop that provides you with quality coffee that
@@ -9,14 +9,14 @@
       tasted.
     </p>
     <app-button> Learn More </app-button>
-  </div>
-  <div class="discover-photo">
+  </article>
+  <figure id="discover-photo">
     <img
       id="coffe-cup"
       src="../../../assets/footer/Cookie-sem-fundo.png"
       alt="Coffe-Cup"
     />
-  </div>
+  </figure>
 </section>
 
 <div class="splash-container">
@@ -28,48 +28,49 @@
 </div>
 
 <section class="content-container enjoy-container">
-  <div class="enjoy-text">
+  <article id="enjoy-text">
     <h1>Enjoy a new blend of coffee style</h1>
     <p>
       Explore all flavours of coffee with us. There is always a new cup worth
       experiencing
     </p>
-  </div>
+  </article>
 </section>
 
 <div class="content-container">
   <app-carousel [cardsList]="coffees()"></app-carousel>
 </div>
 
-<div class="splash-container">
-  <img
-    id="splash-direita"
-    src="../../../assets/coffes/coffe-splash.svg"
-    alt="Coffe-Slapsh"
-  />
-</div>
-
-<article class="content-container">
-  <div class="text-aligner">
-    <h1>Why are we different?</h1>
-    <p>We don’t just make your coffee, we make your day!</p>
+<section>
+  <div class="splash-container">
+    <img
+      id="splash-direita"
+      src="../../../assets/coffes/coffe-splash.svg"
+      alt="Coffe-Slapsh"
+    />
   </div>
-</article>
 
-<section class="content-container">
+  <article class="content-container">
+    <div class="text-aligner">
+      <h1>Why are we different?</h1>
+      <p>We don’t just make your coffee, we make your day!</p>
+    </div>
+  </article>
+
   <app-list-products
+    class="content-container"
     [cardOption]="'small'"
     [cardsList]="banners"
   ></app-list-products>
-</section>
 
-<div class="splash-container">
-  <img
-    class="splash-baixo"
-    src="../../../assets/coffes/splash.baixo.svg"
-    alt="Coffe-Slapsh"
-  />
-</div>
+  <div class="splash-container">
+    <img
+      class="splash-baixo"
+      src="../../../assets/coffes/splash.baixo.svg"
+      alt="Coffe-Slapsh"
+    />
+  </div>
+</section>
 
 <article class="text-aligner">
   <p>Great ideas start with great coffee, Lets help you achieve that</p>
@@ -78,34 +79,31 @@
 </article>
 
 <section>
-  <div class="image-formatter">
-    <div id="coffe-one" class="background-layer"></div>
+  <figure class="image-formatter">
+    <img id="coffe-one" class="background-layer" />
+  </figure>
+  <div class="splash-container">
+    <img
+      id="splash-direita"
+      src="../../../assets/coffes/coffe-splash.svg"
+      alt="Coffe-Slapsh"
+    />
   </div>
 </section>
 
-<div class="splash-container">
-  <img
-    id="splash-direita"
-    src="../../../assets/coffes/coffe-splash.svg"
-    alt="Coffe-Slapsh"
-  />
-</div>
-
 <section>
-  <div class="text-aligner">
+  <article class="text-aligner">
     <h1>Our coffee perfection feedback</h1>
     <p>Our customers has amazing things to say about us</p>
-  </div>
+  </article>
 
-  <div class="feedback-container">
     <app-carousel
+      class="feedback-container"
       cardOption="feedback"
       [cardsList]="feedbacks()"
     ></app-carousel>
-  </div>
-</section>
 
-<div class="splash-container">
+  <div class="splash-container">
   <img
     id="splash-baixo-feedback"
     class="splash-baixo"
@@ -113,3 +111,5 @@
     alt="Coffe-Slapsh"
   />
 </div>
+</section>
+

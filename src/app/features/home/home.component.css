@@ -27,7 +27,7 @@ app-list-products{
   padding: 1rem;
   gap:3rem
 }
-.discover-text{
+#discover-text{
   max-width: 700px;
 }
 .discover-subtitle{
@@ -38,7 +38,7 @@ app-list-products{
   width: clamp(20rem,30vw,60rem);
 }
 
-.discover-photo{
+#discover-photo{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,7 +51,7 @@ app-list-products{
   max-width: clamp(20rem, 17vw, 40rem);
 }
 
-.enjoy-text{
+#enjoy-text{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,6 +63,7 @@ app-list-products{
 }
 
 .feedback-container{
+  display: block;
   min-height: 350px;
 }
 
