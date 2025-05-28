@@ -10,6 +10,7 @@
     </p>
     <app-button> Learn More </app-button>
   </article>
+
   <figure id="discover-photo">
     <img
       id="coffe-cup"
@@ -19,15 +20,14 @@
   </figure>
 </section>
 
-<div class="splash-container">
-  <img
-    id="splash-esquerda"
-    src="../../../assets/coffes/coffe-splash.svg"
-    alt="Coffe-Slapsh"
-  />
-</div>
-
-<section class="content-container enjoy-container">
+<section class="enjoy-container">
+  <div class="splash-container">
+    <img
+      id="splash-esquerda"
+      src="../../../assets/coffes/coffe-splash.svg"
+      alt="Coffe-Slapsh"
+    />
+  </div>
   <article id="enjoy-text">
     <h1>Enjoy a new blend of coffee style</h1>
     <p>
@@ -35,11 +35,9 @@
       experiencing
     </p>
   </article>
-</section>
 
-<div class="content-container">
   <app-carousel [cardsList]="coffees()"></app-carousel>
-</div>
+</section>
 
 <section>
   <div class="splash-container">
@@ -50,11 +48,9 @@
     />
   </div>
 
-  <article class="content-container">
-    <div class="text-aligner">
-      <h1>Why are we different?</h1>
-      <p>We don’t just make your coffee, we make your day!</p>
-    </div>
+  <article class="text-aligner">
+    <h1>Why are we different?</h1>
+    <p>We don’t just make your coffee, we make your day!</p>
   </article>
 
   <app-list-products
@@ -72,16 +68,17 @@
   </div>
 </section>
 
-<article class="text-aligner">
-  <p>Great ideas start with great coffee, Lets help you achieve that</p>
-  <h1>Get started today.</h1>
-  <app-button> Join Us </app-button>
-</article>
-
 <section>
+  <article class="text-aligner">
+    <p>Great ideas start with great coffee, Lets help you achieve that</p>
+    <h1>Get started today.</h1>
+    <app-button> Join Us </app-button>
+  </article>
+
   <figure class="image-formatter">
     <img id="coffe-one" class="background-layer" />
   </figure>
+
   <div class="splash-container">
     <img
       id="splash-direita"
@@ -97,19 +94,18 @@
     <p>Our customers has amazing things to say about us</p>
   </article>
 
-    <app-carousel
-      class="feedback-container"
-      cardOption="feedback"
-      [cardsList]="feedbacks()"
-    ></app-carousel>
+  <app-carousel
+    class="feedback-container"
+    cardOption="feedback"
+    [cardsList]="feedbacks()"
+  ></app-carousel>
 
   <div class="splash-container">
-  <img
-    id="splash-baixo-feedback"
-    class="splash-baixo"
-    src="../../../assets/coffes/splash.baixo.svg"
-    alt="Coffe-Slapsh"
-  />
-</div>
+    <img
+      id="splash-baixo-feedback"
+      class="splash-baixo"
+      src="../../../assets/coffes/splash.baixo.svg"
+      alt="Coffe-Slapsh"
+    />
+  </div>
 </section>
-
