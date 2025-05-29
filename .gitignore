@@ -1,7 +1,10 @@
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
 
-# Ignorar endpoints de desenvolvimento
+#Ignorar variavel de ambiente
+/src/app/core/environments/enviroments.development.ts
+
+# Ignorar endpoints 
 /src/app/core/config/apis/endpoints.development.json
 /src/app/core/config/apis/endpoints.staging.json
 /src/app/core/config/apis/endpoints.production.json
