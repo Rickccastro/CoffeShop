@@ -10,6 +10,8 @@ import { CardDisplay } from '../../../../core/models/CardDisplay';
 import { CardComponent } from '../../card/card.component';
 import { PaymentLinkService } from '../../../services/payment/paymentlink.service';
 import { PaymentItemDto } from '../../../../core/models/PaymentItemDto';
+import { CheckoutSessionsService } from '../../../services/payment/checkout-sessions.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-cesta-dialog',
@@ -28,6 +30,7 @@ export class CestaDialogComponent implements OnInit {
   paymentItems: PaymentItemDto[] = [];
 
   paymentService = inject(PaymentLinkService); 
+  checkoutService = inject(CheckoutSessionsService); 
 
   ngOnInit(): void {
     this.cardsList = this.data.cardList;
@@ -43,8 +46,16 @@ export class CestaDialogComponent implements OnInit {
 finalizarPedido(): void {
   this.paymentItems = this.cardsList.map(card => ({
     priceId: card.priceId as string, 
-    quantity: 1      
+    quantity: 1
   }));
-  this.paymentService.getPaymentLink(this.paymentItems);
+
+  this.checkoutService.createCheckoutSessions(this.paymentItems).subscribe({
+    next: (response) => {
+      return response.clientSecret;
+    },
+    error: (err) => {
+      console.error('Erro ao criar sessão de checkout', err);
+    }
+  });
 }
 }
