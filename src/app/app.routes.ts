@@ -6,6 +6,7 @@ import { SignInComponent } from './features/Account/sign-in/sign-in.component';
 import { UpdateUserComponent } from './features/Account/update-user/update-user.component';
 import { SignUpComponent } from './features/Account/sign-up/sign-up.component';
 import { CoffeesComponent } from './features/products/coffees/coffees.component';
+import { PaymentComponent } from './features/payment/payment.component';
 
 
 export const routes: Routes = [
@@ -35,5 +36,9 @@ export const routes: Routes = [
   resolve: {
     coffee: coffeeResolver,
 }
+}, 
+{
+  path:'payment',
+  component:PaymentComponent,
 }, 
 ];
