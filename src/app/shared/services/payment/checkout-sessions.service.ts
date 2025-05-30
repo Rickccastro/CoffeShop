@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { PaymentItemDto } from '../../../core/models/PaymentItemDto';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -9,6 +10,7 @@ import { Observable } from 'rxjs';
 export class CheckoutSessionsService {
   private clientSecret!: string;
   private paymentItems: { priceId: string; quantity: number }[] = [];
+  router= inject(Router) 
 
   httpClient = inject(HttpClient);
 
@@ -39,5 +41,21 @@ export class CheckoutSessionsService {
       'https://localhost:7087/CheckoutSession/create-checkout-session',
       payload
     );
+  }
+
+  createSessionStatus (sessionId: string){
+    return  this.httpClient.get<any>(`/session-status?session_id=${sessionId}`).subscribe({
+      next: (session) => {
+        if (session.status === 'open') {
+          console.log('Cancelado');
+          // this.router.navigate(['/']);
+        } else if (session.status === 'complete') {
+          console.log('Sucesso');
+        }
+      },
+      error: (err) => {
+        console.error('Erro ao obter status da sessão', err);
+      },
+    });
   }
 }

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CheckoutSessionsService } from '../../../../shared/services/payment/checkout-sessions.service';
 
 @Component({
   selector: 'app-checkout-return',
@@ -10,39 +11,20 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrl: './checkout-return.component.css'
 })
 export class CheckoutReturnComponent implements OnInit {
-  customerEmail: string = '';
-  isSuccess: boolean = false;
-
-  constructor(
-    private route: ActivatedRoute,
-    private http: HttpClient,
-    private router: Router
-  ) {}
-
+    checkoutSessionsService = inject(CheckoutSessionsService);
+    route = inject(ActivatedRoute);
+  
   ngOnInit(): void {
     this.checkSessionStatus();
   }
 
   private checkSessionStatus() {
     const sessionId = this.route.snapshot.queryParamMap.get('session_id');
+    this.checkoutSessionsService.createSessionStatus(sessionId as string);
 
     if (!sessionId) {
       console.error('Session ID não encontrado na URL');
       return;
     }
-
-    this.http.get<any>(`/session-status?session_id=${sessionId}`).subscribe({
-      next: (session) => {
-        if (session.status === 'open') {
-          this.router.navigate(['/payment']);
-        } else if (session.status === 'complete') {
-          this.isSuccess = true;
-          this.customerEmail = session.customer_email;
-        }
-      },
-      error: (err) => {
-        console.error('Erro ao obter status da sessão', err);
-      },
-    });
   }
 }
