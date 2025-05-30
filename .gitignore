@@ -2,7 +2,7 @@
 
 
 #Ignorar variavel de ambiente
-/src/app/core/environments/enviroments.development.ts
+src/app/core/environments/environment.development.ts
 
 # Ignorar endpoints 
 /src/app/core/config/apis/endpoints.development.json
