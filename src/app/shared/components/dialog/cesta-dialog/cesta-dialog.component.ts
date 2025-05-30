@@ -12,6 +12,7 @@ import { PaymentLinkService } from '../../../services/payment/paymentlink.servic
 import { PaymentItemDto } from '../../../../core/models/PaymentItemDto';
 import { CheckoutSessionsService } from '../../../services/payment/checkout-sessions.service';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cesta-dialog',
@@ -22,40 +23,36 @@ import { Observable } from 'rxjs';
 })
 export class CestaDialogComponent implements OnInit {
   cardsList: Partial<CardDisplay>[] = [];
+  paymentItems: PaymentItemDto[] = [];
+
   dialogRef = inject(MatDialogRef);
   data = inject<{ cardList: Partial<CardDisplay>[]; cardOption: string }>(
     MAT_DIALOG_DATA
   );
+  router = inject(Router);
   dialog = inject(MatDialog);
-  paymentItems: PaymentItemDto[] = [];
-
-  paymentService = inject(PaymentLinkService); 
-  checkoutService = inject(CheckoutSessionsService); 
+  paymentService = inject(PaymentLinkService);
+  checkoutService = inject(CheckoutSessionsService);
 
   ngOnInit(): void {
     this.cardsList = this.data.cardList;
   }
 
   close(): void {
-   this.dialogRef.close();
+    this.dialogRef.close();
   }
   removerCesto(): void {
     this.cardsList.pop();
   }
-  
-finalizarPedido(): void {
-  this.paymentItems = this.cardsList.map(card => ({
-    priceId: card.priceId as string, 
-    quantity: 1
-  }));
 
-  this.checkoutService.createCheckoutSessions(this.paymentItems).subscribe({
-    next: (response) => {
-      return response.clientSecret;
-    },
-    error: (err) => {
-      console.error('Erro ao criar sessão de checkout', err);
-    }
-  });
-}
+  finalizarPedido(): void {
+    this.paymentItems = this.cardsList.map((card) => ({
+      priceId: card.priceId as string,
+      quantity: 1,
+    }));
+
+    this.checkoutService.setPaymentItems(this.paymentItems);
+    this.dialog.closeAll();
+    this.router.navigate(['/payment']);
+  }
 }
