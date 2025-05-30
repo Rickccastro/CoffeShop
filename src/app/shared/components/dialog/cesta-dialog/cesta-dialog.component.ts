@@ -47,10 +47,13 @@ export class CestaDialogComponent implements OnInit {
 
   finalizarPedido(): void {
     this.paymentItems = this.cardsList.map((card) => ({
-      priceId: card.priceId as string,
+      name: card.title as string, // Nome do produto
+      description: card.subtitle as string, // Descrição do produto
       quantity: 1,
+      amount: 10, // Valor do produto
+      imageUrl: card.imageSrc as string, // URL da imagem do produto
     }));
-
+    console.log(this.paymentItems);
     this.checkoutService.setPaymentItems(this.paymentItems);
     this.dialog.closeAll();
     this.router.navigate(['/payment']);

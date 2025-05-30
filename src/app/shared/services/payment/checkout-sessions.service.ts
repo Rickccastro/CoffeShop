@@ -9,12 +9,12 @@ import { Router } from '@angular/router';
 })
 export class CheckoutSessionsService {
   private clientSecret!: string;
-  private paymentItems: { priceId: string; quantity: number }[] = [];
+  private paymentItems: PaymentItemDto[] = [];
   router= inject(Router) 
 
   httpClient = inject(HttpClient);
 
-  setPaymentItems(items: { priceId: string; quantity: number }[]) {
+  setPaymentItems(items: PaymentItemDto[]) {
     this.paymentItems = items;
   }
 
