@@ -12,7 +12,7 @@
     {
       "id": "prod_SKqI0zJJxX7BnL",
       "priceId":"price_1RQAbaQl6Wls2VImRstIIVG7",
-      "imageSrc": "assets/coffes/coffe-two.svg",
+      "imageSrc": "https://raw.githubusercontent.com/Rickccastro/CoffeShop/a889be60e8ed2f3eaa00a6502e930c6920902e7a/src/assets/coffes/coffe-two.svg",
       "imageAlt": "Coffee Mug",
       "title": "Espresso",
       "subtitle": "Strong and rich",
@@ -30,7 +30,7 @@
     {
       "id": "prod_SKafqIox1M141p",
       "priceId":"price_1RQHvRQl6Wls2VImf2bmsz4l",
-      "imageSrc": "assets/coffes/coffe-four.svg",
+      "imageSrc": "https://raw.githubusercontent.com/Rickccastro/CoffeShop/a889be60e8ed2f3eaa00a6502e930c6920902e7a/src/assets/coffes/coffe-four.svg",
       "imageAlt": "Coffee Beans",
       "title": "Expresso",
       "subtitle": "Concentrated Coffee ",
