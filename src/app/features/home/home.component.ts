@@ -7,11 +7,12 @@ import { Banner } from '../../core/models/Banner';
 import { Feedback } from '../../core/models/Feedback';
 import { STATIC_BANNERS } from '../../shared/data/static-data';
 import { CarouselComponent } from "../../shared/components/carousel/carousel.component";
+import { SplashComponent } from '../../shared/components/splash/splash.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ButtonComponent, ListProductsComponent, CarouselComponent],
+  imports: [ButtonComponent, ListProductsComponent, CarouselComponent,SplashComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

@@ -21,13 +21,7 @@
 </section>
 
 <section class="enjoy-container">
-  <div class="splash-container">
-    <img
-      id="splash-esquerda"
-      src="../../../assets/coffes/coffe-splash.svg"
-      alt="Coffe-Slapsh"
-    />
-  </div>
+  <app-splash position="esquerda"></app-splash>
   <article id="enjoy-text">
     <h1>Enjoy a new blend of coffee style</h1>
     <p>
@@ -40,14 +34,8 @@
 </section>
 
 <section>
-  <div class="splash-container">
-    <img
-      id="splash-direita"
-      src="../../../assets/coffes/coffe-splash.svg"
-      alt="Coffe-Slapsh"
-    />
-  </div>
-
+  <app-splash position="direita"></app-splash>
+  
   <article class="text-aligner">
     <h1>Why are we different?</h1>
     <p>We don’t just make your coffee, we make your day!</p>
@@ -59,13 +47,8 @@
     [cardsList]="banners"
   ></app-list-products>
 
-  <div class="splash-container">
-    <img
-      class="splash-baixo"
-      src="../../../assets/coffes/splash.baixo.svg"
-      alt="Coffe-Slapsh"
-    />
-  </div>
+  
+  <app-splash position="esquerda"></app-splash>
 </section>
 
 <section>
@@ -79,13 +62,7 @@
     <img id="coffe-one" class="background-layer" />
   </figure>
 
-  <div class="splash-container">
-    <img
-      id="splash-direita"
-      src="../../../assets/coffes/coffe-splash.svg"
-      alt="Coffe-Slapsh"
-    />
-  </div>
+  <app-splash position="direita"></app-splash>
 </section>
 
 <section>
@@ -100,12 +77,5 @@
     [cardsList]="feedbacks()"
   ></app-carousel>
 
-  <div class="splash-container">
-    <img
-      id="splash-baixo-feedback"
-      class="splash-baixo"
-      src="../../../assets/coffes/splash.baixo.svg"
-      alt="Coffe-Slapsh"
-    />
-  </div>
+  <app-splash position="baixo"></app-splash>
 </section>
