@@ -1,4 +1,4 @@
-.splash-container {
+.splash-container { 
   display: flex;
   width: 100%;
 }
@@ -11,11 +11,18 @@
   justify-content: flex-end;
 }
 
-#splash-esquerda,
-#splash-direita {
+.splash-img {
   max-width: clamp(20rem, 17vw, 40rem);
 }
 
-#splash-direita {
+.splash-container.direita .splash-img {
   transform: scaleX(-1);
+}
+
+.splash-baixo {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 0;
+    z-index: -1;
 }
