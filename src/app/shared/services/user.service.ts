@@ -14,7 +14,7 @@ export class UserService {
   }
 
   cadastroUser(user: User) { 
-    return this.httpClient.post<User>('/apiJson/users', user);
+    return this.httpClient.post<User>('https://localhost:7087/Customer/create-customer', user);
   }
   
   atualizarUser(user: User) { 
