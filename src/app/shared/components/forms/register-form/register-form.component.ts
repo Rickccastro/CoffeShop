@@ -45,6 +45,10 @@ export class RegisterFormComponent implements OnInit {
         validators: [Validators.required,Validators.email]
       }),
 
+     endereco: new FormControl<string>(this.user()?.endereco ?? '', {
+        nonNullable: true,
+        validators: Validators.required
+      }),
       senha: new FormControl<string>(this.user()?.senha ?? '', {
         nonNullable: true,
         validators: [Validators.required, Validators.pattern("^[0-9]+$")]
