@@ -3,6 +3,7 @@ import { inject, Injectable } from '@angular/core';
 import { PaymentItemDto } from '../../../core/models/PaymentItemDto';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { User } from '../../../core/models/User/User';
 
 @Injectable({
   providedIn: 'root',
@@ -34,9 +35,10 @@ export class CheckoutSessionsService {
     return this.clientSecret;
   }
   createCheckoutSessions(
-    listProdutos: PaymentItemDto[]
+    listProdutos: PaymentItemDto[], user: User
   ): Observable<{ clientSecret: string }> {
-    const payload = { items: listProdutos };
+    console.log('Criando sessão de checkout com os seguintes itens:', listProdutos);
+    const payload = { userId: user.id, items: listProdutos };
     return this.httpClient.post<{ clientSecret: string }>(
       'https://localhost:7087/CheckoutSession/create-checkout-session',
       payload

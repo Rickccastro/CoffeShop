@@ -4,6 +4,7 @@ import { CheckoutSessionsService } from '../../shared/services/payment/checkout-
 import { CestaDialogComponent } from '../../shared/components/dialog/cesta-dialog/cesta-dialog.component';
 
 import { Environment } from '../../core/environments/environment';
+import { User } from '../../core/models/User/User';
 
 @Component({
   selector: 'app-payment',
@@ -26,15 +27,24 @@ export class PaymentComponent implements OnInit, AfterViewInit {
       return;
     }
 
-    await this.initializeCheckout(paymentItems);
+    const user: User = {
+      id: '1BE999F1-BA4C-4B48-97FA-9A89A40C7AA1',
+      cpf: '123456789',
+      senha: '123456',
+      nome: 'rick2',
+      endereco: 'rua example 123',
+      email: 'rick2@gmail.com',
+    };
+
+    await this.initializeCheckout(paymentItems, user);
   }
 
   private getPaymentItems() {
     return this.checkoutService.getPaymentItems();
   }
 
-  private async initializeCheckout(paymentItems: any[]) {
-    this.checkoutService.createCheckoutSessions(paymentItems).subscribe({
+  private async initializeCheckout(paymentItems: any[], user: User) {
+    this.checkoutService.createCheckoutSessions(paymentItems, user).subscribe({
       next: async (response) => {
         this.handleCheckoutSessionResponse(response);
       },

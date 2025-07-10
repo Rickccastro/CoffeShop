@@ -3,7 +3,7 @@
     {
       "id": "prod_SKqTSniCUMxqbH",
       "priceId": "price_1RQAmlQl6Wls2VImOcpMbgtf",
-      "imageSrc": "assets/coffes/coffe-one.svg",
+      "imageSrc": "https://raw.githubusercontent.com/Rickccastro/CoffeShop/main/src/assets/coffes/coffe-one.svg",
       "imageAlt": "Coffee Cup",
       "title": "Cappuccino",
       "subtitle": "Coffee 50% | Milk 50%",
@@ -21,7 +21,7 @@
     {
       "id": "prod_SKb1PhGPpqV4Td",
       "priceId": "price_1RPvpRQl6Wls2VImAqi1wxoN",
-      "imageSrc": "assets/coffes/coffe-three.svg",
+      "imageSrc": "https://raw.githubusercontent.com/Rickccastro/CoffeShop/main/src/assets/coffes/coffe-one.svg",
       "imageAlt": "Coffee Beans",
       "title": "Macchiato",
       "subtitle": "More milk, less coffee",
@@ -39,7 +39,7 @@
     {
       "id": "prod_SKZSefWAg8fo99",
       "priceId": "price_1RQE62Ql6Wls2VImrFmp43d0",
-      "imageSrc": "assets/coffes/coffe-one.svg",
+      "imageSrc": "https://raw.githubusercontent.com/Rickccastro/CoffeShop/main/src/assets/coffes/coffe-one.svg",
       "imageAlt": "Cold Brew Glass",
       "title": "Cold Brew",
       "subtitle": "Smooth and refreshing",
@@ -48,7 +48,7 @@
     {
       "id": "prod_SKZ9YijPxXl8OP",
       "priceId": "price_1RQE79Ql6Wls2VImvFbhANjC",
-      "imageSrc": "assets/coffes/coffe-two.svg",
+      "imageSrc": "https://raw.githubusercontent.com/Rickccastro/CoffeShop/a889be60e8ed2f3eaa00a6502e930c6920902e7a/src/assets/coffes/coffe-two.svg",
       "imageAlt": "Iced Coffee",
       "title": "Iced Latte",
       "subtitle": "Chilled with a hint of vanilla",
@@ -57,7 +57,7 @@
     {
       "id": "prod_SKtwKfteen6NN5",
       "priceId": "price_1RQE95Ql6Wls2VImFfF2N42I",
-      "imageSrc": "assets/coffes/coffe-three.svg",
+      "imageSrc": "https://raw.githubusercontent.com/Rickccastro/CoffeShop/main/src/assets/coffes/coffe-three.svg",
       "imageAlt": "Mocha Art",
       "title": "Mocha",
       "subtitle": "Chocolate and espresso blend",
@@ -66,7 +66,7 @@
     {
       "id": "prod_SKtxkcTO4eGUod",
       "priceId": "price_1RQE9YQl6Wls2VImdWH7j8GG",
-      "imageSrc": "assets/coffes/coffe-four.svg",
+      "imageSrc": "https://raw.githubusercontent.com/Rickccastro/CoffeShop/a889be60e8ed2f3eaa00a6502e930c6920902e7a/src/assets/coffes/coffe-four.svg",
       "imageAlt": "Classic Brew",
       "title": "Americano",
       "subtitle": "Diluted espresso, bold flavor",
@@ -75,7 +75,7 @@
     {
       "id": "prod_SKtyGgsSetoM50",
       "priceId": "price_1RQEAWQl6Wls2VIm0zwup3GN",
-      "imageSrc": "assets/coffes/coffe-two.svg",
+      "imageSrc": "https://raw.githubusercontent.com/Rickccastro/CoffeShop/a889be60e8ed2f3eaa00a6502e930c6920902e7a/src/assets/coffes/coffe-two.svg",
       "imageAlt": "Caramel Delight",
       "title": "Caramel Macchiato",
       "subtitle": "Espresso with caramel and milk foam",
@@ -84,7 +84,7 @@
     {
       "id": "prod_SKtzxNoGEYLyl0",
       "priceId": "price_1RQEB6Ql6Wls2VImOoYU4hNW",
-      "imageSrc": "assets/coffes/coffe-one.svg",
+      "imageSrc": "https://raw.githubusercontent.com/Rickccastro/CoffeShop/main/src/assets/coffes/coffe-one.svg",
       "imageAlt": "Vanilla Cup",
       "title": "Vanilla Latte",
       "subtitle": "Creamy with a touch of vanilla",
