@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from '../../../core/models/User/User';
-import { UserService } from '../../../shared/services/user.service';
 import { LoginFormComponent } from '../../../shared/components/forms/login-form/login-form.component';
+import { LoginService } from '../../../shared/services/login.service';
+import { Login } from '../../../core/models/Login';
 
 @Component({
   selector: 'app-sign-in',
@@ -12,15 +12,23 @@ import { LoginFormComponent } from '../../../shared/components/forms/login-form/
   styleUrl: './sign-in.component.css'
 })
 export class SignInComponent {
-  userService = inject(UserService);
+  loginUser = inject(LoginService);
   router= inject(Router) 
       
-  onSubmit(user: User) 
+  onSubmit(credentials: Login) 
   {
-     this.userService.loginUser(user)
-    .subscribe((data)=>{
-      alert(`Usuario ${data.nome} Logado com sucesso!`);
-      this.router.navigateByUrl('/');
-    });
+     this.loginUser.loginUser(credentials)
+    .subscribe({
+       next: (response) => {
+        this.loginUser.setSession(response.email,response); 
+        alert(`Usuário ${response.nome} logado com sucesso!`);
+        this.router.navigate(['/']);
+      },
+      error: (err) => {
+        alert('Erro ao fazer login. Verifique seus dados.');
+        console.error(err);
+      }
+    }
+    )  
   } 
 }

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { PaymentItemDto } from '../../../core/models/PaymentItemDto';
+import { PaymentItemDto } from '../../../core/models/DTO/PaymentItemDto';
 
 @Injectable({
   providedIn: 'root',

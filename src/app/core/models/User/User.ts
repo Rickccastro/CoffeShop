@@ -1,10 +1,10 @@
 export interface User {
-    id?: string;
+    id: string;
     cpf: string;
-    nome?: string;
-    email?: string;
-    senha?: string;
-    endereco?: string;
+    nome: string;
+    email: string;
+    senha: string;
+    endereco: string;
     // imageSrc?: string;
     // imageAlt?: string;
 }

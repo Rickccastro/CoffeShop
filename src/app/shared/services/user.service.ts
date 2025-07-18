@@ -20,8 +20,4 @@ export class UserService {
   atualizarUser(user: User) { 
     return this.httpClient.put<User>('/apiJson/users', user);
   }
-
-  loginUser(user: User) { 
-    return this.httpClient.post<User>('/apiJson/users', user);
-  }
 }
