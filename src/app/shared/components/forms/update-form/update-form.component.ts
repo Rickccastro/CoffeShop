@@ -26,17 +26,17 @@ export class UpdateFormComponent implements OnInit {
   
     ngOnInit(): void {
       this.form = new FormGroup({
-        nome: new FormControl<string>(this.user()?.nome ?? '', {
+        nome: new FormControl<string>(this.user()?.UsrNm ?? '', {
           nonNullable: true,
           validators: Validators.required,
         }),
   
-        email: new FormControl<string>(this.user()?.email ?? '', {
+        email: new FormControl<string>(this.user()?.EmailNm ?? '', {
           nonNullable: true,
           validators: [Validators.required,Validators.email]
         }),
   
-        senha: new FormControl<string>(this.user()?.senha ?? '', {
+        senha: new FormControl<string>(this.user()?.UsrIntPassword ?? '', {
           nonNullable: true,
           validators: [Validators.required, Validators.pattern("^[0-9]+$")]
         }),

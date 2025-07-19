@@ -26,12 +26,12 @@ export class LoginFormComponent implements OnInit{
   
     ngOnInit(): void {
       this.form = new FormGroup({  
-        email: new FormControl<string>(this.user()?.email ?? '', {
+        email: new FormControl<string>(this.user()?.EmailNm ?? '', {
           nonNullable: true,
           validators: [Validators.required,Validators.email]
         }),
   
-        senha: new FormControl<string>(this.user()?.senha ?? '', {
+        senha: new FormControl<string>(this.user()?.EmailNm ?? '', {
           nonNullable: true,
           validators: [Validators.required, Validators.pattern("^[0-9]+$")]
         }),

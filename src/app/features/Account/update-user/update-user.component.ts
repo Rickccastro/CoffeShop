@@ -19,7 +19,7 @@ export class UpdateUserComponent {
   {
      this.userService.atualizarUser(user)
     .subscribe((data)=>{
-      alert(`Usuario ${data.nome} atualizado com sucesso!`);
+      alert(`Usuario ${data.UsrNm} atualizado com sucesso!`);
       this.router.navigateByUrl('/');
     });
   }  

@@ -29,7 +29,7 @@ export class NotificationFormComponent {
   ]);
 
   onSubmit() {
-    const user = { email: this.emailFormControl.value } as User;
+    const user = { EmailNm: this.emailFormControl.value } as User;
     this.send.emit(user);
   }
 }

@@ -31,25 +31,25 @@ export class RegisterFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = new FormGroup({
-      cpf: new FormControl<string>(this.user()?.cpf ?? '', {
+      cpf: new FormControl<string>(this.user()?.UsrIntCpf ?? '', {
         nonNullable: true,
         validators: [Validators.required,]
       }),
-      nome: new FormControl<string>(this.user()?.nome ?? '', {
+      nome: new FormControl<string>(this.user()?.UsrNm ?? '', {
         nonNullable: true,
         validators: Validators.required,
       }),
 
-      email: new FormControl<string>(this.user()?.email ?? '', {
+      email: new FormControl<string>(this.user()?.EmailNm ?? '', {
         nonNullable: true,
         validators: [Validators.required,Validators.email]
       }),
 
-     endereco: new FormControl<string>(this.user()?.endereco ?? '', {
+     endereco: new FormControl<string>(this.user()?.UsrNmEndereco ?? '', {
         nonNullable: true,
         validators: Validators.required
       }),
-      senha: new FormControl<string>(this.user()?.senha ?? '', {
+      senha: new FormControl<string>(this.user()?.UsrIntPassword ?? '', {
         nonNullable: true,
         validators: [Validators.required, Validators.pattern("^[0-9]+$")]
       }),

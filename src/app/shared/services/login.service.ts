@@ -1,10 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { User } from '../../core/models/User/User';
-// import { Login } from '../../core/models/Login';
+import { Login } from '../../core/models/Login';
 
-export type Login = Pick<User, 'email' | 'senha'>;
-export type LoginResponse = Pick<User,'id'| 'email' | 'nome'>;
 
 
 @Injectable({
@@ -14,14 +12,14 @@ export class LoginService {
     httpClient = inject(HttpClient);
   
   loginUser(credentials: Login) { 
-    return this.httpClient.post<LoginResponse>('/api/Login/user-login', credentials);
+    return this.httpClient.post<Login>('/api/User/login-user', credentials);
   }
   logout() {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
   }
 
-  setSession(token: string, user: LoginResponse) {
+  setSession(token: string, user: Login) {
     localStorage.setItem('token', token);
     localStorage.setItem('user', JSON.stringify(user));
   }

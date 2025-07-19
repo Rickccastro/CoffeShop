@@ -38,7 +38,7 @@ export class CheckoutSessionsService {
     listProdutos: PaymentItemDto[], user: User
   ): Observable<{ clientSecret: string }> {
     console.log('Criando sessão de checkout com os seguintes itens:', listProdutos);
-    const payload = { userId: user.id, items: listProdutos };
+    const payload = { userId: user.UsrId, items: listProdutos };
     return this.httpClient.post<{ clientSecret: string }>(
       'https://localhost:7087/CheckoutSession/create-checkout-session',
       payload

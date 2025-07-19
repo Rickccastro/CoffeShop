@@ -20,8 +20,8 @@ export class SignInComponent {
      this.loginUser.loginUser(credentials)
     .subscribe({
        next: (response) => {
-        this.loginUser.setSession(response.email,response); 
-        alert(`Usuário ${response.nome} logado com sucesso!`);
+        this.loginUser.setSession(response.EmailNm,response); 
+        alert(`Usuário ${response.EmailNm} logado com sucesso!`);
         this.router.navigate(['/']);
       },
       error: (err) => {

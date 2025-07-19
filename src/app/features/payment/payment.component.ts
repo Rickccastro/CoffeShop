@@ -28,12 +28,12 @@ export class PaymentComponent implements OnInit, AfterViewInit {
     }
 
     const user: User = {
-      id: '1BE999F1-BA4C-4B48-97FA-9A89A40C7AA1',
-      cpf: '123456789',
-      senha: '123456',
-      nome: 'rick2',
-      endereco: 'rua example 123',
-      email: 'rick2@gmail.com',
+      UsrId: '1BE999F1-BA4C-4B48-97FA-9A89A40C7AA1',
+      UsrIntCpf: '123456789',
+      UsrIntPassword: '123456',
+      UsrNm: 'rick2',
+      UsrNmEndereco: 'rua example 123',
+      EmailNm: 'rick2@gmail.com',
     };
 
     await this.initializeCheckout(paymentItems, user);

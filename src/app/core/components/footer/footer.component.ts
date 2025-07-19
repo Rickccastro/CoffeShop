@@ -18,7 +18,7 @@ export class FooterComponent {
   onSubmit(user: User) 
   {
     this.userService.cadastroEmailNotification(user).subscribe((data)=>{
-      alert(`Email ${data.nome} cadastrado com sucesso!`);
+      alert(`Email ${data.UsrNm} cadastrado com sucesso!`);
     });
   }   
 }
