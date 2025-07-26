@@ -1,5 +1,5 @@
 export interface User {
-  UsrId: string;
+  UsrId?: string;
   UsrIntCpf: string;
   UsrNm: string;
   UsrIntPassword: string;
