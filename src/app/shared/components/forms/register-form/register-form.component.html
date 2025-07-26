@@ -6,21 +6,21 @@
         label="CPF"
         type="text"
         placeholder="123.456.789-09"
-        [control]="getControl('cpf')"
+        [control]="getControl('UsrIntCpf')"
       ></app-input>
 
       <app-input
         label="Nome"
         type="text"
         placeholder="Ricardo Castro"
-        [control]="getControl('nome')"
+        [control]="getControl('UsrNm')"
       ></app-input>
 
       <app-input
         label="Email"
         type="email"
         placeholder="ricardo.castro.linkedin@gmail.com"
-        [control]="getControl('email')"
+        [control]="getControl('EmailNm')"
       >
       </app-input>
 
@@ -28,7 +28,7 @@
         label="Endereco"
         type="text"
         placeholder="Rua Exemplo, 123"
-        [control]="getControl('endereco')"
+        [control]="getControl('UsrNmEndereco')"
       >
       </app-input>
 
@@ -36,7 +36,7 @@
         label="Senha"
         type="password"
         placeholder="123456"
-        [control]="getControl('senha')"
+        [control]="getControl('UsrIntPassword')"
       ></app-input>
     </div>
     <app-button [type]="'submit'">Salvar</app-button>

@@ -31,25 +31,25 @@ export class RegisterFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = new FormGroup({
-      cpf: new FormControl<string>(this.user()?.UsrIntCpf ?? '', {
+      UsrIntCpf: new FormControl<string>(this.user()?.UsrIntCpf ?? '', {
         nonNullable: true,
         validators: [Validators.required,]
       }),
-      nome: new FormControl<string>(this.user()?.UsrNm ?? '', {
+      UsrNm: new FormControl<string>(this.user()?.UsrNm ?? '', {
         nonNullable: true,
         validators: Validators.required,
       }),
 
-      email: new FormControl<string>(this.user()?.EmailNm ?? '', {
+      EmailNm: new FormControl<string>(this.user()?.EmailNm ?? '', {
         nonNullable: true,
         validators: [Validators.required,Validators.email]
       }),
 
-     endereco: new FormControl<string>(this.user()?.UsrNmEndereco ?? '', {
+     UsrNmEndereco: new FormControl<string>(this.user()?.UsrNmEndereco ?? '', {
         nonNullable: true,
         validators: Validators.required
       }),
-      senha: new FormControl<string>(this.user()?.UsrIntPassword ?? '', {
+      UsrIntPassword: new FormControl<string>(this.user()?.UsrIntPassword ?? '', {
         nonNullable: true,
         validators: [Validators.required, Validators.pattern("^[0-9]+$")]
       }),
@@ -58,6 +58,7 @@ export class RegisterFormComponent implements OnInit {
 
   onSubmit() {
     const user = this.form.value as User;
+    console.log(user);
     this.send.emit(user);
   }
 
