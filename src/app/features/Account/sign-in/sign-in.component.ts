@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginFormComponent } from '../../../shared/components/forms/login-form/login-form.component';
-import { LoginService } from '../../../shared/services/login.service';
+import { LoginService } from '../../../core/auth/login.service';
 import { Login } from '../../../core/models/Login/Login';
 import { MatDialog } from '@angular/material/dialog';
 import { CestaDialogService } from '../../../shared/services/dialog/cesta-dialog.service';

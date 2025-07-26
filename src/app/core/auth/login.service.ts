@@ -5,8 +5,6 @@ import { Login } from '../../core/models/Login/Login';
 import { Observable } from 'rxjs';
 import { LoginTokenValidatedRequest } from '../../core/models/Login/LoginTokenValidatedRequest';
 
-
-
 @Injectable({
   providedIn: 'root'
 })
