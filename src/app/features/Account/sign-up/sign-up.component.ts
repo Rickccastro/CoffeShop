@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { User } from '../../../core/models/User/User';
 import { RegisterFormComponent } from '../../../shared/components/forms/register-form/register-form.component';
 import { UserService } from '../../../shared/services/user.service';
-
+import { UserRequest } from '../../../core/models/User/UserRequest';
 
 @Component({
   selector: 'app-sign-up',
@@ -17,9 +17,21 @@ export class SignUpComponent {
   router = inject(Router);
 
   onSubmit(user: User) {
-    this.userService.cadastroUser(user).subscribe((data) => {
-      alert(`Usuario ${data.UsrNm} cadastrado com sucesso!`);
+    var userRequest = this.createUserRequest(user);
+    this.userService.cadastroUser(userRequest).subscribe((res) => {
+      alert(`Usuario ${res.usrNm} cadastrado com sucesso!`);
       this.router.navigateByUrl('/');
     });
+  }
+
+  private createUserRequest(user: User): UserRequest {
+    var userRequest: UserRequest = {
+      UsrIntCpf: user.UsrIntCpf,
+      UsrNm: user.UsrNm,
+      UsrIntPassword: user.UsrIntPassword,
+      UsrNmEndereco: user.UsrNmEndereco,
+      EmailNm: user.EmailNm,    
+    }
+   return userRequest; 
   }
 }
