@@ -1,0 +1,17 @@
+<h2 mat-dialog-title>Foi enviado um codigo de autenticação por email, por favor Insira-o abaixo</h2>
+<mat-dialog-content>
+<app-input
+  [label]="'Código de validação'"
+  [control]="codigoFormControl"
+  [type]="'text'"
+  [placeholder]="'Digite o código'"></app-input>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="close()">Cancelar</button>
+  <button mat-button (click)="close()">Re-enviar</button>
+  <button mat-raised-button color="primary" (click)="enviarCodigo()">
+   Enviar código 
+  </button>
+</mat-dialog-actions>
+
+
