@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { User } from '../../core/models/User/User';
+import { UserRequest } from '../../core/models/User/UserRequest';
+import { UserResponse } from '../../core/models/User/UserResponse';
 
 
 @Injectable({
@@ -15,8 +17,8 @@ export class UserService {
   }
 
   
-  cadastroUser(user: User) { 
-    return this.httpClient.post<User>('/api/User/create-user', user);
+  cadastroUser(userRequest: UserRequest) { 
+     return this.httpClient.post<UserResponse>('/api/User/create-user', userRequest);
   }
   
   atualizarUser(user: User) { 
