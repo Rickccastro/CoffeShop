@@ -40,7 +40,7 @@ export class CheckoutSessionsService {
     console.log('Criando sessão de checkout com os seguintes itens:', listProdutos);
     const payload = { userId: user.UsrId, items: listProdutos };
     return this.httpClient.post<{ clientSecret: string }>(
-      'https://localhost:7087/CheckoutSession/create-checkout-session',
+      '/api/CheckoutSession/create-checkout-session',
       payload
     );
   }
@@ -59,5 +59,13 @@ export class CheckoutSessionsService {
         console.error('Erro ao obter status da sessão', err);
       },
     });
+  }
+
+  expireSession(sessionId: string): Observable<void> {
+    return this.httpClient.post<void>(`/api/CheckoutSession/expire-checkout-session/`,
+      {
+        sessionId: sessionId
+      }
+    );
   }
 }
