@@ -8,10 +8,8 @@ import {
 } from '@angular/material/dialog';
 import { CardDisplay } from '../../../../core/models/CardDisplay';
 import { CardComponent } from '../../card/card.component';
-import { PaymentLinkService } from '../../../services/payment/paymentlink.service';
 import { PaymentItemDto } from '../../../../core/models/DTO/PaymentItemDto';
 import { CheckoutSessionsService } from '../../../services/payment/checkout-sessions.service';
-import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 
 @Component({
@@ -31,7 +29,6 @@ export class CestaDialogComponent implements OnInit {
   );
   router = inject(Router);
   dialog = inject(MatDialog);
-  paymentService = inject(PaymentLinkService);
   checkoutService = inject(CheckoutSessionsService);
 
   ngOnInit(): void {
