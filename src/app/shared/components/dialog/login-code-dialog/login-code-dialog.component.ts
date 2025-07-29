@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { InputComponent } from '../../forms/input-form/input-form.component';
 import { Router } from '@angular/router';
+import { AuthService } from '../../../../core/auth/auth-service.service';
 
 @Component({
   selector: 'app-login-code-dialog',
@@ -32,41 +33,42 @@ export class LoginCodeDialogComponent {
   cardList: Partial<CardDisplay>[] = [];
   dialogRef = inject(MatDialogRef<LoginCodeDialogComponent>);
   loginService = inject(LoginService);
-  codigoControl = new FormControl('', Validators.required);
   data = inject<{ login: Login }>(MAT_DIALOG_DATA);
-  router= inject(Router)
+  router = inject(Router);
+  authService = inject(AuthService);
   codigoFormControl = new FormControl('', [Validators.required]);
-  
 
   enviarCodigo(): void {
     this.validarTokenControl();
-    const code = this.codigoControl.value;
-    
-    var result = this.loginService.loginTokenValidated(this.data.login, code!).subscribe();
-
-    if(result === null){
-      this.loginErrorToken();
-      return
-    }
-     alert(`Usuário ${this.data.login.EmailNm} logado com sucesso!`);
-     this.router.navigate(['/']);
+    const code = this.codigoFormControl.value;
+    this.loginService.loginTokenValidated(this.data.login, code!).subscribe({
+      next: (response) => {
+        alert(`Usuário ${response.emailNm} logado com sucesso!`);
+        this.authService.setLoggedIn(true);
+        this.close();
+        this.router.navigate(['/']);
+      },
+      error: (err) => {
+        const errorMsg =
+          err?.error?.message || err?.message || 'Erro desconhecido';
+        alert(`Erro ao validar login: ${errorMsg}`);
+        this.loginErrorToken();
+      },
+    });
   }
-
   close(): void {
     this.dialogRef.close();
   }
 
-    loginErrorToken():void{
-     alert('Código inválido. Tente novamente.');
-      console.log('Código inválido. Tente novamente.');
-      this.codigoControl?.setErrors({ invalid: true });
-      this.codigoControl?.markAsTouched();
-      this.codigoControl?.markAsDirty();
+  loginErrorToken(): void {
+    this.codigoFormControl?.setErrors({ invalid: true });
+    this.codigoFormControl?.markAsTouched();
+    this.codigoFormControl?.markAsDirty();
   }
 
   validarTokenControl(): boolean {
-    if (this.codigoControl?.invalid) {
-      this.codigoControl?.markAsTouched();
+    if (this.codigoFormControl?.invalid) {
+      this.codigoFormControl?.markAsTouched();
       return false;
     }
     return true;

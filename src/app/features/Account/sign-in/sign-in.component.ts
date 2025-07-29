@@ -7,41 +7,38 @@ import { MatDialog } from '@angular/material/dialog';
 import { CestaDialogService } from '../../../shared/services/dialog/cesta-dialog.service';
 import { LoginCodeDialogComponent } from '../../../shared/components/dialog/login-code-dialog/login-code-dialog.component';
 
-
 @Component({
   selector: 'app-sign-in',
   standalone: true,
   imports: [LoginFormComponent],
   templateUrl: './sign-in.component.html',
-  styleUrl: './sign-in.component.css'
+  styleUrl: './sign-in.component.css',
 })
 export class SignInComponent {
   loginUser = inject(LoginService);
-  dialog = inject(MatDialog); 
-  service  = inject(CestaDialogService);
-      
-  onSubmit(credentials: Login) 
-  {
-    this.loginUser.loginUser(credentials)
-    .subscribe({
-       next: (response) => {
+  dialog = inject(MatDialog);
+  service = inject(CestaDialogService);
+
+  onSubmit(credentials: Login) {
+    this.loginUser.loginUser(credentials).subscribe({
+      next: (response) => {
         this.exibirLoginTokenPopUp(credentials);
       },
       error: (err) => {
         alert('Erro ao fazer login. Verifique seus dados.');
         console.error(err);
-      }
-    }
-    )  
-  } 
+      },
+    });
+  }
 
-   exibirLoginTokenPopUp(credentials: Login) {
-      this.dialog.open(LoginCodeDialogComponent, {
-        data: {
-          login: credentials,
+  exibirLoginTokenPopUp(credentials: Login) {
+    this.dialog.open(LoginCodeDialogComponent, {
+      data: {
+        login: {
+          EmailNm: 'ricardoparmezancastro@gmail.com',
+          UsrIntPassword: '123456',
         },
-        width: '300px',
-        height: '300px',
-      });
-    }
+      },
+    });
+  }
 }
